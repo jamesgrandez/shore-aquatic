@@ -40,3 +40,5 @@ yarn-error.log*
 # OMC workspace
 .omc/
 .claude/
+
+.vercel

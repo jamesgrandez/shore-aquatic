@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ShoppingCart } from "lucide-react";
 import { Product } from "@/lib/mockData";
 import { CartUtils } from "@/lib/cart";
+import { getProductImage } from "@/lib/imageMap";
 import AvailabilityBadge from "./AvailabilityBadge";
 
 function CategoryIcon({ category }: { category: string }) {
@@ -35,6 +36,7 @@ function CategoryIcon({ category }: { category: string }) {
 export default function ProductCard({ product }: { product: Product }) {
   const isOutOfSeason = product.availability === "OUT OF SEASON";
   const isBackorder = product.availability === "BACKORDER";
+  const imageUrl = getProductImage(product.id);
 
   const handleAdd = () => {
     CartUtils.add(product);
@@ -48,11 +50,21 @@ export default function ProductCard({ product }: { product: Product }) {
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as const }}
       className="group glass flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-xl hover:shadow-black/20"
     >
-      {/* Top gradient area */}
-      <div
-        className={`relative h-44 bg-gradient-to-br ${product.imageGradient} flex items-center justify-center`}
-      >
-        <CategoryIcon category={product.category} />
+      {/* Top image area */}
+      <div className={`relative h-44 bg-gradient-to-br ${product.imageGradient} flex items-center justify-center overflow-hidden`}>
+        {imageUrl ? (
+          <img
+            src={`${imageUrl}?format=500w`}
+            alt={product.name}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+            onError={(e) => {
+              (e.target as HTMLImageElement).style.display = 'none';
+            }}
+          />
+        ) : (
+          <CategoryIcon category={product.category} />
+        )}
       </div>
 
       {/* Info panel */}

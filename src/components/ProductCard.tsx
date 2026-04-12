@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ShoppingCart } from "lucide-react";
+import Link from "next/link";
 import { Product } from "@/lib/mockData";
 import { CartUtils } from "@/lib/cart";
 import { getProductImage } from "@/lib/imageMap";
@@ -50,22 +51,24 @@ export default function ProductCard({ product }: { product: Product }) {
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as const }}
       className="group glass flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-xl hover:shadow-black/20"
     >
-      {/* Top image area */}
-      <div className={`relative h-44 bg-gradient-to-br ${product.imageGradient} flex items-center justify-center overflow-hidden`}>
-        {imageUrl ? (
-          <img
-            src={`${imageUrl}?format=500w`}
-            alt={product.name}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            loading="lazy"
-            onError={(e) => {
-              (e.target as HTMLImageElement).style.display = 'none';
-            }}
-          />
-        ) : (
-          <CategoryIcon category={product.category} />
-        )}
-      </div>
+      {/* Top image area — clickable */}
+      <Link href={`/shop/${product.id}`} className="block">
+        <div className={`relative h-44 bg-gradient-to-br ${product.imageGradient} flex items-center justify-center overflow-hidden`}>
+          {imageUrl ? (
+            <img
+              src={`${imageUrl}?format=500w`}
+              alt={product.name}
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = 'none';
+              }}
+            />
+          ) : (
+            <CategoryIcon category={product.category} />
+          )}
+        </div>
+      </Link>
 
       {/* Info panel */}
       <div className="flex flex-1 flex-col p-5">
@@ -80,9 +83,11 @@ export default function ProductCard({ product }: { product: Product }) {
         </div>
 
         {/* Name */}
-        <h3 className="text-base font-bold text-white leading-tight">
-          {product.name}
-        </h3>
+        <Link href={`/shop/${product.id}`} className="hover:text-aqua-400 transition-colors">
+          <h3 className="text-base font-bold text-white leading-tight">
+            {product.name}
+          </h3>
+        </Link>
 
         {/* Scientific name */}
         {product.scientificName && (

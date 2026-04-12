@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@theme inline {
+  --color-ocean-950: #010A14;
+  --color-ocean-900: #030B18;
+  --color-ocean-800: #061628;
+  --color-ocean-700: #0A2540;
+  --color-ocean-600: #0D3561;
+  --color-aqua-300: #67E8F9;
+  --color-aqua-400: #22D3EE;
+  --color-aqua-500: #06B6D4;
+  --color-aqua-600: #0891B2;
+  --color-coral: #F97316;
+
+  --animate-shimmer: shimmer 8s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-bubble: bubble 8s ease-in infinite;
+  --animate-wave: wave 12s ease-in-out infinite;
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  @keyframes bubble {
+    0% { transform: translateY(0) scale(1); opacity: 0.6; }
+    100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+  }
+  @keyframes wave {
+    0%, 100% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(-5px) translateY(-3px); }
+    50% { transform: translateX(0) translateY(-5px); }
+    75% { transform: translateX(5px) translateY(-3px); }
+  }
+}
+
+:root {
+  --background: #010A14;
+  --foreground: #E2E8F0;
+  --ocean-950: #010A14;
+  --ocean-900: #030B18;
+  --ocean-800: #061628;
+  --ocean-700: #0A2540;
+  --ocean-600: #0D3561;
+  --aqua-300: #67E8F9;
+  --aqua-400: #22D3EE;
+  --aqua-500: #06B6D4;
+  --aqua-600: #0891B2;
+  --coral: #F97316;
+}
+
+body {
+  background: #010A14;
+  color: #E2E8F0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 1rem;
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 1rem;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #010A14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0A2540;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0D3561;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0A2540 #010A14;
+}

@@ -4,7 +4,24 @@ import { useState, useMemo, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, ChevronLeft, ChevronRight, SlidersHorizontal } from "lucide-react";
 import { products, subCategories } from "@/lib/mockData";
-import { waterGardenProducts, waterGardenSubCategories } from "@/lib/waterGardenData";
+import { waterGardenProducts } from "@/lib/waterGardenData";
+
+// Grouped Water Garden filters — group label maps to the subCategory prefix it matches
+const WG_GROUPS = [
+  { label: "Hardy Lilies",    prefix: "Hardy Lily",    emoji: "🪷" },
+  { label: "Tropical Lilies", prefix: "Tropical Lily", emoji: "🌺" },
+  { label: "Lotus",           prefix: "Lotus",         emoji: "🌸" },
+  { label: "Marginals",       prefix: "Marginal",      emoji: "🌿" },
+  { label: "Specialty",       prefix: "Specialty",     emoji: "⭐" },
+] as const;
+
+// Variant chips shown when a group is active (suffix after the prefix + " - ")
+const WG_VARIANTS: Record<string, string[]> = {
+  "Hardy Lily":    ["Changeable", "Peach/Orange", "Pink", "Red", "White", "Yellow", "Potted"],
+  "Tropical Lily": ["Autumn Shades", "Blue", "Blue/Green", "Lavender", "Night/Pink", "Night/Red", "Night/White", "Pink", "Purple", "Red", "White", "Yellow"],
+  "Lotus":         ["Pink", "Red", "Versicolor", "White", "Yellow", "Potted"],
+  "Marginal":      ["Hardy", "Tropical"],
+};
 import ProductCard from "@/components/ProductCard";
 import Footer from "@/components/Footer";
 
@@ -24,6 +41,8 @@ const availabilityMap: Record<string, string> = {
 export default function ShopPage() {
   const [category, setCategory] = useState<string>("All");
   const [subCategory, setSubCategory] = useState<string>("All");
+  const [wgGroup, setWgGroup] = useState<string>("All");     // WG top-level group
+  const [wgVariant, setWgVariant] = useState<string>("All"); // WG color/variant within group
   const [waterType, setWaterType] = useState<string>("All");
   const [availability, setAvailability] = useState<string>("All");
   const [search, setSearch] = useState("");
@@ -42,14 +61,42 @@ export default function ShopPage() {
   }, []);
 
   // Reset page on filter change
-  useEffect(() => { setPage(1); }, [category, subCategory, waterType, availability, search]);
+  useEffect(() => { setPage(1); }, [category, subCategory, wgGroup, wgVariant, waterType, availability, search]);
 
-  const activeSubCategories = category === "Water Garden" ? waterGardenSubCategories : subCategories;
+  // Derive active WG variant chips for the selected group
+  const activeWgVariants = wgGroup !== "All" ? (WG_VARIANTS[wgGroup] ?? []) : [];
+
+  // Build the exact subCategory string from WG group + variant selection
+  const wgSubCatFilter = useMemo(() => {
+    if (wgGroup === "All") return null; // no WG filter
+    const group = WG_GROUPS.find(g => g.prefix === wgGroup);
+    if (!group) return null;
+    if (wgVariant === "All") return wgGroup; // prefix match: any sub under this group
+    // Build exact subCategory: e.g. "Hardy Lily - Pink" or "Marginal Hardy - 2\" Pot"
+    if (wgGroup === "Marginal") {
+      return `Marginal ${wgVariant} - 2" Pot`;
+    }
+    return `${wgGroup} - ${wgVariant}`;
+  }, [wgGroup, wgVariant]);
 
   const filtered = useMemo(() => {
     return allProducts.filter((p) => {
       if (category !== "All" && p.category !== category) return false;
-      if (subCategory !== "All" && p.subCategory !== subCategory) return false;
+
+      // WG-specific group filter (replaces subCategory for Water Garden)
+      if (category === "Water Garden" && wgSubCatFilter !== null) {
+        const sub = p.subCategory ?? "";
+        // Exact match for variant, prefix match for group-only
+        if (wgVariant !== "All") {
+          if (sub !== wgSubCatFilter) return false;
+        } else {
+          if (!sub.startsWith(wgGroup)) return false;
+        }
+      }
+
+      // Aquarium plant sub-category filter
+      if (category === "Plants" && subCategory !== "All" && p.subCategory !== subCategory) return false;
+
       if (waterType !== "All" && p.waterType !== waterType && p.waterType !== "Both") return false;
       if (availability !== "All" && p.availability !== availabilityMap[availability]) return false;
       if (search) {
@@ -59,7 +106,7 @@ export default function ShopPage() {
       }
       return true;
     });
-  }, [category, subCategory, waterType, availability, search]);
+  }, [category, subCategory, wgGroup, wgVariant, wgSubCatFilter, waterType, availability, search]);
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
   const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
@@ -67,13 +114,15 @@ export default function ShopPage() {
   const resetFilters = useCallback(() => {
     setCategory("All");
     setSubCategory("All");
+    setWgGroup("All");
+    setWgVariant("All");
     setWaterType("All");
     setAvailability("All");
     setSearch("");
     setPage(1);
   }, []);
 
-  const hasActiveFilters = category !== "All" || subCategory !== "All" || waterType !== "All" || availability !== "All" || search;
+  const hasActiveFilters = category !== "All" || subCategory !== "All" || wgGroup !== "All" || waterType !== "All" || availability !== "All" || search;
 
   return (
     <main className="pt-16">
@@ -158,12 +207,72 @@ export default function ShopPage() {
             </div>
           </div>
 
-          {/* Sub-category row — show for Plants and Water Garden */}
-          {(category === "All" || category === "Plants" || category === "Water Garden") && (
+          {/* Water Garden: grouped two-tier filter */}
+          {category === "Water Garden" && (
+            <div className="mt-2 space-y-1.5">
+              {/* Tier 1: groups */}
+              <div className="flex items-center gap-1.5 flex-wrap">
+                <span className="text-xs text-slate-600 w-8 shrink-0">Type</span>
+                <button
+                  onClick={() => { setWgGroup("All"); setWgVariant("All"); }}
+                  className={`rounded-full px-3 py-1 text-xs font-medium transition-all cursor-pointer ${
+                    wgGroup === "All"
+                      ? "bg-teal-400/20 text-teal-300 border border-teal-400/40"
+                      : "bg-white/5 text-slate-400 border border-white/10 hover:text-white"
+                  }`}
+                >
+                  All Types
+                </button>
+                {WG_GROUPS.map(({ label, prefix, emoji }) => (
+                  <button
+                    key={prefix}
+                    onClick={() => { setWgGroup(prefix); setWgVariant("All"); }}
+                    className={`rounded-full px-3 py-1 text-xs font-medium transition-all cursor-pointer flex items-center gap-1.5 ${
+                      wgGroup === prefix
+                        ? "bg-teal-400/20 text-teal-300 border border-teal-400/40"
+                        : "bg-white/5 text-slate-400 border border-white/10 hover:text-white"
+                    }`}
+                  >
+                    <span>{emoji}</span>{label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Tier 2: variants (shown only when a group with variants is active) */}
+              {activeWgVariants.length > 0 && (
+                <div className="flex items-center gap-1.5 flex-wrap pl-10">
+                  <button
+                    onClick={() => setWgVariant("All")}
+                    className={`rounded-full px-2.5 py-0.5 text-[11px] transition-all cursor-pointer ${
+                      wgVariant === "All"
+                        ? "bg-teal-400/15 text-teal-300 border border-teal-400/30"
+                        : "bg-white/5 text-slate-500 border border-white/8 hover:text-slate-300"
+                    }`}
+                  >
+                    All Colors
+                  </button>
+                  {activeWgVariants.map((v) => (
+                    <button
+                      key={v}
+                      onClick={() => setWgVariant(v)}
+                      className={`rounded-full px-2.5 py-0.5 text-[11px] transition-all cursor-pointer ${
+                        wgVariant === v
+                          ? "bg-teal-400/15 text-teal-300 border border-teal-400/30"
+                          : "bg-white/5 text-slate-500 border border-white/8 hover:text-slate-300"
+                      }`}
+                    >
+                      {v}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Aquarium plants: genus sub-category row */}
+          {(category === "All" || category === "Plants") && (
             <div className="mt-2 flex items-center gap-1.5 flex-wrap">
-              <span className="text-xs text-slate-600 mr-1">
-                {category === "Water Garden" ? "Type:" : "Genus:"}
-              </span>
+              <span className="text-xs text-slate-600 mr-1">Genus:</span>
               <button
                 onClick={() => setSubCategory("All")}
                 className={`rounded-full px-2.5 py-0.5 text-xs transition-all cursor-pointer ${
@@ -172,9 +281,9 @@ export default function ShopPage() {
                     : "bg-white/5 text-slate-500 border border-white/10 hover:text-white"
                 }`}
               >
-                {category === "Water Garden" ? "All Types" : "All Genera"}
+                All Genera
               </button>
-              {activeSubCategories.map((sub) => (
+              {subCategories.map((sub) => (
                 <button
                   key={sub}
                   onClick={() => setSubCategory(sub)}

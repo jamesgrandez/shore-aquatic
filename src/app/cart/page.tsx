@@ -2,15 +2,18 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Trash2, Plus, Minus, ShoppingBag } from "lucide-react";
+import { Trash2, Plus, Minus, ShoppingBag, Lock } from "lucide-react";
 import Link from "next/link";
 import { CartUtils, CartItem } from "@/lib/cart";
+import { createShopifyCheckout } from "@/lib/shopifyCart";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
 import Footer from "@/components/Footer";
 
 export default function CartPage() {
   const [items, setItems] = useState<CartItem[]>([]);
   const [mounted, setMounted] = useState(false);
+  const [checkoutState, setCheckoutState] = useState<"idle" | "loading" | "error">("idle");
+  const [checkoutError, setCheckoutError] = useState("");
 
   useEffect(() => {
     setMounted(true);
@@ -28,6 +31,20 @@ export default function CartPage() {
   const removeItem = (id: string) => {
     CartUtils.remove(id);
     setItems(CartUtils.get());
+  };
+
+  const handleCheckout = async () => {
+    setCheckoutState("loading");
+    setCheckoutError("");
+    try {
+      const checkoutUrl = await createShopifyCheckout(
+        items.map((i) => ({ productId: i.id, quantity: i.quantity }))
+      );
+      window.location.href = checkoutUrl;
+    } catch (err: any) {
+      setCheckoutState("error");
+      setCheckoutError(err.message ?? "Something went wrong. Please try again.");
+    }
   };
 
   if (!mounted) return null;
@@ -182,17 +199,38 @@ export default function CartPage() {
                   </div>
                 </div>
 
-                <Link
-                  href="/checkout"
-                  className="mt-6 block w-full rounded-full bg-coral py-3.5 text-center text-sm font-bold text-white shadow-lg shadow-coral/20 hover:bg-orange-500 transition-all cursor-pointer"
+                <button
+                  onClick={handleCheckout}
+                  disabled={checkoutState === "loading"}
+                  className="mt-6 flex items-center justify-center gap-2 w-full rounded-full bg-coral py-3.5 text-center text-sm font-bold text-white shadow-lg shadow-coral/20 hover:bg-orange-500 transition-all cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  Proceed to Checkout
-                </Link>
+                  {checkoutState === "loading" ? (
+                    <>
+                      <motion.span
+                        animate={{ rotate: 360 }}
+                        transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
+                        className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full"
+                      />
+                      Preparing checkout…
+                    </>
+                  ) : (
+                    <>
+                      <Lock size={14} />
+                      Proceed to Checkout
+                    </>
+                  )}
+                </button>
 
-                <p className="mt-4 text-[11px] text-slate-500 leading-relaxed text-center">
-                  Your card will NOT be charged at checkout. Shore Aquatic will
-                  review live availability and charge only upon approval.
-                </p>
+                {checkoutError && (
+                  <p className="mt-3 text-xs text-red-400 text-center">{checkoutError}</p>
+                )}
+
+                <div className="mt-4 flex items-center justify-center gap-2">
+                  <Lock size={10} className="text-slate-600" />
+                  <p className="text-[11px] text-slate-500">
+                    Secure checkout powered by Shopify · Shop Pay accepted
+                  </p>
+                </div>
               </div>
             </div>
           </div>

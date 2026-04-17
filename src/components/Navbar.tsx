@@ -55,11 +55,11 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="Shore Aquatic"
-              width={120}
-              height={75}
-              className="h-10 w-auto transition-opacity group-hover:opacity-80"
+              width={160}
+              height={101}
+              className="h-11 w-auto transition-opacity group-hover:opacity-90"
               priority
             />
           </Link>

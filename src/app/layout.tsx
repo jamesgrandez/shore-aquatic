@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   },
   icons: {
-    icon: "/logo.jpg",
-    shortcut: "/logo.jpg",
-    apple: "/logo.jpg",
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
   openGraph: {
     type: "website",
@@ -33,13 +33,13 @@ export const metadata: Metadata = {
     siteName: "Shore Aquatic",
     title: "Shore Aquatic | Premium Aquatic Plants & Livestock",
     description: "South Florida's premier source for hand-curated freshwater aquatic plants, water garden lilies, and live livestock. 1,043 species. Free 2-day shipping over $100.",
-    images: [{ url: "/logo.jpg", width: 283, height: 178, alt: "Shore Aquatic – Get Planted" }],
+    images: [{ url: "/logo.png", width: 283, height: 178, alt: "Shore Aquatic – Get Planted" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Shore Aquatic | Premium Aquatic Plants & Livestock",
     description: "South Florida's premier aquatic plant source. 1,043 species. Free 2-day shipping over $100.",
-    images: ["/logo.jpg"],
+    images: ["/logo.png"],
   },
 };
 
@@ -50,8 +50,8 @@ const jsonLd = {
   "name": "Shore Aquatic",
   "description": "South Florida's premier source for hand-curated freshwater aquatic plants, water garden lilies, and aquarium livestock.",
   "url": "https://shoreaquatic.com",
-  "logo": "https://shoreaquatic.com/logo.jpg",
-  "image": "https://shoreaquatic.com/logo.jpg",
+  "logo": "https://shoreaquatic.com/logo.png",
+  "image": "https://shoreaquatic.com/logo.png",
   "telephone": "+1-954-253-9275",
   "address": {
     "@type": "PostalAddress",

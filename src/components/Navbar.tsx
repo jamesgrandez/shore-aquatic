@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingCart, Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { CartUtils } from "@/lib/cart";
 
@@ -52,51 +53,15 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              className="transition-transform group-hover:scale-110"
-            >
-              <defs>
-                <linearGradient
-                  id="logoGrad"
-                  x1="0"
-                  y1="0"
-                  x2="32"
-                  y2="32"
-                >
-                  <stop stopColor="#67E8F9" />
-                  <stop offset="1" stopColor="#06B6D4" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M4 18 C8 12, 14 12, 16 16 C18 20, 24 20, 28 14"
-                stroke="url(#logoGrad)"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                fill="none"
-              />
-              <path
-                d="M4 22 C8 16, 14 16, 16 20 C18 24, 24 24, 28 18"
-                stroke="url(#logoGrad)"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                fill="none"
-                opacity="0.5"
-              />
-              <circle cx="26" cy="10" r="3" fill="url(#logoGrad)" opacity="0.8" />
-            </svg>
-            <div className="flex items-baseline gap-1">
-              <span className="text-lg font-bold text-white tracking-tight">
-                Shore
-              </span>
-              <span className="text-lg font-light text-aqua-400 tracking-tight">
-                Aquatic
-              </span>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/logo.jpg"
+              alt="Shore Aquatic"
+              width={120}
+              height={75}
+              className="h-10 w-auto transition-opacity group-hover:opacity-80"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}

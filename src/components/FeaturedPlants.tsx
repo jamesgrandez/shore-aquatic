@@ -113,7 +113,8 @@ export default function FeaturedPlants() {
                   width={600}
                   height={450}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
+                  loading={i === 0 ? "eager" : "lazy"}
+                  priority={i === 0}
                 />
                 {/* Availability badge */}
                 <div className="absolute top-3 right-3">

@@ -146,6 +146,7 @@ export default function Hero() {
                 height={400}
                 className="w-full h-full object-cover"
                 loading="eager"
+                priority={i === 0}
               />
             </div>
           </motion.div>

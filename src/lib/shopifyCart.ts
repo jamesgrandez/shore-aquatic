@@ -29,29 +29,29 @@ async function storefrontFetch(query: string, variables: Record<string, unknown>
   return json.data;
 }
 
-// ── Variant lookup by SKU ─────────────────────────────────────────────────────
+// ── Variant lookup by handle ──────────────────────────────────────────────────
 
-/** Returns the Shopify GID for a variant whose SKU matches our product ID. */
-async function getVariantIdBySku(sku: string): Promise<string | null> {
+/**
+ * Returns the Shopify GID for the first variant of a product.
+ * Our product IDs map directly to Shopify handles (underscores → hyphens, lowercase).
+ * e.g. "wg-hccom" → handle "wg-hccom", "plant-bamb" → handle "plant-bamb"
+ */
+async function getVariantIdByHandle(productId: string): Promise<string | null> {
+  const handle = productId.replace(/_/g, "-").toLowerCase();
   const data = await storefrontFetch(`
-    query GetVariantBySku($query: String!) {
-      products(first: 1, query: $query) {
-        edges {
-          node {
-            variants(first: 5) {
-              edges {
-                node { id sku availableForSale }
-              }
-            }
+    query GetVariantByHandle($handle: String!) {
+      productByHandle(handle: $handle) {
+        variants(first: 1) {
+          edges {
+            node { id sku availableForSale }
           }
         }
       }
     }
-  `, { query: `sku:${sku}` });
+  `, { handle });
 
-  const variants = data?.products?.edges?.[0]?.node?.variants?.edges ?? [];
-  const match = variants.find((e: any) => e.node.sku === sku);
-  return match?.node?.id ?? null;
+  const variant = data?.productByHandle?.variants?.edges?.[0]?.node;
+  return variant?.id ?? null;
 }
 
 // ── Cart mutations ────────────────────────────────────────────────────────────
@@ -96,7 +96,7 @@ export async function createShopifyCheckout(
   // Look up Shopify variant IDs for all items in parallel
   const resolved = await Promise.all(
     items.map(async (item) => {
-      const variantId = await getVariantIdBySku(item.productId);
+      const variantId = await getVariantIdByHandle(item.productId);
       return { variantId, quantity: item.quantity, productId: item.productId };
     })
   );
@@ -115,7 +115,16 @@ export async function createShopifyCheckout(
   }));
 
   const cart = await cartCreate(lines);
-  return cart.checkoutUrl as string;
+
+  // Shopify may return a checkoutUrl using the custom domain (www.shoreaquatic.com)
+  // which now points to our Next.js site rather than Shopify checkout.
+  // Force the URL to use the .myshopify.com domain so checkout works correctly.
+  const checkoutUrl = (cart.checkoutUrl as string).replace(
+    /^https?:\/\/[^/]+/,
+    `https://${DOMAIN}`
+  );
+
+  return checkoutUrl;
 }
 
 /** Direct checkout URL without Storefront API — works as a fallback using cart permalinks. */

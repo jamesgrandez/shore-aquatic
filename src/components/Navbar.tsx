@@ -51,7 +51,7 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <Image
@@ -59,7 +59,7 @@ export default function Navbar() {
               alt="Shore Aquatic"
               width={160}
               height={101}
-              className="h-11 w-auto transition-opacity group-hover:opacity-90"
+              className="h-16 w-auto transition-opacity group-hover:opacity-90"
               priority
             />
           </Link>

@@ -27,14 +27,26 @@ export default function ContactPage() {
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-aqua-400">
                   Phone
                 </h3>
-                <p className="mt-2 text-sm text-slate-400">(954) 555-0123</p>
+                <p className="mt-2 text-sm text-slate-400">
+                  <a
+                    href="tel:+19542539275"
+                    className="hover:text-aqua-400 transition-colors"
+                  >
+                    (954) 253-9275
+                  </a>
+                </p>
               </div>
               <div>
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-aqua-400">
                   Email
                 </h3>
                 <p className="mt-2 text-sm text-slate-400">
-                  hello@shoreaquatic.com
+                  <a
+                    href="mailto:shoreaquatic@gmail.com"
+                    className="hover:text-aqua-400 transition-colors break-all"
+                  >
+                    shoreaquatic@gmail.com
+                  </a>
                 </p>
               </div>
               <div>

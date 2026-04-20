@@ -56,6 +56,7 @@ const jsonLd = {
   "logo": "https://shoreaquatic.com/logo.png",
   "image": "https://shoreaquatic.com/logo.png",
   "telephone": "+1-954-253-9275",
+  "email": "shoreaquatic@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Fort Lauderdale",
@@ -80,77 +81,6 @@ const jsonLd = {
   "sameAs": []
 };
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do you ship live aquatic plants?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! We ship live aquatic plants nationwide. All plants are carefully packed in insulated, water-retaining packaging to ensure they arrive healthy. We offer free 2-day shipping on orders over $100."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is your live arrival guarantee?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Shore Aquatic guarantees live arrival on all plant orders. If your plants arrive in poor condition, contact us within 24 hours of delivery with a photo and we will make it right with a replacement or store credit."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do you pack aquatic plants for shipping?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Plants are packed in sealed, moisture-retaining bags with oxygen, then placed in insulated boxes with heat or cold packs as needed depending on season and destination. Orders ship Monday–Wednesday to avoid weekend delays."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What types of aquatic plants do you sell?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We carry over 1,043 species including freshwater aquarium plants (bunch plants, Echinodorus, Anubias, Cryptocoryne, Vallisneria), water garden plants (hardy and tropical water lilies, lotus, marginal plants), and specialty tissue culture varieties. All plants are sourced from Florida Aquatic Nurseries."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you sell water lilies and pond plants?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! We have an extensive water garden collection including hardy water lilies, tropical water lilies (day and night blooming), lotus in multiple colors, and marginal pond plants. Many are available year-round with seasonal varieties available for backorder."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where are you located and where do you ship from?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Shore Aquatic is based in Fort Lauderdale, Florida. We source our plants directly from Florida Aquatic Nurseries and ship nationwide from South Florida. Our warm climate allows us to grow and maintain a wide variety of tropical and subtropical aquatic species."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How often is availability updated?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our inventory availability is updated weekly based on current stock from our nursery supplier. Products marked Available are in stock, Backorder items have an expected arrival date, and Out of Season items will return at the next growing season."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What payment methods do you accept?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We accept all major credit cards, Shop Pay, Apple Pay, and Google Pay through our secure Shopify checkout."
-      }
-    }
-  ]
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -165,10 +95,6 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
       <body className="min-h-screen bg-ocean-950 text-slate-200 font-sans">

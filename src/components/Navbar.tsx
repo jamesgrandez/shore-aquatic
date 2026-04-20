@@ -1,5 +1,5 @@
 "use client";
-
+// v2 - Shore Aquatic logo navbar
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingCart, Menu, X } from "lucide-react";

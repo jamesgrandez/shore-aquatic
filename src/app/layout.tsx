@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Shore Aquatic", url: "https://shoreaquatic.com" }],
   creator: "Shore Aquatic",
   publisher: "Shore Aquatic",
+  alternates: {
+    canonical: "https://shoreaquatic.com",
+  },
   robots: {
     index: true,
     follow: true,

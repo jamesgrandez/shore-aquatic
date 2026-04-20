@@ -9,6 +9,17 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      // www → non-www canonical redirect
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.shoreaquatic.com" }],
+        destination: "https://shoreaquatic.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

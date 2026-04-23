@@ -2,6 +2,8 @@ import Link from "next/link";
 
 const shopLinks = [
   { href: "/shop?category=Plants", label: "Plants" },
+  { href: "/shop?category=Water Garden", label: "Water Garden" },
+  { href: "/shop?category=Saltwater", label: "Saltwater" },
   { href: "/shop?category=Livestock", label: "Livestock" },
   { href: "/shop?category=Dry Goods", label: "Dry Goods" },
 ];

@@ -1,10 +1,11 @@
 import { products } from "@/lib/mockData";
 import { waterGardenProducts } from "@/lib/waterGardenData";
+import { saltwaterProducts } from "@/lib/saltwaterData";
 import { getProductImage } from "@/lib/imageMap";
 import type { Metadata } from "next";
 import ProductDetailClient from "./ProductDetailClient";
 
-const allProducts = [...products, ...waterGardenProducts];
+const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts];
 
 export async function generateMetadata(
   { params }: { params: Promise<{ id: string }> }

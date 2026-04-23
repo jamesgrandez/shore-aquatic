@@ -1,12 +1,13 @@
 import { MetadataRoute } from "next";
 import { products } from "@/lib/mockData";
 import { waterGardenProducts } from "@/lib/waterGardenData";
+import { saltwaterProducts } from "@/lib/saltwaterData";
 import { plantDetails } from "@/lib/plantDetails";
 
 const BASE = "https://shoreaquatic.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const allProducts = [...products, ...waterGardenProducts];
+  const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts];
 
   const productUrls = allProducts
     .filter((p) => p.availability !== "OUT OF SEASON")

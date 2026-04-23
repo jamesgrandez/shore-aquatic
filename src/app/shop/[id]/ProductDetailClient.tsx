@@ -6,12 +6,13 @@ import { motion } from "framer-motion";
 import { ShoppingCart, ArrowLeft, Leaf, Sun, Droplets, MapPin, FlaskConical, Move, Zap, CheckCircle2 } from "lucide-react";
 import { products } from "@/lib/mockData";
 import { waterGardenProducts } from "@/lib/waterGardenData";
+import { saltwaterProducts } from "@/lib/saltwaterData";
 import { getProductImage } from "@/lib/imageMap";
 import { findPlantDetail } from "@/lib/plantDetails";
 import { CartUtils } from "@/lib/cart";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
 
-const allProducts = [...products, ...waterGardenProducts];
+const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts];
 
 const CARE_ROWS = [
   { key: "commonName",   label: "Common Name",        icon: Leaf },

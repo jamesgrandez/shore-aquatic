@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, ChevronLeft, ChevronRight, SlidersHorizontal } from "lucide-react";
 import { products, subCategories } from "@/lib/mockData";
 import { waterGardenProducts } from "@/lib/waterGardenData";
+import { saltwaterProducts } from "@/lib/saltwaterData";
 
 // Grouped Water Garden filters — group label maps to the subCategory prefix it matches
 const WG_GROUPS = [
@@ -22,12 +23,15 @@ const WG_VARIANTS: Record<string, string[]> = {
   "Lotus":         ["Pink", "Red", "Versicolor", "White", "Yellow", "Potted"],
   "Marginal":      ["Hardy", "Tropical"],
 };
+
+// Saltwater sub-category chips — extensible as we add Corals, Invertebrates, Marine Plants
+const SW_SUBCATEGORIES = ["Macroalgae"] as const;
 import ProductCard from "@/components/ProductCard";
 import Footer from "@/components/Footer";
 
-const allProducts = [...products, ...waterGardenProducts];
+const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts];
 
-const CATEGORIES = ["All", "Plants", "Water Garden", "Livestock", "Dry Goods"] as const;
+const CATEGORIES = ["All", "Plants", "Water Garden", "Saltwater", "Livestock", "Dry Goods"] as const;
 const WATER_TYPES = ["All", "Freshwater", "Saltwater"] as const;
 const AVAILABILITIES = ["All", "Available Now", "Backorder", "Out of Season"] as const;
 const PAGE_SIZE = 24;
@@ -96,6 +100,9 @@ export default function ShopPage() {
 
       // Aquarium plant sub-category filter
       if (category === "Plants" && subCategory !== "All" && p.subCategory !== subCategory) return false;
+
+      // Saltwater sub-category filter
+      if (category === "Saltwater" && subCategory !== "All" && p.subCategory !== subCategory) return false;
 
       if (waterType !== "All" && p.waterType !== waterType && p.waterType !== "Both") return false;
       if (availability !== "All" && p.availability !== availabilityMap[availability]) return false;
@@ -269,6 +276,36 @@ export default function ShopPage() {
             </div>
           )}
 
+          {/* Saltwater: sub-category row (Macroalgae / Corals / Marine Plants as they grow) */}
+          {category === "Saltwater" && (
+            <div className="mt-2 flex items-center gap-1.5 flex-wrap">
+              <span className="text-xs text-slate-600 mr-1">Type:</span>
+              <button
+                onClick={() => setSubCategory("All")}
+                className={`rounded-full px-2.5 py-0.5 text-xs transition-all cursor-pointer ${
+                  subCategory === "All"
+                    ? "bg-rose-400/20 text-rose-300 border border-rose-400/40"
+                    : "bg-white/5 text-slate-500 border border-white/10 hover:text-white"
+                }`}
+              >
+                All Saltwater
+              </button>
+              {SW_SUBCATEGORIES.map((sub) => (
+                <button
+                  key={sub}
+                  onClick={() => setSubCategory(sub)}
+                  className={`rounded-full px-2.5 py-0.5 text-xs transition-all cursor-pointer ${
+                    subCategory === sub
+                      ? "bg-rose-400/20 text-rose-300 border border-rose-400/40"
+                      : "bg-white/5 text-slate-500 border border-white/10 hover:text-white"
+                  }`}
+                >
+                  {sub}
+                </button>
+              ))}
+            </div>
+          )}
+
           {/* Aquarium plants: genus sub-category row */}
           {(category === "All" || category === "Plants") && (
             <div className="mt-2 flex items-center gap-1.5 flex-wrap">
@@ -308,7 +345,7 @@ export default function ShopPage() {
           <span className="text-slate-300 font-medium">{(page - 1) * PAGE_SIZE + 1}–{Math.min(page * PAGE_SIZE, filtered.length)}</span>
           {" "}of{" "}
           <span className="text-slate-300 font-medium">{filtered.length}</span> products
-          {filtered.length !== products.length && ` (${products.length} total)`}
+          {filtered.length !== allProducts.length && ` (${allProducts.length} total)`}
         </p>
         {hasActiveFilters && (
           <button

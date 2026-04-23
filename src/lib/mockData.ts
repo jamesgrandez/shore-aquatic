@@ -3,7 +3,7 @@ export interface Product {
   name: string;
   scientificName?: string;
   description: string;
-  category: "Plants" | "Livestock" | "Dry Goods" | "Water Garden";
+  category: "Plants" | "Livestock" | "Dry Goods" | "Water Garden" | "Saltwater";
   subCategory: string;
   waterType: "Freshwater" | "Saltwater" | "Both";
   availability: "AVAILABLE" | "BACKORDER" | "OUT OF SEASON";

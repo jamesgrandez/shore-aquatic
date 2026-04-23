@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { products } from "@/lib/mockData";
 import { waterGardenProducts } from "@/lib/waterGardenData";
+import { saltwaterProducts } from "@/lib/saltwaterData";
 
 const categories = [
   {
@@ -79,6 +80,47 @@ const categories = [
     ),
   },
   {
+    name: "Saltwater",
+    subtitle: "Macroalgae, Corals & Marine Plants",
+    gradient: "from-rose-950 via-red-900 to-orange-900",
+    link: "/shop?category=Saltwater",
+    icon: (
+      <svg viewBox="0 0 48 48" className="w-12 h-12" aria-hidden>
+        {/* Coral/macroalgae fronds */}
+        <path
+          d="M12 42 C12 42, 10 28, 14 22 C18 16, 14 10, 18 6"
+          stroke="#FB7185"
+          strokeWidth="2.5"
+          fill="none"
+          opacity="0.8"
+        />
+        <path
+          d="M24 42 C24 42, 22 26, 26 18 C30 10, 24 6, 28 4"
+          stroke="#F43F5E"
+          strokeWidth="2.5"
+          fill="none"
+          opacity="0.7"
+        />
+        <path
+          d="M36 42 C36 42, 34 30, 38 24 C42 18, 36 14, 40 10"
+          stroke="#FDA4AF"
+          strokeWidth="2.5"
+          fill="none"
+          opacity="0.8"
+        />
+        {/* Pom-pom dots along fronds */}
+        <circle cx="14" cy="22" r="2.2" fill="#FB7185" opacity="0.9" />
+        <circle cx="26" cy="18" r="2.4" fill="#F43F5E" opacity="0.9" />
+        <circle cx="38" cy="24" r="2.2" fill="#FDA4AF" opacity="0.9" />
+        <circle cx="18" cy="6" r="1.8" fill="#FB7185" opacity="0.8" />
+        <circle cx="28" cy="4" r="1.8" fill="#F43F5E" opacity="0.8" />
+        <circle cx="40" cy="10" r="1.8" fill="#FDA4AF" opacity="0.8" />
+        {/* Substrate */}
+        <ellipse cx="24" cy="42" rx="20" ry="2" fill="#9CA3AF" opacity="0.4" />
+      </svg>
+    ),
+  },
+  {
     name: "Dry Goods",
     subtitle: "Equipment, Filtration & Supplements",
     gradient: "from-slate-900 via-zinc-900 to-slate-800",
@@ -108,11 +150,14 @@ export default function CategoryCards() {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {categories.map((cat, i) => {
-            const count = cat.name === "Water Garden"
-              ? waterGardenProducts.length
-              : products.filter((p) => p.category === cat.name).length;
+            const count =
+              cat.name === "Water Garden"
+                ? waterGardenProducts.length
+                : cat.name === "Saltwater"
+                  ? saltwaterProducts.length
+                  : products.filter((p) => p.category === cat.name).length;
 
             return (
               <motion.div

@@ -10,6 +10,7 @@ const shopLinks = [
 
 const infoLinks = [
   { href: "/about", label: "About" },
+  { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
   { href: "/care-guides", label: "Care Guides" },
   { href: "/contact", label: "Contact" },

@@ -11,6 +11,17 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "aquarium-plants-melting",
+    title: "Why Are My Aquarium Plants Melting? (And How to Save Them)",
+    description:
+      "Science-backed guide to plant melt — 5 types diagnosed, 19-species likelihood table, and a 6-step recovery protocol. Learn why melting is normal and when it's not.",
+    category: "Troubleshooting",
+    readTime: 14,
+    date: "April 23, 2026",
+    gradient: "from-cyan-950 to-teal-950",
+    icon: "🪴",
+  },
+  {
     slug: "aquarium-plants-turning-brown-yellow-black",
     title: "Why Are My Aquarium Plants Turning Brown, Yellow, or Black?",
     description:

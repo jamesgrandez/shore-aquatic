@@ -11,6 +11,17 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "aquarium-plants-without-substrate",
+    title: "Can Aquarium Plants Grow in Gravel or Sand?",
+    description:
+      "Complete guide — which plants thrive in gravel, sand, or bare-bottom tanks. Root tabs, epiphyte attachment, the Walstad method, and a 29-species compatibility table.",
+    category: "Setup Guide",
+    readTime: 16,
+    date: "April 25, 2026",
+    gradient: "from-amber-950 to-stone-900",
+    icon: "🪨",
+  },
+  {
     slug: "aquarium-plants-melting",
     title: "Why Are My Aquarium Plants Melting? (And How to Save Them)",
     description:

@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/care-guides`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/faq`,             lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/blog`,            lastModified: new Date(), changeFrequency: "weekly",  priority: 0.8 },
+    { url: `${BASE}/blog/aquarium-plants-without-substrate`,          lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/blog/aquarium-plants-melting`,                    lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/blog/aquarium-plants-turning-brown-yellow-black`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/about`,           lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },

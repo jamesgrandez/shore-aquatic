@@ -11,6 +11,17 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "best-aquarium-plants-for-beginners",
+    title: "15 Best Aquarium Plants for Beginners (No CO₂ Required)",
+    description:
+      "Every plant ranked by a 5-dimension score — with the #1 failure mode, pro tip, and water parameters per species. Includes scenario picks for nano tanks, shrimp, algae problems, and coldwater setups.",
+    category: "Buyer's Guide",
+    readTime: 18,
+    date: "April 26, 2026",
+    gradient: "from-emerald-950 to-cyan-950",
+    icon: "🏆",
+  },
+  {
     slug: "aquarium-plants-without-substrate",
     title: "Can Aquarium Plants Grow in Gravel or Sand?",
     description:

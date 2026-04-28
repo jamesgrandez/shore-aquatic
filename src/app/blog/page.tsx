@@ -11,6 +11,17 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "best-plants-for-betta-fish",
+    title: "Best Aquarium Plants for Betta Fish (15 That Actually Help)",
+    description:
+      "Plants ranked for Betta-specific benefits — leaf hammocks, bubble nests, fin safety, and blackwater setups. Tank size guides for 2.5, 5, 10, and 20-gallon tanks.",
+    category: "Buyer's Guide",
+    readTime: 20,
+    date: "April 26, 2026",
+    gradient: "from-rose-950 to-purple-950",
+    icon: "🐠",
+  },
+  {
     slug: "best-aquarium-plants-for-beginners",
     title: "15 Best Aquarium Plants for Beginners (No CO₂ Required)",
     description:

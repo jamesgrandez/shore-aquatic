@@ -1474,22 +1474,6 @@ Acrostichum danaefolium, also know as Florida's giant leather fern, is an outsta
     placement: "",
     availableAs: "2” and 4” pots",
   },
-  "aeschynomene-fluitans": {
-    slug: "aeschynomene-fluitans",
-    description: `Scientific Name:Aeschynomene fluitans
-
-The fern like leaves on the smaller sensitive plant will gracefully close when touched. This plant is perfect for moist to wet pond edges, and will even grow free floating. It produces pretty yellow pea like flowers in mid summer, and has brick red stems. The plant grows up to 10 inches in height and spreads.`,
-    commonName: "Large Leaf Sensitive Plant",
-    family: "",
-    nativeTo: "South America",
-    lighting: "",
-    requirements: "Surface",
-    growthForm: "",
-    growthRate: "",
-    trueAquatic: "",
-    placement: "",
-    availableAs: "Bare root",
-  },
   "alocasia-amazonica-hilo-beauty": {
     slug: "alocasia-amazonica-hilo-beauty",
     description: `Alocasia amazonica'Hilo Beauty'
@@ -2108,22 +2092,6 @@ Thin tubular stems with reddish-brown heads that form drooping clusters at top o
     placement: "",
     availableAs: "Tuber, bare root",
   },
-  "neptunia-aquatica": {
-    slug: "neptunia-aquatica",
-    description: `Scientific Name:Neptunia aquatica
-
-The sensitive plant's fern like foliage contracts at the slightest touch. Its flowers are yellow and measure 1 inch wide. The plant grows 3-5 inches tall.`,
-    commonName: "Sensitive plant",
-    family: "",
-    nativeTo: "South America",
-    lighting: "",
-    requirements: "Floating",
-    growthForm: "",
-    growthRate: "",
-    trueAquatic: "",
-    placement: "",
-    availableAs: "Bare Root",
-  },
   "nymphoides-hydrocharioides-1": {
     slug: "nymphoides-hydrocharioides-1",
     description: `Scientific Name:Nymphoides hydrocharioides
@@ -2203,38 +2171,6 @@ Abundant lavender stalks of flowers`,
     trueAquatic: "",
     placement: "",
     availableAs: "2” and 4” Pot",
-  },
-  "pistia-stratiotes": {
-    slug: "pistia-stratiotes",
-    description: `Scientific Name:Pistia stratiotes
-
-Water lettuce really does resemble a floating head of lettuce or cabbage. The lime green leaves are spongy, crinkly and velvet in texture. When mature, each leaf may grow up to 12 inches. One individual plant can grow up to 24 inches in diameter, though water lettuce has a running spread.`,
-    commonName: "Water lettuce",
-    family: "",
-    nativeTo: "Pan-tropical",
-    lighting: "",
-    requirements: "Floating",
-    growthForm: "",
-    growthRate: "",
-    trueAquatic: "",
-    placement: "",
-    availableAs: "Bare root",
-  },
-  "pistia-stratiotes-variegated": {
-    slug: "pistia-stratiotes-variegated",
-    description: `Scientific Name:Pistia stratiotes'Rosette'
-
-Variegated water lettuce is a brand new find in water gardening! This is the latest in a series of variegated plants to appear for water gardeners. Water lettuce is already a very unique and popular plant in the water garden and this variegated form is sure to liven up a garden even more. The variegation is creamy yellow against the deep green leaves making this a very attractive plant. We are sure this plant will be a standard floating plant for years to come. The variegation is more intense in low nutrient situations.`,
-    commonName: "Variegated water lettuce",
-    family: "",
-    nativeTo: "Cultivar",
-    lighting: "",
-    requirements: "Floating",
-    growthForm: "",
-    growthRate: "",
-    trueAquatic: "",
-    placement: "",
-    availableAs: "Bare root",
   },
   "pontederia-cordata": {
     slug: "pontederia-cordata",

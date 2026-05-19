@@ -4,6 +4,34 @@ import type { Product } from "./mockData";
 
 export const saltwaterProducts: Product[] = [
   {
+    id: "live-marine-rotifers",
+    name: "Live Marine Rotifers",
+    description:
+      "Live, actively reproducing marine rotifer culture at 500–1,000 per mL. First food for clownfish and other marine larvae, plus corals, seahorses, pipefish, mandarins, and filter-feeding inverts. Ships in growing water — feed straight away or start your own culture. Available 1/2 gallon, 1 gallon, 2 gallon. Free local pickup or overnight/2-day shipping (cost baked into price).",
+    category: "Saltwater",
+    subCategory: "Live Food",
+    waterType: "Saltwater",
+    availability: "AVAILABLE",
+    price: 75,
+    size: "1/2 gallon – 2 gallon",
+    wholesalePrice: 0,
+    imageGradient: "from-cyan-900 to-teal-900",
+    tags: [
+      "rotifers",
+      "live food",
+      "marine",
+      "saltwater",
+      "reef",
+      "fry food",
+      "larval food",
+      "clownfish",
+      "coral food",
+      "seahorse",
+      "live culture",
+      "zooplankton",
+    ],
+  },
+  {
     id: "sw-chaeto",
     name: "Chaetomorpha Macroalgae",
     scientificName: "Chaetomorpha linum",

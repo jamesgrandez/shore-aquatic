@@ -846,6 +846,11 @@ export const fanImageMap: Record<string, string> = {
   "wg-tystsk": "https://images.squarespace-cdn.com/content/v1/5a6b9222d7bdce6c9dab4541/1559939573155-WQTWB8PBFIZR15SF5QNM/Nymphaea%2B%2527Stan%2BSkinger%2527%2B3%2B%25281%2Bof%2B1%2529.jpg",
 };
 
+// Manual overrides for non-FAN products (local images, custom CDN URLs, etc.)
+const localImageMap: Record<string, string> = {
+  "live-marine-rotifers": "/images/rotifers/microscope-1.jpg",
+};
+
 export function getProductImage(productId: string): string | null {
-  return fanImageMap[productId] ?? null;
+  return localImageMap[productId] ?? fanImageMap[productId] ?? null;
 }

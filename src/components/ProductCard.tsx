@@ -38,6 +38,7 @@ function CategoryIcon({ category }: { category: string }) {
 export default function ProductCard({ product }: { product: Product }) {
   const isOutOfSeason = product.availability === "OUT OF SEASON";
   const isBackorder = product.availability === "BACKORDER";
+  const requiresConfig = product.id === "live-marine-rotifers";
   const imageUrl = getProductImage(product.id);
 
   const handleAdd = () => {
@@ -57,7 +58,7 @@ export default function ProductCard({ product }: { product: Product }) {
         <div className={`relative h-44 bg-gradient-to-br ${product.imageGradient} flex items-center justify-center overflow-hidden`}>
           {imageUrl ? (
             <Image
-              src={`${imageUrl}?format=500w`}
+              src={imageUrl.includes("squarespace") ? `${imageUrl}?format=500w` : imageUrl}
               alt={product.name}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -115,25 +116,34 @@ export default function ProductCard({ product }: { product: Product }) {
         <div className="flex items-center justify-between gap-2">
           <div className="flex flex-col gap-1.5">
             <span className="text-xl font-bold text-aqua-400">
-              ${product.price.toFixed(2)}
+              {requiresConfig ? `From $${product.price}` : `$${product.price.toFixed(2)}`}
             </span>
             <AvailabilityBadge status={product.availability} />
           </div>
 
-          <button
-            onClick={handleAdd}
-            disabled={isOutOfSeason}
-            className={`flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wide transition-all cursor-pointer disabled:cursor-not-allowed ${
-              isOutOfSeason
-                ? "bg-slate-700/50 text-slate-500"
-                : isBackorder
-                ? "bg-amber-500/20 text-amber-300 border border-amber-500/30 hover:bg-amber-500/30"
-                : "bg-coral text-white shadow-lg shadow-coral/20 hover:bg-orange-500 hover:shadow-coral/40"
-            }`}
-          >
-            <ShoppingCart size={14} />
-            {isOutOfSeason ? "Unavailable" : "Add to Cart"}
-          </button>
+          {requiresConfig ? (
+            <Link
+              href={`/shop/${product.id}`}
+              className="flex items-center gap-1.5 rounded-full bg-aqua-400 px-4 py-2 text-xs font-bold uppercase tracking-wide text-ocean-950 shadow-lg shadow-aqua-400/20 transition-all hover:bg-aqua-300"
+            >
+              Configure →
+            </Link>
+          ) : (
+            <button
+              onClick={handleAdd}
+              disabled={isOutOfSeason}
+              className={`flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wide transition-all cursor-pointer disabled:cursor-not-allowed ${
+                isOutOfSeason
+                  ? "bg-slate-700/50 text-slate-500"
+                  : isBackorder
+                  ? "bg-amber-500/20 text-amber-300 border border-amber-500/30 hover:bg-amber-500/30"
+                  : "bg-coral text-white shadow-lg shadow-coral/20 hover:bg-orange-500 hover:shadow-coral/40"
+              }`}
+            >
+              <ShoppingCart size={14} />
+              {isOutOfSeason ? "Unavailable" : "Add to Cart"}
+            </button>
+          )}
         </div>
       </div>
     </motion.div>

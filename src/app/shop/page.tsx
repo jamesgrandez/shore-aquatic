@@ -6,6 +6,7 @@ import { Search, X, ChevronLeft, ChevronRight, SlidersHorizontal } from "lucide-
 import { products, subCategories } from "@/lib/mockData";
 import { waterGardenProducts } from "@/lib/waterGardenData";
 import { saltwaterProducts } from "@/lib/saltwaterData";
+import { livestockProducts } from "@/lib/livestockData";
 
 // Grouped Water Garden filters — group label maps to the subCategory prefix it matches
 const WG_GROUPS = [
@@ -26,10 +27,13 @@ const WG_VARIANTS: Record<string, string[]> = {
 
 // Saltwater sub-category chips — extensible as we add Corals, Invertebrates, Marine Plants
 const SW_SUBCATEGORIES = ["Macroalgae", "Live Food"] as const;
+
+// Livestock sub-category chips — extensible as we add Shrimp, Fish, etc.
+const LS_SUBCATEGORIES = ["Snails"] as const;
 import ProductCard from "@/components/ProductCard";
 import Footer from "@/components/Footer";
 
-const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts];
+const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts];
 
 const CATEGORIES = ["All", "Plants", "Water Garden", "Saltwater", "Livestock", "Dry Goods"] as const;
 const WATER_TYPES = ["All", "Freshwater", "Saltwater"] as const;
@@ -103,6 +107,9 @@ export default function ShopPage() {
 
       // Saltwater sub-category filter
       if (category === "Saltwater" && subCategory !== "All" && p.subCategory !== subCategory) return false;
+
+      // Livestock sub-category filter
+      if (category === "Livestock" && subCategory !== "All" && p.subCategory !== subCategory) return false;
 
       if (waterType !== "All" && p.waterType !== waterType && p.waterType !== "Both") return false;
       if (availability !== "All" && p.availability !== availabilityMap[availability]) return false;
@@ -297,6 +304,36 @@ export default function ShopPage() {
                   className={`rounded-full px-2.5 py-0.5 text-xs transition-all cursor-pointer ${
                     subCategory === sub
                       ? "bg-rose-400/20 text-rose-300 border border-rose-400/40"
+                      : "bg-white/5 text-slate-500 border border-white/10 hover:text-white"
+                  }`}
+                >
+                  {sub}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Livestock: sub-category row (Snails / Shrimp / Fish as they grow) */}
+          {category === "Livestock" && (
+            <div className="mt-2 flex items-center gap-1.5 flex-wrap">
+              <span className="text-xs text-slate-600 mr-1">Type:</span>
+              <button
+                onClick={() => setSubCategory("All")}
+                className={`rounded-full px-2.5 py-0.5 text-xs transition-all cursor-pointer ${
+                  subCategory === "All"
+                    ? "bg-emerald-400/20 text-emerald-300 border border-emerald-400/40"
+                    : "bg-white/5 text-slate-500 border border-white/10 hover:text-white"
+                }`}
+              >
+                All Livestock
+              </button>
+              {LS_SUBCATEGORIES.map((sub) => (
+                <button
+                  key={sub}
+                  onClick={() => setSubCategory(sub)}
+                  className={`rounded-full px-2.5 py-0.5 text-xs transition-all cursor-pointer ${
+                    subCategory === sub
+                      ? "bg-emerald-400/20 text-emerald-300 border border-emerald-400/40"
                       : "bg-white/5 text-slate-500 border border-white/10 hover:text-white"
                   }`}
                 >

@@ -849,6 +849,14 @@ export const fanImageMap: Record<string, string> = {
 // Manual overrides for non-FAN products (local images, custom CDN URLs, etc.)
 const localImageMap: Record<string, string> = {
   "live-marine-rotifers": "/images/rotifers/microscope-1.jpg",
+  // Mystery snails — purple variants use specific photos; others use the assortment shot
+  "ls-snail-assorted-3":  "/images/snails/assorted-rainbow.jpg",
+  "ls-snail-assorted-10": "/images/snails/assorted-rainbow.jpg",
+  "ls-snail-gold-3":      "/images/snails/assorted-rainbow.jpg",
+  "ls-snail-black-3":     "/images/snails/assorted-rainbow.jpg",
+  "ls-snail-blue-3":      "/images/snails/assorted-rainbow.jpg",
+  "ls-snail-ivory-3":     "/images/snails/assorted-rainbow.jpg",
+  "ls-snail-purple-3":    "/images/snails/purple-pair.jpg",
 };
 
 export function getProductImage(productId: string): string | null {

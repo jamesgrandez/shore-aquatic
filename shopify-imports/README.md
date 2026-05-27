@@ -1,0 +1,61 @@
+# Shopify Product Imports
+
+CSV files in this folder are formatted for **Shopify Admin → Products → Import**.
+
+## Current files
+
+| File | Products | Status |
+|------|----------|--------|
+| `saltwater-macroalgae-2026-04.csv` | Chaetomorpha, Red Ogo Gracilaria, Pom Pom Gracilaria (S/M) | Uploaded |
+| `livestock-mystery-snails-2026-05.csv` | 7 mystery snail packs (3-pack assorted/gold/black/blue/ivory/purple + 10-pack assorted) | Ready to upload |
+
+## How to upload
+
+1. Go to **Shopify Admin → Products → All products**
+2. Click **Import** (top-right)
+3. Select the CSV file from this folder
+4. On the preview page, choose **Overwrite products with matching handles** only if you're updating existing products. For first-time imports, leave unchecked.
+5. Click **Upload and continue**
+6. Review the summary — it should report the expected number of new products
+7. Click **Import products**
+
+## Notes on the macroalgae CSV
+
+- **Pricing** matches Top Shelf Aquatics. Pom Pom Medium is set to $29.99; update to your preferred price before upload if different.
+- **Inventory** is pre-set to 10 units each. Adjust in the CSV or inside Shopify after import.
+- **Handles** become the URL slugs: `/products/chaetomorpha-macroalgae`, etc.
+- **SKUs** (`SW-CHAETO`, `SW-REDOGO`, `SW-POMPOM-SM`, `SW-POMPOM-MD`) match the internal IDs in `src/lib/saltwaterData.ts` so the Storefront API sync will line up.
+- **Images are blank.** Add photos directly in Shopify after import (Products → click product → Media → Upload).
+- **Google Product Category** is set to `Animals & Pet Supplies > Pet Supplies > Fish Supplies > Aquarium Plants` — the closest match in Google's taxonomy for saltwater macroalgae.
+- **Tags** include both `Saltwater` and the sub-category (`Macroalgae`) so the front-end filter chips pick them up when the Storefront API path goes live.
+- **Weight unit is grams** (`g`). Chaeto/Red Ogo = 100g, Pom Pom Small = 80g, Medium = 140g. Adjust per your actual shipping weights.
+- **Cost per item** is the wholesale cost — only visible to you, used for margin reporting.
+
+## Notes on the mystery snails CSV
+
+- **7 products**, 9 rows (the purple variant has 3 photos so it gets 2 extra image-only rows).
+- **Images pull from the live site** at `https://shoreaquatic.com/images/snails/*.jpg`. The deploy must be live before importing or Shopify can't fetch them.
+- **Inventory** is pre-set to 10 units each. Update to actual stock counts before upload.
+- **Pricing** matches the website (`src/lib/livestockData.ts`): $24.99 / $26.99 / $29.99 / $32.99 / $59.99.
+- **Handles** become the URL slugs: `/products/mystery-snails-3-pack-assorted`, `/products/purple-mystery-snails-3-pack`, etc.
+- **SKUs** (`LS-SNAIL-*`) match the IDs in `src/lib/livestockData.ts` so the Storefront API sync will line up later.
+- **Cost per item** is the wholesale cost (visible only to you, used for margin reporting).
+- **Weight** is set to 150g per 3-pack and 500g per 10-pack — adjust if your actual shipping weights differ.
+- **Variant grouping:** All 7 are independent products (no variants). If you'd rather collapse colors into a single Color variant on one parent product, that's a one-time restructure inside Shopify Admin.
+
+## Schema checklist (before upload)
+
+- [ ] All 3 handles are unique and don't collide with existing Shopify products
+- [ ] Prices are finalized (Pom Pom Medium in particular)
+- [ ] Inventory quantities reflect actual stock on hand
+- [ ] You have product photos ready to upload after the CSV import
+- [ ] Your `shore-aquatic.myshopify.com` store is the target (not a dev/preview store)
+
+## After upload
+
+1. Add product images (at least one per variant)
+2. Verify the three products appear at:
+   - `https://shoreaquatic.com/shop?category=Saltwater` (once Storefront API is wired to pull them)
+   - `https://[your-store].myshopify.com/products/chaetomorpha-macroalgae` (Shopify direct)
+3. Add to any relevant collections (e.g. "Saltwater", "Macroalgae", "New Arrivals")
+4. Double-check Google Shopping category and MPN in each product's SEO section

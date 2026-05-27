@@ -5,6 +5,7 @@ import Link from "next/link";
 import { products } from "@/lib/mockData";
 import { waterGardenProducts } from "@/lib/waterGardenData";
 import { saltwaterProducts } from "@/lib/saltwaterData";
+import { livestockProducts } from "@/lib/livestockData";
 
 const categories = [
   {
@@ -157,7 +158,9 @@ export default function CategoryCards() {
                 ? waterGardenProducts.length
                 : cat.name === "Saltwater"
                   ? saltwaterProducts.length
-                  : products.filter((p) => p.category === cat.name).length;
+                  : cat.name === "Livestock"
+                    ? livestockProducts.length
+                    : products.filter((p) => p.category === cat.name).length;
 
             return (
               <motion.div

@@ -26,7 +26,7 @@ const WG_VARIANTS: Record<string, string[]> = {
 };
 
 // Saltwater sub-category chips — extensible as we add Corals, Invertebrates, Marine Plants
-const SW_SUBCATEGORIES = ["Macroalgae", "Live Food"] as const;
+const SW_SUBCATEGORIES = ["Macroalgae", "Live Food", "Invertebrates"] as const;
 
 // Livestock sub-category chips — extensible as we add Shrimp, Fish, etc.
 const LS_SUBCATEGORIES = ["Snails"] as const;

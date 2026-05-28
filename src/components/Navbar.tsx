@@ -11,9 +11,17 @@ import { CartUtils } from "@/lib/cart";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/shop", label: "Shop" },
+  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
+
+// A nav link is "active" when the URL matches exactly (for /) or starts with
+// the link path (so /shop/foo highlights Shop, /blog/foo highlights Blog).
+function isActive(linkHref: string, currentPath: string) {
+  if (linkHref === "/") return currentPath === "/";
+  return currentPath === linkHref || currentPath.startsWith(linkHref + "/");
+}
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -67,7 +75,7 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => {
-              const active = pathname === link.href;
+              const active = isActive(link.href, pathname);
               return (
                 <Link
                   key={link.href}
@@ -131,7 +139,7 @@ export default function Navbar() {
           >
             <div className="px-4 py-4 space-y-1">
               {navLinks.map((link) => {
-                const active = pathname === link.href;
+                const active = isActive(link.href, pathname);
                 return (
                   <Link
                     key={link.href}

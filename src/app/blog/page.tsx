@@ -11,6 +11,17 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "mystery-snail-eggs",
+    title: "Mystery Snail Eggs: Identify, Hatch, or Remove (Complete Guide)",
+    description:
+      "Found pink eggs above your tank waterline? Complete identification, hatching timeline by temperature, decision matrix, 4-step removal protocol, color genetics, and 10-question FAQ.",
+    category: "Care Guide",
+    readTime: 17,
+    date: "May 19, 2026",
+    gradient: "from-pink-950 to-rose-900",
+    icon: "🐌",
+  },
+  {
     slug: "best-plants-for-betta-fish",
     title: "Best Aquarium Plants for Betta Fish (15 That Actually Help)",
     description:

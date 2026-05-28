@@ -42,3 +42,6 @@ yarn-error.log*
 .claude/
 
 .vercel
+
+# Marketplace upload artifacts — kept on local desktop, never in repo
+walmart-imports/

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -296,21 +297,41 @@ export default function MysterySnailEggsPage() {
         </div>
       </section>
 
-      {/* ─── QUICK ANSWER (above-the-fold value) ─── */}
+      {/* ─── QUICK ANSWER + HERO PHOTO ─── */}
       <section className="py-10 bg-ocean-950">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border-2 border-rose-400/40 bg-rose-950/30 p-6">
-            <div className="flex items-start gap-4">
-              <div className="text-3xl">🐌</div>
-              <div className="flex-1">
-                <h2 className="text-xl font-bold text-white mb-3">Quick Answer</h2>
-                <ul className="space-y-2 text-sm text-slate-300 leading-relaxed">
-                  <li><strong className="text-rose-300">What they are:</strong> Mystery snail (<em>Pomacea diffusa</em>) eggs — calcified pink clusters laid above the waterline. Each clutch holds 50–300+ eggs.</li>
-                  <li><strong className="text-rose-300">Hatching window:</strong> 10 days to 4 weeks depending on temperature. At 76–80°F: ~12 days.</li>
-                  <li><strong className="text-rose-300">Single snail laying eggs?</strong> Normal. Females store viable sperm for up to a year after one mating.</li>
-                  <li><strong className="text-rose-300">Should you hatch or remove?</strong> Remove unless you have a stocked-down tank (55+ gallons, no predators) AND a rehoming plan. A 200-snail hatch can crash a small aquarium.</li>
-                  <li><strong className="text-rose-300">Removal protocol:</strong> Wait 24–48 hrs for hardening, scrape with a plastic card, freeze 24–72 hrs at 0°F, dispose in trash. Never flush or release outdoors.</li>
-                </ul>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-6 lg:grid-cols-5 items-start">
+            {/* Real clutch photo */}
+            <div className="lg:col-span-2 rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden">
+              <div className="relative aspect-[3/4] w-full">
+                <Image
+                  src="/images/snail-eggs/clutch-pink-fresh.jpg"
+                  alt="Pink mystery snail egg clutch laid on the side of a plastic breeder box above the waterline — classic cured pink coloration with visible jelly-bubble texture"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  priority
+                />
+              </div>
+              <p className="px-4 py-3 text-xs text-slate-500 italic border-t border-white/5">
+                A typical cured mystery snail clutch — pink coloration, jelly-bubble texture, laid above the waterline. This stage is 1–14 days old.
+              </p>
+            </div>
+
+            {/* Quick Answer card */}
+            <div className="lg:col-span-3 rounded-2xl border-2 border-rose-400/40 bg-rose-950/30 p-6">
+              <div className="flex items-start gap-4">
+                <div className="text-3xl">🐌</div>
+                <div className="flex-1">
+                  <h2 className="text-xl font-bold text-white mb-3">Quick Answer</h2>
+                  <ul className="space-y-2 text-sm text-slate-300 leading-relaxed">
+                    <li><strong className="text-rose-300">What they are:</strong> Mystery snail (<em>Pomacea diffusa</em>) eggs — calcified pink clusters laid above the waterline. Each clutch holds 50–300+ eggs.</li>
+                    <li><strong className="text-rose-300">Hatching window:</strong> 10 days to 4 weeks depending on temperature. At 76–80°F: ~12 days.</li>
+                    <li><strong className="text-rose-300">Single snail laying eggs?</strong> Normal. Females store viable sperm for up to a year after one mating.</li>
+                    <li><strong className="text-rose-300">Should you hatch or remove?</strong> Remove unless you have a stocked-down tank (55+ gallons, no predators) AND a rehoming plan. A 200-snail hatch can crash a small aquarium.</li>
+                    <li><strong className="text-rose-300">Removal protocol:</strong> Wait 24–48 hrs for hardening, scrape with a plastic card, freeze 24–72 hrs at 0°F, dispose in trash. Never flush or release outdoors.</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -401,6 +422,17 @@ export default function MysterySnailEggsPage() {
             Mystery snail egg behavior is one of the strangest in the aquarium hobby — adults breathe water AND air, but their embryos can only breathe air. Here&rsquo;s why that matters.
           </p>
 
+          <div className="mb-8 rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden">
+            <Image
+              src="/images/snail-eggs/biology-infographic.jpg"
+              alt="Mystery snail egg biology infographic showing why eggs are laid above the waterline — embryos are terrestrial respirers that die from oxygen starvation underwater, predator avoidance evolutionary pressure, temperature-dependent enzyme-driven development, and native range in Amazon and Plata basins"
+              width={1400}
+              height={764}
+              className="w-full h-auto"
+              sizes="(max-width: 1024px) 100vw, 1024px"
+            />
+          </div>
+
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
               <h3 className="text-lg font-bold text-white mb-2">🫁 Embryos are terrestrial respirers</h3>
@@ -485,6 +517,17 @@ export default function MysterySnailEggsPage() {
           <p className="text-slate-400 mb-8">
             One clutch can produce 200 hatchlings. Before deciding to incubate, run through these 5 factors honestly — if any single one is a red flag, removal is almost always the right call.
           </p>
+
+          <div className="mb-8 rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden">
+            <Image
+              src="/images/snail-eggs/decision-matrix-infographic.jpg"
+              alt="Should you hatch or remove mystery snail eggs decision matrix — 5 factors compared with red flag versus green light: tank size, existing population, tankmates, rehoming plan, and state legality"
+              width={1400}
+              height={764}
+              className="w-full h-auto"
+              sizes="(max-width: 1024px) 100vw, 1024px"
+            />
+          </div>
 
           <div className="space-y-4">
             {DECISION_FACTORS.map((f) => (

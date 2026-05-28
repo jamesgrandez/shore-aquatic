@@ -117,7 +117,7 @@ export const saltwaterProducts: Product[] = [
     name: "Red Legged Scarlet Hermit Crabs — 5 Pack",
     scientificName: "Paguristes cadenati",
     description:
-      "Reef-safe Caribbean hermit crabs prized for their peaceful temperament and unique appetite for cyanobacteria (red slime algae). They also graze hair algae, diatoms, detritus, and uneaten food while leaving corals, snails, and fish alone. Solid scarlet body with distinctive yellow eyestalks. Adults reach 1–1.5 inches. Stock 1 crab per 2–3 gallons for sustainable foraging — overstocking causes starvation. Ships overnight with live arrival guarantee. Tank size minimum 10 gallons; established saltwater systems only.",
+      "Sustainably sourced from our own Caribbean waters by certified collectors and acclimated at our licensed aquaculture facility before shipping. Reef-safe hermit crabs prized for their peaceful temperament and unique appetite for cyanobacteria (red slime algae). They also graze hair algae, diatoms, detritus, and uneaten food while leaving corals, snails, and fish alone. Solid scarlet body with distinctive yellow eyestalks. Adults reach 1–1.5 inches. Stock 1 crab per 2–3 gallons for sustainable foraging. Ships overnight with live arrival guarantee. Established saltwater tanks only (10+ gallons).",
     category: "Saltwater",
     subCategory: "Invertebrates",
     waterType: "Saltwater",
@@ -146,7 +146,7 @@ export const saltwaterProducts: Product[] = [
     name: "Red Legged Scarlet Hermit Crabs — 10 Pack",
     scientificName: "Paguristes cadenati",
     description:
-      "10-pack of reef-safe Scarlet Hermit Crabs (Paguristes cadenati) — peaceful Caribbean cleanup crew specialized in eating cyanobacteria, hair algae, diatoms, and detritus. Ideal for 20–40 gallon reefs at 1 crab per 2–3 gallons. Solid red body, yellow eyestalks, adults reach 1–1.5 inches. Reef-safe with corals, peaceful fish, and other inverts including seahorses. Ships overnight with live arrival guarantee. Established saltwater tanks only — never introduce to new systems.",
+      "Sustainably sourced from our own Caribbean waters and acclimated at our licensed aquaculture facility before shipping. 10-pack of reef-safe Scarlet Hermits (Paguristes cadenati) — peaceful Caribbean cleanup crew specialized in eating cyanobacteria (red slime), hair algae, diatoms, and detritus. Ideal for 20–40 gallon reefs at 1 crab per 2–3 gallons. Solid red body, yellow eyestalks, adults reach 1–1.5 inches. Reef-safe with corals, peaceful fish, and other inverts including seahorses. Ships overnight with live arrival guarantee. Established saltwater tanks only — never introduce to new systems.",
     category: "Saltwater",
     subCategory: "Invertebrates",
     waterType: "Saltwater",
@@ -175,7 +175,7 @@ export const saltwaterProducts: Product[] = [
     name: "Red Legged Scarlet Hermit Crabs — 20 Pack",
     scientificName: "Paguristes cadenati",
     description:
-      "Bulk 20-pack of Scarlet Hermit Crabs (Paguristes cadenati) sized for larger reef systems — ideal for 50+ gallon displays at 1 crab per 2–3 gallons. Peaceful Caribbean species specialized in eating cyanobacteria (red slime), hair algae, diatoms, detritus, and uneaten food. Best per-crab price for serious cleanup crews. Reef-safe with corals, peaceful fish, and seahorses. Provide a shell bank of 3–5 spare empty shells per crab to prevent shell aggression. Ships overnight with live arrival guarantee.",
+      "Sustainably sourced from our own Caribbean waters and acclimated at our licensed aquaculture facility before shipping. Bulk 20-pack of Scarlet Hermits (Paguristes cadenati) sized for larger reef systems — ideal for 50+ gallon displays at 1 crab per 2–3 gallons. Peaceful Caribbean species specialized in eating cyanobacteria (red slime), hair algae, diatoms, and detritus. Best per-crab price for serious cleanup crews. Reef-safe with corals, peaceful fish, and seahorses. Provide a shell bank of 3–5 spare empty shells per crab. Ships overnight with live arrival guarantee.",
     category: "Saltwater",
     subCategory: "Invertebrates",
     waterType: "Saltwater",

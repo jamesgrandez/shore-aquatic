@@ -857,6 +857,10 @@ const localImageMap: Record<string, string> = {
   "ls-snail-blue-3":      "/images/snails/assorted-rainbow.jpg",
   "ls-snail-ivory-3":     "/images/snails/assorted-rainbow.jpg",
   "ls-snail-purple-3":    "/images/snails/purple-pair.jpg",
+  // Scarlet Hermit Crabs — 3 angles, mix-and-match per pack
+  "sw-hermit-scarlet-5":  "/images/hermits/scarlet-side.jpg",   // single-specimen hero shot
+  "sw-hermit-scarlet-10": "/images/hermits/scarlet-front.jpg",  // front-facing single
+  "sw-hermit-scarlet-20": "/images/hermits/scarlet-group.jpg",  // group shot — fits bulk pack
 };
 
 export function getProductImage(productId: string): string | null {

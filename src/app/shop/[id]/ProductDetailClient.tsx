@@ -7,12 +7,13 @@ import { ShoppingCart, ArrowLeft, Leaf, Sun, Droplets, MapPin, FlaskConical, Mov
 import { products } from "@/lib/mockData";
 import { waterGardenProducts } from "@/lib/waterGardenData";
 import { saltwaterProducts } from "@/lib/saltwaterData";
+import { livestockProducts } from "@/lib/livestockData";
 import { getProductImage } from "@/lib/imageMap";
 import { findPlantDetail } from "@/lib/plantDetails";
 import { CartUtils } from "@/lib/cart";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
 
-const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts];
+const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts];
 
 const CARE_ROWS = [
   { key: "commonName",   label: "Common Name",        icon: Leaf },

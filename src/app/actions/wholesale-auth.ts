@@ -40,11 +40,22 @@ export async function loginAction(_prev: LoginFormState, formData: FormData): Pr
     return { error: "Invalid username or password.", username };
   }
 
-  // Issue session cookie
-  await setSessionCookie({
-    username: account.username,
-    company: account.company,
-  });
+  // Issue session cookie. Wrap separately from the redirect so configuration
+  // errors (e.g. missing SESSION_SECRET in Vercel) surface as a useful form
+  // error rather than a generic 500 page.
+  try {
+    await setSessionCookie({
+      username: account.username,
+      company: account.company,
+    });
+  } catch (err) {
+    console.error("Wholesale session creation failed:", err);
+    return {
+      error:
+        "Sign-in is temporarily unavailable. The server is missing required configuration (SESSION_SECRET). Please contact shoreaquatic@gmail.com.",
+      username,
+    };
+  }
 
   redirect("/wholesale/portal");
 }

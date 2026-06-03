@@ -98,8 +98,20 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Right: Cart + Mobile Menu */}
+          {/* Right: Wholesale + Cart + Mobile Menu */}
           <div className="flex items-center gap-3">
+            {/* Wholesale portal button (desktop only — mobile gets it in the drawer) */}
+            <Link
+              href="/wholesale"
+              className={`hidden md:inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+                isActive("/wholesale", pathname)
+                  ? "border border-aqua-400/60 bg-aqua-400/15 text-aqua-300"
+                  : "border border-white/15 text-slate-400 hover:border-aqua-400/40 hover:text-aqua-300 hover:bg-aqua-400/5"
+              }`}
+            >
+              Wholesale
+            </Link>
+
             <Link
               href="/cart"
               className="relative p-2 text-slate-300 hover:text-white transition-colors cursor-pointer"
@@ -154,6 +166,20 @@ export default function Navbar() {
                   </Link>
                 );
               })}
+
+              {/* B2B portal — separated from retail nav with a divider */}
+              <div className="pt-2 mt-2 border-t border-white/5">
+                <Link
+                  href="/wholesale"
+                  className={`block rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-wider transition-colors cursor-pointer ${
+                    isActive("/wholesale", pathname)
+                      ? "border border-aqua-400/60 bg-aqua-400/10 text-aqua-300"
+                      : "border border-white/15 text-slate-400 hover:border-aqua-400/40 hover:text-aqua-300"
+                  }`}
+                >
+                  Wholesale Portal →
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

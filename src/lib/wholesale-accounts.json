@@ -1,0 +1,23 @@
+{
+  "comment": "Wholesale portal account list. Add new accounts by running `node scripts/hash-wholesale-password.mjs <password>` and pasting the hash. The bcrypt hash itself is safe to commit. Plain passwords are NEVER stored here.",
+  "users": [
+    {
+      "username": "demo",
+      "passwordHash": "$2b$12$S95A2fupi0Ph2PNT/QZaneH2hC3P2IDpae3lVvwqVyES5jKQ1SUrS",
+      "company": "Demo Retailer",
+      "contactName": "Shore Aquatic",
+      "email": "shoreaquatic@gmail.com",
+      "createdAt": "2026-05-28",
+      "active": true
+    },
+    {
+      "username": "test",
+      "passwordHash": "$2b$12$v3XVx4Zx.TrSnXpQrdTebe/bHJ4vnlj6d0SydKRxkiyDiXn2iLUnu",
+      "company": "Test Account",
+      "contactName": "Internal Testing",
+      "email": "shoreaquatic@gmail.com",
+      "createdAt": "2026-05-28",
+      "active": true
+    }
+  ]
+}

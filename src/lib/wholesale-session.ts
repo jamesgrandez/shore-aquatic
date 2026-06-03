@@ -2,14 +2,22 @@ import "server-only";
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
 
-const SECRET = process.env.SESSION_SECRET;
-if (!SECRET) {
-  throw new Error("SESSION_SECRET env var not set. Add it to .env.local and Vercel env.");
-}
-const encodedKey = new TextEncoder().encode(SECRET);
-
 const COOKIE_NAME = "shore_wholesale_session";
 const SESSION_DAYS = 7;
+
+// Lazy secret lookup — only throws when a function actually needs the key.
+// This lets `next build` succeed even if SESSION_SECRET isn't set yet
+// (the actual route will still fail at request time until the env is set).
+function getEncodedKey() {
+  const secret = process.env.SESSION_SECRET;
+  if (!secret) {
+    throw new Error(
+      "SESSION_SECRET env var not set. Add it to .env.local locally " +
+      "and to Vercel project Environment Variables before deploying."
+    );
+  }
+  return new TextEncoder().encode(secret);
+}
 
 export interface WholesaleSession {
   username: string;
@@ -22,13 +30,13 @@ export async function encryptSession(payload: WholesaleSession): Promise<string>
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
     .setExpirationTime(`${SESSION_DAYS}d`)
-    .sign(encodedKey);
+    .sign(getEncodedKey());
 }
 
 export async function decryptSession(token: string | undefined): Promise<WholesaleSession | null> {
   if (!token) return null;
   try {
-    const { payload } = await jwtVerify(token, encodedKey, { algorithms: ["HS256"] });
+    const { payload } = await jwtVerify(token, getEncodedKey(), { algorithms: ["HS256"] });
     return {
       username: payload.username as string,
       company: payload.company as string,

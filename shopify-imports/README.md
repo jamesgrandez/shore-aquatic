@@ -7,7 +7,8 @@ CSV files in this folder are formatted for **Shopify Admin → Products → Impo
 | File | Products | Status |
 |------|----------|--------|
 | `saltwater-macroalgae-2026-04.csv` | Chaetomorpha, Red Ogo Gracilaria, Pom Pom Gracilaria (S/M) | Uploaded |
-| `livestock-mystery-snails-2026-05.csv` | 7 mystery snail packs (3-pack assorted/gold/black/blue/ivory/purple + 10-pack assorted) | Ready to upload |
+| `livestock-mystery-snails-2026-05.csv` | 7 mystery snail packs (3-pack assorted/gold/black/blue/ivory/purple + 10-pack assorted) | Uploaded |
+| `livestock-scarlet-hermits-2026-06.csv` | 3 Scarlet Hermit Crab packs (5 / 10 / 20) | Ready to upload |
 
 ## How to upload
 
@@ -42,6 +43,18 @@ CSV files in this folder are formatted for **Shopify Admin → Products → Impo
 - **Cost per item** is the wholesale cost (visible only to you, used for margin reporting).
 - **Weight** is set to 150g per 3-pack and 500g per 10-pack — adjust if your actual shipping weights differ.
 - **Variant grouping:** All 7 are independent products (no variants). If you'd rather collapse colors into a single Color variant on one parent product, that's a one-time restructure inside Shopify Admin.
+
+## Notes on the Scarlet Hermits CSV
+
+- **3 products**, 15 rows total (each product gets 5 image slots: 1 white-bg hero + 4 additional).
+- **Images pull from the live site** at `https://shoreaquatic.com/images/hermits/*.jpg`. The deploy must be live before importing or Shopify can't fetch them.
+- **Inventory** is pre-set to 10 units each. Update to actual stock counts before upload.
+- **Pricing** matches the website (`src/lib/livestockData.ts`): $29.99 / $49.99 / $89.99.
+- **Handles** match the website product IDs: `sw-hermit-scarlet-5`, `-10`, `-20` — so the existing cart routing keeps working without any changes.
+- **SKUs** (`SW-HERMIT-SCARLET-*`) match the IDs for Storefront API sync.
+- **Cost per item** is the wholesale cost (visible only to you, used for margin reporting).
+- **Weight**: 280g (5-pack), 450g (10-pack), 750g (20-pack) — adjust if your actual shipping weights differ.
+- **Image set per product**: white-bg hero shot + 3 infographics (pack sizes, acclimation, diet) + in-tank lifestyle shot. All Shopify-compliant; the diet infographic is fine on shoreaquatic.com but should NOT be reused on Amazon (FIFRA pesticide rules).
 
 ## Schema checklist (before upload)
 

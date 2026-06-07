@@ -5,15 +5,16 @@ import type { Product } from "./mockData";
 export const saltwaterProducts: Product[] = [
   {
     id: "live-marine-rotifers",
-    name: "Live Marine Rotifers",
+    name: "Live Marine Rotifers (L-Type Brachionus)",
+    scientificName: "Brachionus plicatilis",
     description:
-      "Live, actively reproducing marine rotifer culture at 500–1,000 per mL. First food for clownfish and other marine larvae, plus corals, seahorses, pipefish, mandarins, and filter-feeding inverts. Ships in growing water — feed straight away or start your own culture. Available 1/2 gallon, 1 gallon, 2 gallon. Free local pickup or overnight/2-day shipping (cost baked into price).",
+      "L-type marine rotifer culture sized 150–360 microns for first-feed marine larvae. Made-to-order weekly at 500–1,000 per mL. Day-zero productive — feed today, not in 3 weeks. Signed Quality Report with every shipment. Available 4 oz, 16 oz, 32 oz, and 1 gallon. Free local pickup or overnight/2-day shipping.",
     category: "Saltwater",
     subCategory: "Live Food",
     waterType: "Saltwater",
     availability: "AVAILABLE",
-    price: 75,
-    size: "1/2 gallon – 2 gallon",
+    price: 19.99,
+    size: "4 oz – 1 Gallon",
     wholesalePrice: 0,
     imageGradient: "from-cyan-900 to-teal-900",
     tags: [
@@ -29,6 +30,9 @@ export const saltwaterProducts: Product[] = [
       "seahorse",
       "live culture",
       "zooplankton",
+      "L-type",
+      "Brachionus",
+      "made-to-order",
     ],
   },
   {

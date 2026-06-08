@@ -11,6 +11,17 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "how-to-set-up-a-reef-tank",
+    title: "How to Set Up Your First Reef Tank (Complete Beginner Guide)",
+    description:
+      "Equipment tiers from $300 to $1,500+, the cycling protocol that works, target water parameters, the livestock order that prevents crashes, refugium setup, common mistakes, and the honest first-year budget.",
+    category: "Setup Guide",
+    readTime: 22,
+    date: "June 7, 2026",
+    gradient: "from-cyan-950 to-teal-900",
+    icon: "🪸",
+  },
+  {
     slug: "mystery-snail-eggs",
     title: "Mystery Snail Eggs: Identify, Hatch, or Remove (Complete Guide)",
     description:

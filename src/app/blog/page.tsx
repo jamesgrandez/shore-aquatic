@@ -11,6 +11,17 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "best-plants-for-shrimp-tanks",
+    title: "Best Plants for Shrimp Tanks (10 Species Ranked + Safety Protocol)",
+    description:
+      "10 shrimp-safe plants ranked by biofilm production and shelter quality. Plus the plant safety hazards (pesticide, copper, glutaraldehyde) and 5-step quarantine protocol that prevents colony wipeouts.",
+    category: "Buyer's Guide",
+    readTime: 18,
+    date: "June 7, 2026",
+    gradient: "from-emerald-950 to-teal-900",
+    icon: "🦐",
+  },
+  {
     slug: "how-to-set-up-a-reef-tank",
     title: "How to Set Up Your First Reef Tank (Complete Beginner Guide)",
     description:

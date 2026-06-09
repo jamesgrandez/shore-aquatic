@@ -3,11 +3,18 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Can Aquarium Plants Grow in Gravel or Sand? | Shore Aquatic",
+  title: "Aquarium Plants Without Substrate: 29 Species Ranked",
   description:
-    "Complete guide to planted tanks without expensive substrate — which plants thrive in gravel, sand, or bare-bottom, plus root tabs, epiphyte attachment, the Walstad method, and a 29-species compatibility table.",
+    "29 aquarium plants ranked for gravel, sand, or bare-bottom tanks. Root tab brands compared, epiphyte attachment guide, Walstad method, common mistake fixes.",
   alternates: {
     canonical: "https://shoreaquatic.com/blog/aquarium-plants-without-substrate",
+  },
+  openGraph: {
+    title: "Aquarium Plants Without Substrate: 29 Species Ranked",
+    description:
+      "29 aquarium plants ranked for gravel, sand, or bare-bottom tanks. Root tab brands compared, epiphyte attachment guide, Walstad method, common mistake fixes.",
+    type: "article",
+    url: "https://shoreaquatic.com/blog/aquarium-plants-without-substrate",
   },
 };
 

@@ -3,11 +3,18 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Best Aquarium Plants for Betta Fish (15 That Actually Help) | Shore Aquatic",
+  title: "15 Best Plants for Betta Fish — Fin-Safe Ranked Guide",
   description:
-    "Plants ranked for Betta-specific benefits — leaf hammocks, bubble nests, fin safety, and blackwater setups. Includes tank size guides for 2.5, 5, 10, and 20-gallon Betta tanks.",
+    "15 plants ranked for Betta tanks — scored for fin safety, bubble nest support, and tank size. Surface coverage rules, blackwater tips, 2.5–20 gallon guides.",
   alternates: {
     canonical: "https://shoreaquatic.com/blog/best-plants-for-betta-fish",
+  },
+  openGraph: {
+    title: "15 Best Plants for Betta Fish — Fin-Safe Ranked Guide",
+    description:
+      "15 plants ranked for Betta tanks — scored for fin safety, bubble nest support, and tank size. Surface coverage rules, blackwater tips, 2.5–20 gallon guides.",
+    type: "article",
+    url: "https://shoreaquatic.com/blog/best-plants-for-betta-fish",
   },
 };
 

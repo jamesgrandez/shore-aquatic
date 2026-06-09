@@ -3,17 +3,18 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Why Are My Aquarium Plants Turning Brown, Yellow, or Black? | Shore Aquatic",
+  title: "Aquarium Plants Brown, Yellow or Black? 24 Causes Diagnosed",
   description:
-    "Complete troubleshooting guide: 24 causes of aquarium plant discoloration diagnosed by color, pattern, and species. Includes water parameter chart, species melt guide, and step-by-step fixes.",
+    "24 causes of brown, yellow, and black aquarium plants — diagnosed by color, pattern, and species. Water parameter chart and step-by-step fix protocol.",
   alternates: {
     canonical:
       "https://shoreaquatic.com/blog/aquarium-plants-turning-brown-yellow-black",
   },
   openGraph: {
-    title: "Why Are My Aquarium Plants Turning Brown, Yellow, or Black?",
+    title: "Aquarium Plants Brown, Yellow or Black? 24 Causes Diagnosed",
     description:
-      "Diagnose and fix aquarium plant discoloration with our complete 24-cause guide. Color-coded diagnosis, species acclimation notes, water parameter chart, and FAQ.",
+      "24 causes of brown, yellow, and black aquarium plants — diagnosed by color, pattern, and species. Water parameter chart and step-by-step fix protocol.",
+    type: "article",
     url: "https://shoreaquatic.com/blog/aquarium-plants-turning-brown-yellow-black",
   },
 };

@@ -3,14 +3,15 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Why Are My Aquarium Plants Melting? (And How to Save Them) | Shore Aquatic",
+  title: "Aquarium Plants Melting? 5 Types Diagnosed + 6-Step Fix",
   description:
-    "The complete guide to aquarium plant melt — what causes it, 5 types of melt, species-by-species profiles, how to tell melt from death, and a step-by-step recovery protocol.",
+    "5 melt types diagnosed, 19-species likelihood table, and a 6-step recovery protocol. Learn when plant melt is normal — and when it signals real rot.",
   alternates: { canonical: "https://shoreaquatic.com/blog/aquarium-plants-melting" },
   openGraph: {
-    title: "Why Are My Aquarium Plants Melting? (And How to Save Them)",
+    title: "Aquarium Plants Melting? 5 Types Diagnosed + 6-Step Fix",
     description:
-      "Understand the biology behind plant melt, diagnose which of 5 melt types you have, check 19 species profiles, and follow the proven recovery protocol.",
+      "5 melt types diagnosed, 19-species likelihood table, and a 6-step recovery protocol. Learn when plant melt is normal — and when it signals real rot.",
+    type: "article",
     url: "https://shoreaquatic.com/blog/aquarium-plants-melting",
   },
 };

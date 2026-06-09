@@ -19,11 +19,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
+  // Care guides were substantially expanded on 2026-06-09 with new sections
+  // (Difficulty rating, CO2/fert guidance, Aquascaping, Tank Mates, Pro Tips,
+  // Common Issues, FAQ) — bump lastModified to trigger Google recrawl.
   const careGuideUrls = Object.keys(plantDetails).map((slug) => ({
     url: `${BASE}/care-guides/${slug}`,
-    lastModified: new Date("2025-01-01"),
+    lastModified: new Date("2026-06-09"),
     changeFrequency: "monthly" as const,
-    priority: 0.7,
+    priority: 0.8,
   }));
 
   return [

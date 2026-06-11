@@ -847,6 +847,67 @@ export const fanImageMap: Record<string, string> = {
 };
 
 // Manual overrides for non-FAN products (local images, custom CDN URLs, etc.)
+
+// Dry goods & equipment — images hosted on the active Shopify CDN
+const dryGoodsImageMap: Record<string, string> = {
+  "ai-hydra-64-hd-led-reef-light-black": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/hydra-64-black.png?v=1730833591",
+  "aquael-air-pump-miniboost-100": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/AmazonSword2_9.png?v=1727897837",
+  "aquael-multikani-expandable-canister-filter": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/AmazonSword2_12.png?v=1727993621",
+  "aquael-pat-mini-tiny-turbine-filter-for-5-30-gallon-tank": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/AmazonSword2_14.png?v=1727994007",
+  "aquaforest-di-resin-1l-for-rodi": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/AmazonSword2_16.png?v=1727995731",
+  "aquarium-decorations-non-toxic-pirate-themed-for-freshwater-or-saltwater": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/2.5Pirateskullwithtreasure_1.png?v=1679072804",
+  "aquastik-epoxy-putty-coraline-red-4-oz-stick-for-underwater-coral-adhesion": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/AquaStikEpoxyPutty.jpg?v=1633190935",
+  "boyd-enterprises-chemipure-blue": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/chemipure-blue-collage-400x400.png?v=1668704963",
+  "c02-begginer-bundle-package-ista-c02-cans-diffuser-set-co2-indicator-solution": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/AmazonSword2_25.png?v=1729196479",
+  "caribsea-liferock-belize-branch-marine-reef-aquarium-20lb-or-40lb": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/AmazonSword2_28.png?v=1729198804",
+  "caribsea-arag-alive-natural-reef-substrate": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/Untitleddesign_41.png?v=1731687865",
+  "caribsea-bimini-pink-arag-alive-saltwater-reef-substrate-10-lb-or-20-lb": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/Untitleddesign_42.png?v=1731688182",
+  "caribsea-dragon-stone-aquascaping-exotica-freshwater-aquarium-rock-25lbs": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/Untitleddesign_43.png?v=1731688593",
+  "caribsea-fiji-pink-arag-alive-live-sand-10-or-20lb-reef-substrate-aquarium-saltwater": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/Untitleddesign_44.png?v=1731688797",
+  "caribsea-rio-grande-freshwater-substrate-super-natural-5-or-20-lb": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/Untitleddesign_45.png?v=1731689146",
+  "caribsea-samurai-soil-substrate-for-shrimp-and-planted-aquaria": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/Untitleddesign_48.png?v=1731689688",
+  "caribsea-eco-complete-planted-freshwater-substrate-red": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/Untitleddesign_49.png?v=1731691842",
+  "caribsea-eco-complete-planted-freshwater-substrate-black": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/Untitleddesign_50.png?v=1731692140",
+  "caribsea-eco-complete-cichlid-zach-black": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/Untitleddesign_51.png?v=1731692322",
+  "caribsea-life-rock-frag-zone": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/Untitleddesign_52.png?v=1731692769",
+  "caribsea-liferock-for-aquascapes-and-reefs-20-lb-box": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/CaribSeaLifeRock.png?v=1605988453",
+  "caribsea-mountain-stone-seiryu-stone-black-5-lbs": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/CaribSeaMountaindesign.png?v=1605992559",
+  "caribsea-eco-complete-cichlid-freshwater-substrate-white": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/Untitleddesign_54.png?v=1731693787",
+  "cichlid-sinking-gold-mini-12-oz": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/Untitleddesign_62.png?v=1731706890",
+  "coral-rx-8oz-coral-dip": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/81SSPVzucoL._AC_SL1500.jpg?v=1668706339",
+  "coral-rx-pro-concentated-coral-dip-1oz": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/OIP.jpg?v=1668705996",
+  "green-goddess-concentrated-liquid-fertilizer-easy-to-dose-all-in-one-supplement-for-freshwater-aquariums-promotes-healthy-plant-growth-ideal-for-low-to-moderate-tech-tanks": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/8oz_bottle_mock_up_Green_Goddess.png?v=1720638466",
+  "hydor-seltz-d-dc-500-750-or-1000-controllable-universal-water-pump-for-salt-and-freshwater-aquarium": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/HydorSeltzDDC.png?v=1610316125",
+  "icecap-2k-gyre-flow-pump-with-dual-pump-wifi-controller": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/Icecap2Kgyrepumpwaveenginekit_png.jpg?v=1638366124",
+  "icecap-4k-gyre-flow-pump-with-dual-pump-wifi-controller": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/Icecap4Kgyrepumpkit4.png?v=1610545993",
+  "icecap-di-media-color-indicating-mized-bed-deionization-resin-1-25-lbs": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/cfb93e35-3b57-4260-b16a-742259c238c1.png?v=1614616170",
+  "ista-bio-sponge-round-bio-foam-large": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/61nFcRNGfAS._AC_SL1200.jpg?v=1668710469",
+  "ista-2-in-1-co2-bubble-counter-with-check-valve": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTABUBBLECOUNTER.png?v=1604168999",
+  "ista-acu-dose-co2-pressure-regulator-360-rotatable-outlet": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTAACUDOSEREGULATOR1.png?v=1604268136",
+  "ista-co2-45g-cartridge-supply-set": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTACO245gset.png?v=1606222177",
+  "ista-co2-88g-cartridge-supply-set": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTASUPPLYSET88G1.png?v=1605625374",
+  "ista-co2-95g-disposable-cartridge-supply-set-basic": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTACO295GSET.png?v=1604267282",
+  "ista-co2-controller-mini-gauge-vertical": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTACO2CONTROLLERMINI.png?v=1604267890",
+  "ista-co2-diffuser-3-in-1": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTADIFFUSERLARGE.png?v=1604263673",
+  "ista-co2-indicator-solution": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTACO2INDICATORSOLUTION1.png?v=1604174612",
+  "co2-indicator-all-angle-view": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTACO2INDICATORALLANGLEVIEW1.png?v=1604175085",
+  "ista-disposable-co2-can-3-piece": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTACO2DISPOSABLECAN3PCS.png?v=1604269180",
+  "ista-disposable-co2-cartridge-88g": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTACO2CARTRIDGE88G.png?v=1604268660",
+  "ista-metal-air-valve-2-3-4-or-5-gang": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTA2GANG.png?v=1604172089",
+  "ista-mini-ceramic-co2-diffuser-cone": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTAMINIDIFFUSER.png?v=1604264014",
+  "ista-mini-co2-bubble-counter": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTACO2MINIBUBBLECOUNTER.png?v=1604264239",
+  "ista-planaria-trap": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTAPLANARIATRAP1.png?v=1604264899",
+  "replacement-ceramic-ufo-co2-diffuser": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTAREPLACEMENTCO2DIFFUSERSMALLANDMINI_ae9c0c34-c213-4bd6-9085-98362146a1ff.png?v=1604266025",
+  "ista-spring-check-valve-for-co2-for-air-pump-applications": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTASpringStop.png?v=1606223826",
+  "ista-ufo-co2-diffuser": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTAUFOCO2DIFFUSER.png?v=1604266371",
+  "ista-replacement-co2-diffuser-ceramic-fits-3-in-1-small-co2-diffuser-and-mini": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/ISTAREPLACEMENTCO2DIFFUSERSMALLANDMINI.png?v=1604265478",
+  "klir-fleece-roller-filter-di-4": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/Klirfilter.png?v=1601829736",
+  "phyto-feast-concentrate-32-oz": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/phytofeastlive_main_500x_2x_a77e995e-d7dd-4505-aa3d-3c9440864b01.webp?v=1668703101",
+  "pond-scum-concentrated-liquid-fertilizer-easy-to-dose-all-in-one-supplement-for-freshwater-aquariums-promotes-healthy-plant-growth-ideal-for-low-to-moderate-light-tanks-and-4-ounce": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/Pond_Scum_3.png?v=1720638491",
+  "seachem-impulse-multi-function-aquarium-water-pump-400-600-or-800": "https://cdn.shopify.com/s/files/1/0266/9799/0330/products/SeachemImpulsePumps.jpg?v=1614096854",
+  "shore-aquatic-hemigraphis-repanda-bundle-live-aquarium-plant-tropical-freshwater-decorations-pest-free-great-for-starter-tanks": "https://cdn.shopify.com/s/files/1/0266/9799/0330/files/il_fullxfull.6059428427_6tiy.webp?v=1716495706",
+};
+
 const localImageMap: Record<string, string> = {
   "live-marine-rotifers": "/images/rotifers/hero-packshot.jpg",
   // Mystery snails — purple variants use specific photos; others use the assortment shot
@@ -866,5 +927,5 @@ const localImageMap: Record<string, string> = {
 };
 
 export function getProductImage(productId: string): string | null {
-  return localImageMap[productId] ?? fanImageMap[productId] ?? null;
+  return localImageMap[productId] ?? dryGoodsImageMap[productId] ?? fanImageMap[productId] ?? null;
 }

@@ -3,12 +3,13 @@ import { products } from "@/lib/mockData";
 import { waterGardenProducts } from "@/lib/waterGardenData";
 import { saltwaterProducts } from "@/lib/saltwaterData";
 import { livestockProducts } from "@/lib/livestockData";
+import { dryGoodsProducts } from "@/lib/dryGoodsData";
 import { plantDetails } from "@/lib/plantDetails";
 
 const BASE = "https://shoreaquatic.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts];
+  const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts, ...dryGoodsProducts];
 
   const productUrls = allProducts
     .filter((p) => p.availability !== "OUT OF SEASON")

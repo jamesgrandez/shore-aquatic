@@ -8,6 +8,7 @@ import { waterGardenProducts } from "@/lib/waterGardenData";
 import { saltwaterProducts } from "@/lib/saltwaterData";
 import { livestockProducts } from "@/lib/livestockData";
 import { dryGoodsProducts } from "@/lib/dryGoodsData";
+import { marineLivestockProducts } from "@/lib/marineLivestockData";
 
 // Grouped Water Garden filters — group label maps to the subCategory prefix it matches
 const WG_GROUPS = [
@@ -34,7 +35,7 @@ const LS_SUBCATEGORIES = ["Snails", "Saltwater Invertebrates"] as const;
 import ProductCard from "@/components/ProductCard";
 import Footer from "@/components/Footer";
 
-const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts, ...dryGoodsProducts];
+const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts, ...dryGoodsProducts, ...marineLivestockProducts];
 
 const CATEGORIES = ["All", "Plants", "Water Garden", "Saltwater", "Livestock", "Dry Goods"] as const;
 const WATER_TYPES = ["All", "Freshwater", "Saltwater"] as const;

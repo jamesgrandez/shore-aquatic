@@ -3,11 +3,12 @@ import { waterGardenProducts } from "@/lib/waterGardenData";
 import { saltwaterProducts } from "@/lib/saltwaterData";
 import { livestockProducts } from "@/lib/livestockData";
 import { dryGoodsProducts } from "@/lib/dryGoodsData";
+import { marineLivestockProducts } from "@/lib/marineLivestockData";
 import { getProductImage } from "@/lib/imageMap";
 import type { Metadata } from "next";
 import ProductDetailClient from "./ProductDetailClient";
 
-const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts, ...dryGoodsProducts];
+const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts, ...dryGoodsProducts, ...marineLivestockProducts];
 
 export async function generateMetadata(
   { params }: { params: Promise<{ id: string }> }

@@ -55,7 +55,7 @@ export async function submitBackorderRequest(
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const notifyEmail = process.env.BACKORDER_NOTIFY_EMAIL || "sales@shoreaquatic.com";
+  const notifyEmail = process.env.BACKORDER_NOTIFY_EMAIL || "shoreaquatic@gmail.com";
 
   const subtotal = items.reduce((s, i) => s + i.price * i.quantity, 0);
   const lines = items
@@ -71,7 +71,7 @@ export async function submitBackorderRequest(
     "Requested items:",
     lines,
     "",
-    `Estimated subtotal: $${subtotal.toFixed(2)} (plus overnight shipping)`,
+    `Estimated subtotal: $${subtotal.toFixed(2)} (overnight shipping included in pricing)`,
     note ? `\nCustomer note:\n${note}` : null,
     "",
     "Next step: verify availability with the supplier, then reply to the",

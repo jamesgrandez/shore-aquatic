@@ -239,8 +239,8 @@ export default function CartPage() {
                         <span className="font-semibold">Backorder items in cart.</span>{" "}
                         We confirm availability with our supplier before any payment —
                         submit your request and we&apos;ll reply within 1 business day
-                        with confirmed stock and an invoice. Livestock ships FedEx
-                        overnight (quoted in your invoice).
+                        with confirmed stock and an invoice. Prices include FedEx
+                        overnight shipping with live arrival guarantee.
                       </p>
                     </div>
                     <input type="hidden" name="items" value={JSON.stringify(items)} />

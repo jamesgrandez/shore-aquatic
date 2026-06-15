@@ -9,12 +9,13 @@ import { waterGardenProducts } from "@/lib/waterGardenData";
 import { saltwaterProducts } from "@/lib/saltwaterData";
 import { livestockProducts } from "@/lib/livestockData";
 import { dryGoodsProducts } from "@/lib/dryGoodsData";
+import { marineLivestockProducts } from "@/lib/marineLivestockData";
 import { getProductImage } from "@/lib/imageMap";
 import { findPlantDetail } from "@/lib/plantDetails";
 import { CartUtils } from "@/lib/cart";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
 
-const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts, ...dryGoodsProducts];
+const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts, ...dryGoodsProducts, ...marineLivestockProducts];
 
 const CARE_ROWS = [
   { key: "commonName",   label: "Common Name",        icon: Leaf },

@@ -7,6 +7,7 @@ import { waterGardenProducts } from "@/lib/waterGardenData";
 import { saltwaterProducts } from "@/lib/saltwaterData";
 import { livestockProducts } from "@/lib/livestockData";
 import { dryGoodsProducts } from "@/lib/dryGoodsData";
+import { marineLivestockProducts } from "@/lib/marineLivestockData";
 
 const categories = [
   {
@@ -158,9 +159,9 @@ export default function CategoryCards() {
               cat.name === "Water Garden"
                 ? waterGardenProducts.length
                 : cat.name === "Saltwater"
-                  ? saltwaterProducts.length
+                  ? saltwaterProducts.length + marineLivestockProducts.filter((p) => p.category === "Saltwater").length
                   : cat.name === "Livestock"
-                    ? livestockProducts.length
+                    ? livestockProducts.length + marineLivestockProducts.filter((p) => p.category === "Livestock").length
                     : cat.name === "Dry Goods"
                       ? dryGoodsProducts.length +
                         products.filter((p) => p.category === cat.name).length

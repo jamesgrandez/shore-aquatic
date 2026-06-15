@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useActionState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Trash2, Plus, Minus, ShoppingBag, Lock } from "lucide-react";
+import { Trash2, Plus, Minus, ShoppingBag, Lock, Mail, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { CartUtils, CartItem } from "@/lib/cart";
 import { createShopifyCheckout } from "@/lib/shopifyCart";
+import { submitBackorderRequest, BackorderFormState } from "@/app/actions/backorder";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
 import Footer from "@/components/Footer";
 
@@ -14,6 +15,18 @@ export default function CartPage() {
   const [mounted, setMounted] = useState(false);
   const [checkoutState, setCheckoutState] = useState<"idle" | "loading" | "error">("idle");
   const [checkoutError, setCheckoutError] = useState("");
+  const [requestState, requestAction, requestPending] = useActionState<BackorderFormState, FormData>(
+    submitBackorderRequest,
+    {}
+  );
+
+  // Clear the cart once a backorder request is confirmed sent
+  useEffect(() => {
+    if (requestState.ok) {
+      CartUtils.clear();
+      setItems([]);
+    }
+  }, [requestState.ok]);
 
   useEffect(() => {
     setMounted(true);
@@ -52,6 +65,7 @@ export default function CartPage() {
   const subtotal = items.reduce((s, i) => s + i.price * i.quantity, 0);
   const tax = subtotal * 0.06;
   const total = subtotal + tax;
+  const hasBackorder = items.some((i) => i.availability === "BACKORDER");
 
   return (
     <main className="pt-16">
@@ -69,7 +83,26 @@ export default function CartPage() {
       </section>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-        {items.length === 0 ? (
+        {requestState.ok ? (
+          <div className="flex items-center justify-center py-20">
+            <div className="glass-strong rounded-2xl p-12 text-center max-w-lg">
+              <CheckCircle2 size={48} className="mx-auto text-emerald-400 mb-4" />
+              <p className="text-xl font-medium text-white">Backorder request sent</p>
+              <p className="mt-3 text-sm text-slate-400 leading-relaxed">
+                We&apos;ve received your list and will verify availability with our
+                supplier. Expect a reply within 1 business day with confirmed stock
+                and an invoice — <span className="text-slate-300">you won&apos;t be
+                charged anything until you approve it</span>.
+              </p>
+              <Link
+                href="/shop"
+                className="mt-6 inline-block rounded-full bg-coral px-6 py-3 text-sm font-bold text-white shadow-lg shadow-coral/20 hover:bg-orange-500 transition-all cursor-pointer"
+              >
+                Continue Shopping
+              </Link>
+            </div>
+          </div>
+        ) : items.length === 0 ? (
           <div className="flex items-center justify-center py-20">
             <div className="glass-strong rounded-2xl p-12 text-center max-w-md">
               <ShoppingBag size={48} className="mx-auto text-slate-600 mb-4" />
@@ -199,38 +232,108 @@ export default function CartPage() {
                   </div>
                 </div>
 
-                <button
-                  onClick={handleCheckout}
-                  disabled={checkoutState === "loading"}
-                  className="mt-6 flex items-center justify-center gap-2 w-full rounded-full bg-coral py-3.5 text-center text-sm font-bold text-white shadow-lg shadow-coral/20 hover:bg-orange-500 transition-all cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
-                >
-                  {checkoutState === "loading" ? (
-                    <>
-                      <motion.span
-                        animate={{ rotate: 360 }}
-                        transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
-                        className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full"
-                      />
-                      Preparing checkout…
-                    </>
-                  ) : (
-                    <>
-                      <Lock size={14} />
-                      Proceed to Checkout
-                    </>
-                  )}
-                </button>
+                {hasBackorder ? (
+                  <form action={requestAction} className="mt-6 space-y-3">
+                    <div className="rounded-xl bg-aqua-400/10 border border-aqua-400/20 p-3.5">
+                      <p className="text-xs text-aqua-300 leading-relaxed">
+                        <span className="font-semibold">Backorder items in cart.</span>{" "}
+                        We confirm availability with our supplier before any payment —
+                        submit your request and we&apos;ll reply within 1 business day
+                        with confirmed stock and an invoice. Prices include FedEx
+                        overnight shipping with live arrival guarantee.
+                      </p>
+                    </div>
+                    <input type="hidden" name="items" value={JSON.stringify(items)} />
+                    <input
+                      name="name"
+                      required
+                      placeholder="Your name"
+                      className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-aqua-400/50"
+                    />
+                    <input
+                      name="email"
+                      type="email"
+                      required
+                      placeholder="Email address"
+                      className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-aqua-400/50"
+                    />
+                    <input
+                      name="phone"
+                      type="tel"
+                      placeholder="Phone (optional)"
+                      className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-aqua-400/50"
+                    />
+                    <textarea
+                      name="note"
+                      rows={2}
+                      placeholder="Notes — sizes, color preferences, ship dates… (optional)"
+                      className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-aqua-400/50 resize-none"
+                    />
+                    <button
+                      type="submit"
+                      disabled={requestPending}
+                      className="flex items-center justify-center gap-2 w-full rounded-full bg-coral py-3.5 text-center text-sm font-bold text-white shadow-lg shadow-coral/20 hover:bg-orange-500 transition-all cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+                    >
+                      {requestPending ? (
+                        <>
+                          <motion.span
+                            animate={{ rotate: 360 }}
+                            transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
+                            className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full"
+                          />
+                          Sending request…
+                        </>
+                      ) : (
+                        <>
+                          <Mail size={14} />
+                          Request Availability — No Charge
+                        </>
+                      )}
+                    </button>
+                    {requestState.error && (
+                      <p className="text-xs text-red-400 text-center">{requestState.error}</p>
+                    )}
+                    <p className="text-[11px] text-slate-500 text-center">
+                      No payment is collected now. Totals shown are estimates pending
+                      availability confirmation.
+                    </p>
+                  </form>
+                ) : (
+                  <>
+                    <button
+                      onClick={handleCheckout}
+                      disabled={checkoutState === "loading"}
+                      className="mt-6 flex items-center justify-center gap-2 w-full rounded-full bg-coral py-3.5 text-center text-sm font-bold text-white shadow-lg shadow-coral/20 hover:bg-orange-500 transition-all cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+                    >
+                      {checkoutState === "loading" ? (
+                        <>
+                          <motion.span
+                            animate={{ rotate: 360 }}
+                            transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
+                            className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full"
+                          />
+                          Preparing checkout…
+                        </>
+                      ) : (
+                        <>
+                          <Lock size={14} />
+                          Proceed to Checkout
+                        </>
+                      )}
+                    </button>
 
-                {checkoutError && (
-                  <p className="mt-3 text-xs text-red-400 text-center">{checkoutError}</p>
+                    {checkoutError && (
+                      <p className="mt-3 text-xs text-red-400 text-center">{checkoutError}</p>
+                    )}
+
+                    <div className="mt-4 flex items-center justify-center gap-2">
+                      <Lock size={10} className="text-slate-600" />
+                      <p className="text-[11px] text-slate-500">
+                        Secure checkout powered by Shopify · Shop Pay accepted
+                      </p>
+                    </div>
+                  </>
                 )}
-
-                <div className="mt-4 flex items-center justify-center gap-2">
-                  <Lock size={10} className="text-slate-600" />
-                  <p className="text-[11px] text-slate-500">
-                    Secure checkout powered by Shopify · Shop Pay accepted
-                  </p>
-                </div>
               </div>
             </div>
           </div>

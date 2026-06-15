@@ -56,6 +56,12 @@ export async function submitBackorderRequest(
 
   const apiKey = process.env.RESEND_API_KEY;
   const notifyEmail = process.env.BACKORDER_NOTIFY_EMAIL || "shoreaquatic@gmail.com";
+  // Resend's shared onboarding sender works without domain verification but can
+  // only deliver to the account owner's address. Once shoreaquatic.com is
+  // verified at resend.com/domains, set BACKORDER_FROM_EMAIL to
+  // "backorders@shoreaquatic.com" to send from the brand domain.
+  const fromEmail =
+    process.env.BACKORDER_FROM_EMAIL || "Shore Aquatic Backorders <onboarding@resend.dev>";
 
   const subtotal = items.reduce((s, i) => s + i.price * i.quantity, 0);
   const lines = items
@@ -98,7 +104,7 @@ export async function submitBackorderRequest(
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "Shore Aquatic Backorders <backorders@shoreaquatic.com>",
+      from: fromEmail,
       to: [notifyEmail],
       reply_to: email,
       subject: `Backorder request — ${name} — ${items.length} item${items.length === 1 ? "" : "s"} ($${subtotal.toFixed(2)})`,

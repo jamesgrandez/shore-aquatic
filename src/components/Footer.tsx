@@ -19,6 +19,7 @@ const infoLinks = [
 const legalLinks = [
   { href: "#", label: "Privacy Policy" },
   { href: "#", label: "Terms of Service" },
+  { href: "/image-credits", label: "Photo Credits" },
 ];
 
 export default function Footer() {

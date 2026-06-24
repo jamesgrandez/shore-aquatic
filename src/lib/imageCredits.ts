@@ -13,6 +13,7 @@ export interface ImageCredit {
 }
 
 export const imageCredits: ImageCredit[] = [
+  { id: "swl-berghia-nudibranch-5pk", species: "Berghia Nudibranch (Berghia verrucicornis)", author: "Chris Taklis", license: "CC-BY", source: "iNaturalist", sourceUrl: "https://www.inaturalist.org/observations/50079237" },
   { id: "swl-4-stripe-damsel-5pk", species: "4 Stripe Damsel", author: "Tim", license: "CC-BY", source: "iNaturalist", sourceUrl: "https://www.inaturalist.org/observations/107810886" },
   { id: "swl-abalone", species: "Abalone", author: "no rights reserved", license: "CC0", source: "iNaturalist", sourceUrl: "https://www.inaturalist.org/observations/250342980" },
   { id: "swl-angel-cortez-md", species: "Angel: Cortez", author: "Alberto Alcal\u00e1", license: "CC-BY", source: "iNaturalist", sourceUrl: "https://www.inaturalist.org/observations/166887818" },

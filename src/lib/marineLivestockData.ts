@@ -5,6 +5,19 @@
 // See ~/OneDrive/Desktop/Shore Aquatic/marine-livestock/ for the pricing workbook.
 import type { Product } from "./mockData";
 
+// Shared care/selling copy appended to every Berghia tier (original copy).
+const BERGHIA_BASE_DESC =
+  "Also sold in the hobby as Berghia verrucicornis, these are aquacultured, never wild-collected. " +
+  "Care is simple: drip-acclimate slowly, then release them onto the rock near an aiptasia cluster with the " +
+  "pumps off and the lights down — Berghia are nocturnal and shy, so you may not see them often even as the " +
+  "aiptasia disappears over the following weeks. Keep them only in established reef tanks with stable " +
+  "parameters (72–80°F, salinity 1.024–1.026); they have no interest in fish food, algae, or detritus and " +
+  "feed exclusively on aiptasia, so once the pest is eliminated the colony will slowly decline or can be " +
+  "moved to another infested tank. Avoid powerful uncovered intakes, which can pull in small specimens. " +
+  "Ships overnight as juveniles roughly 1/4 to 1/2 inch. Backorder item: we confirm availability before any " +
+  "payment is collected — submit a backorder request from your cart and we'll reply within 1 business day " +
+  "with confirmed stock and an invoice.";
+
 export const marineLivestockProducts: Product[] = [
   {
     id: "swl-flame-back-pygmy-angel-medium-large",
@@ -7205,5 +7218,60 @@ export const marineLivestockProducts: Product[] = [
     wholesalePrice: 44.99,
     imageGradient: "from-purple-800 to-ocean-950",
     tags: ["corals & frags", "saltwater", "reef", "backorder", "marine", "cultured lps"],
+  },
+
+  // ── Berghia Nudibranchs (aiptasia control) — quantity tiers ──────────────
+  // Pricing: $95.83 product per 5-pack (= $575 ÷ 6 at the 30 bulk tier),
+  // plus $49.99 flat overnight shipping per order, free at the 30 tier.
+  {
+    id: "swl-berghia-nudibranch-5pk",
+    name: "Berghia Nudibranch — 5 Pack",
+    scientificName: "Berghia stephanieae",
+    description:
+      "A 5-pack of aquacultured Berghia nudibranchs — the safest, most effective way to wipe out a stubborn aiptasia (glass anemone) outbreak without chemicals or dips. Berghia eat aiptasia and nothing else: they will not touch your corals, clams, fish, or other invertebrates, making them completely reef safe. Working at night, they hunt down even the small aiptasia buried deep in rockwork that you can't reach by hand. Five is a solid starting dose for most tanks up to roughly 60–80 gallons; they breed in your tank as they feed, so the population grows to match the problem and then naturally tapers off once the aiptasia is gone. " +
+      BERGHIA_BASE_DESC,
+    category: "Livestock",
+    subCategory: "Saltwater Invertebrates",
+    waterType: "Saltwater",
+    availability: "BACKORDER",
+    price: 145.99,
+    size: "5 nudibranchs, ~1/4–1/2 inch each",
+    wholesalePrice: 95.99,
+    imageGradient: "from-teal-800 to-ocean-950",
+    tags: ["nudibranch", "berghia", "aiptasia", "reef safe", "saltwater", "backorder"],
+  },
+  {
+    id: "swl-berghia-nudibranch-15pk",
+    name: "Berghia Nudibranch — 15 Pack",
+    scientificName: "Berghia stephanieae",
+    description:
+      "Fifteen aquacultured Berghia nudibranchs — sized for a heavier aiptasia infestation or a larger system (roughly 100–180 gallons). Stocking more Berghia at once clears an outbreak faster and gives the breeding colony a stronger head start. Like all Berghia, they are strictly aiptasia eaters and 100% reef safe — corals, clams, fish, and other inverts are never harmed. " +
+      BERGHIA_BASE_DESC,
+    category: "Livestock",
+    subCategory: "Saltwater Invertebrates",
+    waterType: "Saltwater",
+    availability: "BACKORDER",
+    price: 337.99,
+    size: "15 nudibranchs, ~1/4–1/2 inch each",
+    wholesalePrice: 274.99,
+    imageGradient: "from-teal-800 to-ocean-950",
+    tags: ["nudibranch", "berghia", "aiptasia", "reef safe", "saltwater", "backorder"],
+  },
+  {
+    id: "swl-berghia-nudibranch-30pk",
+    name: "Berghia Nudibranch — 30 Pack (Free Overnight Shipping)",
+    scientificName: "Berghia stephanieae",
+    description:
+      "Our best value — thirty aquacultured Berghia nudibranchs with FREE FedEx overnight shipping included. This is the go-to package for a severe aiptasia outbreak, a large display or frag system, or for splitting between multiple tanks. The large group establishes a fast-breeding colony that overwhelms even a heavy infestation. Strictly aiptasia eaters and completely reef safe. " +
+      BERGHIA_BASE_DESC,
+    category: "Livestock",
+    subCategory: "Saltwater Invertebrates",
+    waterType: "Saltwater",
+    availability: "BACKORDER",
+    price: 575.0,
+    size: "30 nudibranchs, ~1/4–1/2 inch each",
+    wholesalePrice: 499.99,
+    imageGradient: "from-teal-800 to-ocean-950",
+    tags: ["nudibranch", "berghia", "aiptasia", "reef safe", "saltwater", "backorder", "bulk"],
   },
 ];

@@ -1066,9 +1066,9 @@ const marineImageMap: Record<string, string> = {
   "swl-yellow-red-tree-sponge": "/images/marine/swl-yellow-red-tree-sponge.webp",
   "swl-zebra-turbo-5pk": "/images/marine/swl-zebra-turbo-5pk.webp",
   // ── Openly-licensed species photos (iNaturalist / Wikimedia, CC0/CC-BY) ──
-  "swl-berghia-nudibranch-5pk": "/images/marine/swl-berghia-nudibranch-5pk.jpg",
-  "swl-berghia-nudibranch-15pk": "/images/marine/swl-berghia-nudibranch-5pk.jpg",
-  "swl-berghia-nudibranch-30pk": "/images/marine/swl-berghia-nudibranch-5pk.jpg",
+  "swl-berghia-nudibranch-5pk": "/images/marine/swl-berghia-nudibranch-5pk.webp",
+  "swl-berghia-nudibranch-15pk": "/images/marine/swl-berghia-nudibranch-5pk.webp",
+  "swl-berghia-nudibranch-30pk": "/images/marine/swl-berghia-nudibranch-5pk.webp",
   "swl-3-stripe-damsel-5pk": "/images/marine/swl-4-stripe-damsel-5pk.png",
   "swl-4-stripe-damsel-5pk": "/images/marine/swl-4-stripe-damsel-5pk.png",
   "swl-abalone": "/images/marine/swl-abalone.jpg",

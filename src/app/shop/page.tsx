@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Search, X, ChevronLeft, ChevronRight, SlidersHorizontal } from "lucide-react";
 import { products, subCategories } from "@/lib/mockData";
 import { waterGardenProducts } from "@/lib/waterGardenData";
@@ -30,8 +30,64 @@ const WG_VARIANTS: Record<string, string[]> = {
 // Saltwater sub-category chips — extensible as we add Corals, Invertebrates, Marine Plants
 const SW_SUBCATEGORIES = ["Macroalgae", "Live Food"] as const;
 
-// Livestock sub-category chips — extensible as we add Shrimp, Fish, etc.
-const LS_SUBCATEGORIES = ["Snails", "Saltwater Invertebrates"] as const;
+// Livestock sub-category chips — ordered by catalog size so the biggest groups lead
+const LS_SUBCATEGORIES = [
+  "Marine Fish",
+  "Corals & Frags",
+  "Saltwater Invertebrates",
+  "Anemones",
+  "Snails",
+  "Clams",
+] as const;
+
+// Dry Goods sub-category chips — equipment & supplies groupings
+const DG_SUBCATEGORIES = [
+  "CO2 Equipment",
+  "Filtration",
+  "Pumps & Flow",
+  "Water Treatment",
+  "Lighting",
+  "Substrate & Hardscape",
+  "Food & Nutrition",
+  "Accessories",
+  "Decor",
+  "Equipment",
+] as const;
+
+// Marine-fish "type" second-level filter. Each chip matches if any keyword
+// appears in the listing name (case-insensitive). Shown only when the
+// Livestock → Marine Fish sub-category is active. Sorted/shown by live count.
+const FISH_TYPES: { label: string; keywords: string[] }[] = [
+  { label: "Angelfish", keywords: ["angel", "coral beauty"] },
+  { label: "Tangs", keywords: ["tang", "unicorn", "surgeon"] },
+  { label: "Wrasses", keywords: ["wrasse", "tusk", "coris", "hogfish", "fairy", "flasher"] },
+  { label: "Clownfish", keywords: ["clown", "ocellaris", "percula", "maroon", "gladiator", "davinci", "da vinci"] },
+  { label: "Gobies", keywords: ["goby"] },
+  { label: "Blennies", keywords: ["blenny"] },
+  { label: "Damsels & Chromis", keywords: ["damsel", "chromis"] },
+  { label: "Anthias", keywords: ["anthias"] },
+  { label: "Basslets & Grammas", keywords: ["basslet", "gramma", "hamlet"] },
+  { label: "Butterflyfish", keywords: ["butterfly"] },
+  { label: "Puffers & Boxfish", keywords: ["puffer", "boxfish", "boxfih", "toadfish", "porcupine", "toby"] },
+  { label: "Hawkfish", keywords: ["hawk"] },
+  { label: "Cardinalfish", keywords: ["cardinal"] },
+  { label: "Eels", keywords: ["eel", "moray"] },
+  { label: "Triggers & Files", keywords: ["trigger", "file fish", "filefish"] },
+  { label: "Lionfish", keywords: ["lion"] },
+  { label: "Foxface & Rabbitfish", keywords: ["foxface", "rabbit"] },
+  { label: "Dragonets", keywords: ["mandarin", "dragonet", "scooter"] },
+  { label: "Dottybacks", keywords: ["dottyback", "pseudochromis"] },
+];
+
+// Resolve a marine-fish listing name to its type label (or "Other").
+function fishTypeOf(name: string): string {
+  const n = name.toLowerCase();
+  for (const t of FISH_TYPES) {
+    if (t.keywords.some((k) => n.includes(k))) return t.label;
+  }
+  return "Other";
+}
+
 import ProductCard from "@/components/ProductCard";
 import Footer from "@/components/Footer";
 
@@ -51,6 +107,7 @@ const availabilityMap: Record<string, string> = {
 export default function ShopPage() {
   const [category, setCategory] = useState<string>("All");
   const [subCategory, setSubCategory] = useState<string>("All");
+  const [fishType, setFishType] = useState<string>("All"); // marine-fish second level
   const [wgGroup, setWgGroup] = useState<string>("All");     // WG top-level group
   const [wgVariant, setWgVariant] = useState<string>("All"); // WG color/variant within group
   const [waterType, setWaterType] = useState<string>("All");
@@ -71,7 +128,12 @@ export default function ShopPage() {
   }, []);
 
   // Reset page on filter change
-  useEffect(() => { setPage(1); }, [category, subCategory, wgGroup, wgVariant, waterType, availability, search]);
+  useEffect(() => { setPage(1); }, [category, subCategory, fishType, wgGroup, wgVariant, waterType, availability, search]);
+
+  // Reset the fish-type sub-filter whenever we leave the Marine Fish view
+  useEffect(() => {
+    if (!(category === "Livestock" && subCategory === "Marine Fish")) setFishType("All");
+  }, [category, subCategory]);
 
   // Derive active WG variant chips for the selected group
   const activeWgVariants = wgGroup !== "All" ? (WG_VARIANTS[wgGroup] ?? []) : [];
@@ -113,6 +175,18 @@ export default function ShopPage() {
       // Livestock sub-category filter
       if (category === "Livestock" && subCategory !== "All" && p.subCategory !== subCategory) return false;
 
+      // Marine-fish type second-level filter
+      if (
+        category === "Livestock" &&
+        subCategory === "Marine Fish" &&
+        fishType !== "All" &&
+        fishTypeOf(p.name) !== fishType
+      )
+        return false;
+
+      // Dry Goods sub-category filter
+      if (category === "Dry Goods" && subCategory !== "All" && p.subCategory !== subCategory) return false;
+
       if (waterType !== "All" && p.waterType !== waterType && p.waterType !== "Both") return false;
       if (availability !== "All" && p.availability !== availabilityMap[availability]) return false;
       if (search) {
@@ -122,7 +196,27 @@ export default function ShopPage() {
       }
       return true;
     });
-  }, [category, subCategory, wgGroup, wgVariant, wgSubCatFilter, waterType, availability, search]);
+  }, [category, subCategory, fishType, wgGroup, wgVariant, wgSubCatFilter, waterType, availability, search]);
+
+  // Live counts for the marine-fish type chips (only types actually present)
+  const fishTypeCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const p of allProducts) {
+      if (p.category === "Livestock" && p.subCategory === "Marine Fish") {
+        const t = fishTypeOf(p.name);
+        counts[t] = (counts[t] ?? 0) + 1;
+      }
+    }
+    return counts;
+  }, []);
+
+  const orderedFishTypes = useMemo(
+    () =>
+      [...FISH_TYPES.map((t) => t.label), "Other"]
+        .filter((label) => (fishTypeCounts[label] ?? 0) > 0)
+        .sort((a, b) => (fishTypeCounts[b] ?? 0) - (fishTypeCounts[a] ?? 0)),
+    [fishTypeCounts]
+  );
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
   const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
@@ -130,6 +224,7 @@ export default function ShopPage() {
   const resetFilters = useCallback(() => {
     setCategory("All");
     setSubCategory("All");
+    setFishType("All");
     setWgGroup("All");
     setWgVariant("All");
     setWaterType("All");
@@ -138,7 +233,7 @@ export default function ShopPage() {
     setPage(1);
   }, []);
 
-  const hasActiveFilters = category !== "All" || subCategory !== "All" || wgGroup !== "All" || waterType !== "All" || availability !== "All" || search;
+  const hasActiveFilters = category !== "All" || subCategory !== "All" || fishType !== "All" || wgGroup !== "All" || waterType !== "All" || availability !== "All" || search;
 
   return (
     <main className="pt-16">
@@ -159,7 +254,7 @@ export default function ShopPage() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-3 text-slate-400 text-sm"
           >
-            {allProducts.length} premium aquatic plants — freshwater, saltwater & water garden
+            {allProducts.length} listings — aquarium plants, saltwater fish &amp; coral, pond plants &amp; equipment
           </motion.p>
         </div>
       </section>
@@ -210,7 +305,7 @@ export default function ShopPage() {
               <Search size={13} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
               <input
                 type="text"
-                placeholder="Search plants..."
+                placeholder="Search the shop..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 className="w-48 rounded-full border border-white/10 bg-white/5 pl-8 pr-3 py-1.5 text-xs text-white placeholder-slate-500 outline-none focus:border-aqua-400/50 focus:ring-1 focus:ring-aqua-400/20 transition-all"
@@ -315,27 +410,89 @@ export default function ShopPage() {
             </div>
           )}
 
-          {/* Livestock: sub-category row (Snails / Shrimp / Fish as they grow) */}
+          {/* Livestock: sub-category row + marine-fish type second level */}
           {category === "Livestock" && (
+            <div className="mt-2 space-y-1.5">
+              <div className="flex items-center gap-1.5 flex-wrap">
+                <span className="text-xs text-slate-600 mr-1">Type:</span>
+                <button
+                  onClick={() => setSubCategory("All")}
+                  className={`rounded-full px-2.5 py-0.5 text-xs transition-all cursor-pointer ${
+                    subCategory === "All"
+                      ? "bg-emerald-400/20 text-emerald-300 border border-emerald-400/40"
+                      : "bg-white/5 text-slate-500 border border-white/10 hover:text-white"
+                  }`}
+                >
+                  All Livestock
+                </button>
+                {LS_SUBCATEGORIES.map((sub) => (
+                  <button
+                    key={sub}
+                    onClick={() => setSubCategory(sub)}
+                    className={`rounded-full px-2.5 py-0.5 text-xs transition-all cursor-pointer ${
+                      subCategory === sub
+                        ? "bg-emerald-400/20 text-emerald-300 border border-emerald-400/40"
+                        : "bg-white/5 text-slate-500 border border-white/10 hover:text-white"
+                    }`}
+                  >
+                    {sub}
+                  </button>
+                ))}
+              </div>
+
+              {/* Marine-fish type chips (only under Marine Fish) */}
+              {subCategory === "Marine Fish" && (
+                <div className="flex items-center gap-1.5 flex-wrap pl-10">
+                  <button
+                    onClick={() => setFishType("All")}
+                    className={`rounded-full px-2.5 py-0.5 text-[11px] transition-all cursor-pointer ${
+                      fishType === "All"
+                        ? "bg-emerald-400/15 text-emerald-300 border border-emerald-400/30"
+                        : "bg-white/5 text-slate-500 border border-white/8 hover:text-slate-300"
+                    }`}
+                  >
+                    All Fish
+                  </button>
+                  {orderedFishTypes.map((label) => (
+                    <button
+                      key={label}
+                      onClick={() => setFishType(label)}
+                      className={`rounded-full px-2.5 py-0.5 text-[11px] transition-all cursor-pointer ${
+                        fishType === label
+                          ? "bg-emerald-400/15 text-emerald-300 border border-emerald-400/30"
+                          : "bg-white/5 text-slate-500 border border-white/8 hover:text-slate-300"
+                      }`}
+                    >
+                      {label}
+                      <span className="ml-1 text-slate-600">{fishTypeCounts[label]}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Dry Goods: equipment & supplies sub-category row */}
+          {category === "Dry Goods" && (
             <div className="mt-2 flex items-center gap-1.5 flex-wrap">
               <span className="text-xs text-slate-600 mr-1">Type:</span>
               <button
                 onClick={() => setSubCategory("All")}
                 className={`rounded-full px-2.5 py-0.5 text-xs transition-all cursor-pointer ${
                   subCategory === "All"
-                    ? "bg-emerald-400/20 text-emerald-300 border border-emerald-400/40"
+                    ? "bg-sky-400/20 text-sky-300 border border-sky-400/40"
                     : "bg-white/5 text-slate-500 border border-white/10 hover:text-white"
                 }`}
               >
-                All Livestock
+                All Equipment
               </button>
-              {LS_SUBCATEGORIES.map((sub) => (
+              {DG_SUBCATEGORIES.map((sub) => (
                 <button
                   key={sub}
                   onClick={() => setSubCategory(sub)}
                   className={`rounded-full px-2.5 py-0.5 text-xs transition-all cursor-pointer ${
                     subCategory === sub
-                      ? "bg-emerald-400/20 text-emerald-300 border border-emerald-400/40"
+                      ? "bg-sky-400/20 text-sky-300 border border-sky-400/40"
                       : "bg-white/5 text-slate-500 border border-white/10 hover:text-white"
                   }`}
                 >
@@ -397,49 +554,37 @@ export default function ShopPage() {
         )}
       </div>
 
-      {/* Product grid */}
+      {/* Product grid — keyed per-card so filter changes re-animate without a
+          container-level AnimatePresence swap (which could deadlock on mount) */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12">
-        <AnimatePresence mode="wait">
-          {paginated.length > 0 ? (
-            <motion.div
-              key={`${category}-${subCategory}-${availability}-${search}-${page}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-            >
-              {paginated.map((product, i) => (
-                <motion.div
-                  key={product.id}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: Math.min(i * 0.03, 0.3), duration: 0.3 }}
-                >
-                  <ProductCard product={product} />
-                </motion.div>
-              ))}
-            </motion.div>
-          ) : (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="flex items-center justify-center py-24"
-            >
-              <div className="glass-strong rounded-2xl p-10 text-center max-w-md">
-                <p className="text-lg font-medium text-white">No products found</p>
-                <p className="mt-2 text-sm text-slate-400">Try adjusting your filters or search terms.</p>
-                <button
-                  onClick={resetFilters}
-                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-aqua-400/20 px-5 py-2 text-sm font-medium text-aqua-300 border border-aqua-400/30 hover:bg-aqua-400/30 transition-all cursor-pointer"
-                >
-                  <X size={14} />
-                  Reset Filters
-                </button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {paginated.length > 0 ? (
+          <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {paginated.map((product, i) => (
+              <motion.div
+                key={product.id}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: Math.min(i * 0.03, 0.3), duration: 0.3 }}
+              >
+                <ProductCard product={product} />
+              </motion.div>
+            ))}
+          </div>
+        ) : (
+          <div className="flex items-center justify-center py-24">
+            <div className="glass-strong rounded-2xl p-10 text-center max-w-md">
+              <p className="text-lg font-medium text-white">No products found</p>
+              <p className="mt-2 text-sm text-slate-400">Try adjusting your filters or search terms.</p>
+              <button
+                onClick={resetFilters}
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-aqua-400/20 px-5 py-2 text-sm font-medium text-aqua-300 border border-aqua-400/30 hover:bg-aqua-400/30 transition-all cursor-pointer"
+              >
+                <X size={14} />
+                Reset Filters
+              </button>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Pagination */}

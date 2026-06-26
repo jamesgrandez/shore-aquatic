@@ -11,6 +11,17 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "how-to-get-rid-of-aiptasia",
+    title: "How to Get Rid of Aiptasia (And Keep It Gone)",
+    description:
+      "Identify glass anemones vs. harmless look-alikes, why scraping spreads them, and every removal method compared — manual, chemical, and the biological controls (Berghia, peppermint shrimp, copperband) that actually work.",
+    category: "Saltwater Guide",
+    readTime: 12,
+    date: "June 26, 2026",
+    gradient: "from-rose-950 to-amber-900",
+    icon: "🪼",
+  },
+  {
     slug: "best-plants-for-shrimp-tanks",
     title: "Best Plants for Shrimp Tanks (10 Species Ranked + Safety Protocol)",
     description:

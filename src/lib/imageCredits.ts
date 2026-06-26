@@ -13,6 +13,8 @@ export interface ImageCredit {
 }
 
 export const imageCredits: ImageCredit[] = [
+  { id: "blog-aiptasia", species: "Aiptasia / Glass Anemone (Exaiptasia diaphana)", author: "no rights reserved", license: "CC0", source: "iNaturalist", sourceUrl: "https://www.inaturalist.org/taxa/Exaiptasia-diaphana" },
+  { id: "blog-matted-filefish", species: "Matted Filefish (Acreichthys tomentosus)", author: "portioid", license: "CC-BY", source: "iNaturalist", sourceUrl: "https://www.inaturalist.org/taxa/Acreichthys-tomentosus" },
   { id: "swl-arrow-crab-5pk", species: "Arrow Crab", author: "Donald Davesne", license: "CC-BY", source: "iNaturalist", sourceUrl: "https://www.inaturalist.org/observations/120487148" },
   { id: "swl-arrow-crab-haiti-5pk", species: "Arrow Crab Haiti", author: "Donald Davesne", license: "CC-BY", source: "iNaturalist", sourceUrl: "https://www.inaturalist.org/observations/120487148" },
   { id: "swl-astrea-25pk", species: "Astrea", author: "Fives", license: "CC-BY", source: "iNaturalist", sourceUrl: "https://www.inaturalist.org/observations/149947050" },

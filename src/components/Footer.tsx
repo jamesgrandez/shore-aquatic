@@ -133,7 +133,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-600">
-            Fort Lauderdale, FL 33311 &middot; Area Code 954
+            Fort Lauderdale, FL
           </p>
           <p className="text-xs text-slate-600">
             &copy; 2026 Shore Aquatic. All rights reserved.

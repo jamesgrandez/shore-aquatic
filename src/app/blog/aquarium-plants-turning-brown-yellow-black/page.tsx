@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import RelatedGuides from "@/components/RelatedGuides";
 
 export const metadata: Metadata = {
   title: "Aquarium Plants Brown, Yellow or Black? 24 Causes Diagnosed",
@@ -33,7 +34,7 @@ const articleJsonLd = {
     url: "https://shoreaquatic.com",
   },
   datePublished: "2026-04-24",
-  dateModified: "2026-04-24",
+  dateModified: "2026-07-05",
   url: "https://shoreaquatic.com/blog/aquarium-plants-turning-brown-yellow-black",
   mainEntityOfPage:
     "https://shoreaquatic.com/blog/aquarium-plants-turning-brown-yellow-black",
@@ -795,6 +796,7 @@ export default function AquariumPlantColorGuidePage() {
           </section>
         </div>
 
+        <RelatedGuides current="aquarium-plants-turning-brown-yellow-black" />
         <Footer />
       </main>
     </>

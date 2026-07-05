@@ -33,7 +33,7 @@ const articleJsonLd = {
     logo: { "@type": "ImageObject", url: "https://shoreaquatic.com/logo.jpg" },
   },
   datePublished: "2026-04-25",
-  dateModified: "2026-04-25",
+  dateModified: "2026-07-05",
   url: "https://shoreaquatic.com/blog/aquarium-plants-without-substrate",
   mainEntityOfPage:
     "https://shoreaquatic.com/blog/aquarium-plants-without-substrate",

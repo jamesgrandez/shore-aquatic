@@ -33,7 +33,7 @@ const articleJsonLd = {
     logo: { "@type": "ImageObject", url: "https://shoreaquatic.com/logo.jpg" },
   },
   datePublished: "2026-04-26",
-  dateModified: "2026-04-26",
+  dateModified: "2026-07-05",
   url: "https://shoreaquatic.com/blog/best-plants-for-betta-fish",
   mainEntityOfPage: "https://shoreaquatic.com/blog/best-plants-for-betta-fish",
 };

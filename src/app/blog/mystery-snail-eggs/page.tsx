@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import RelatedGuides from "@/components/RelatedGuides";
 
 export const metadata: Metadata = {
   title: "Mystery Snail Eggs: Identify, Hatch, or Remove (Complete Guide) | Shore Aquatic",
@@ -859,6 +860,7 @@ export default function MysterySnailEggsPage() {
         </div>
       </section>
 
+      <RelatedGuides current="mystery-snail-eggs" />
       <Footer />
     </main>
   );

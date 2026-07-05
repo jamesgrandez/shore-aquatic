@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import RelatedGuides from "@/components/RelatedGuides";
 
 export const metadata: Metadata = {
   title: "Best Plants for Shrimp Tanks: 10 Species Ranked + Safety Protocol | Shore Aquatic",
@@ -960,6 +961,7 @@ export default function ShrimpPlantsPage() {
         </div>
       </section>
 
+      <RelatedGuides current="best-plants-for-shrimp-tanks" />
       <Footer />
     </main>
   );

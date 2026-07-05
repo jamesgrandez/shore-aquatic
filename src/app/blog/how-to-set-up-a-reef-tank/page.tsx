@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import RelatedGuides from "@/components/RelatedGuides";
 
 export const metadata: Metadata = {
   title: "How to Set Up Your First Reef Tank: Complete Beginner Guide | Shore Aquatic",
@@ -872,6 +873,7 @@ export default function ReefTankSetupGuidePage() {
         </div>
       </section>
 
+      <RelatedGuides current="how-to-set-up-a-reef-tank" />
       <Footer />
     </main>
   );

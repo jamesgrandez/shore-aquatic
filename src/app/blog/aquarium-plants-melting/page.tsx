@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import RelatedGuides from "@/components/RelatedGuides";
 
 export const metadata: Metadata = {
   title: "Aquarium Plants Melting? 5 Types Diagnosed + 6-Step Fix",
@@ -25,7 +26,7 @@ const articleJsonLd = {
   author: { "@type": "Organization", name: "Shore Aquatic" },
   publisher: { "@type": "Organization", name: "Shore Aquatic", url: "https://shoreaquatic.com" },
   datePublished: "2026-04-24",
-  dateModified: "2026-04-24",
+  dateModified: "2026-07-05",
   url: "https://shoreaquatic.com/blog/aquarium-plants-melting",
   mainEntityOfPage: "https://shoreaquatic.com/blog/aquarium-plants-melting",
 };
@@ -637,6 +638,7 @@ export default function AquariumPlantsMeltingPage() {
           </section>
         </div>
 
+        <RelatedGuides current="aquarium-plants-melting" />
         <Footer />
       </main>
     </>

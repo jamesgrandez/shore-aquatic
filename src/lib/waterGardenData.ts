@@ -1969,7 +1969,7 @@ export const waterGardenProducts: Product[] = [
   },
   {
     id: "wg-tpale",
-    name: "Alexis",
+    name: "Alexis Water Lily",
     description: "Rich tropical day-blooming purple lily. Deep, jewel-toned blooms with a long flowering season.",
     category: "Water Garden",
     subCategory: "Tropical Lily - Purple",

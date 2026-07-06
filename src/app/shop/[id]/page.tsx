@@ -7,6 +7,7 @@ import { marineLivestockProducts } from "@/lib/marineLivestockData";
 import { getProductImage } from "@/lib/imageMap";
 import type { Metadata } from "next";
 import ProductDetailClient from "./ProductDetailClient";
+import ProductEnrichment from "@/components/ProductEnrichment";
 
 const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts, ...dryGoodsProducts, ...marineLivestockProducts];
 
@@ -164,6 +165,7 @@ export default async function ProductDetailPage(
         />
       )}
       <ProductDetailClient />
+      {product && <ProductEnrichment product={product} />}
     </>
   );
 }

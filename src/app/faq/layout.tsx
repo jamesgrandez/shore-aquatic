@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FAQ – Frequently Asked Questions | Shore Aquatic",
+  title: "FAQ – Frequently Asked Questions",
   description:
     "Answers about shipping live aquatic plants, our live arrival guarantee, water lilies, tissue culture, plant care, payment methods, and more. Fort Lauderdale, FL.",
   alternates: { canonical: "https://shoreaquatic.com/faq" },

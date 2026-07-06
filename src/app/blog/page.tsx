@@ -3,7 +3,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Blog — Aquarium Plant Guides & Tips | Shore Aquatic",
+  title: "Blog — Aquarium Plant Guides & Tips",
   description:
     "Expert guides on aquarium plant care, troubleshooting, substrate, CO2, and water parameters. Written by Shore Aquatic — South Florida's aquatic plant specialists.",
   alternates: { canonical: "https://shoreaquatic.com/blog" },

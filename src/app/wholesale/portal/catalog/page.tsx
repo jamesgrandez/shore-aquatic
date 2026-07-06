@@ -3,7 +3,7 @@ import { products } from "@/lib/mockData";
 import CatalogTable, { type CatalogRow } from "./CatalogTable";
 
 export const metadata: Metadata = {
-  title: "Wholesale Catalog | Shore Aquatic",
+  title: "Wholesale Catalog",
   description: "Interactive wholesale catalog with filterable plant inventory and net pricing.",
   robots: { index: false, follow: false },
 };

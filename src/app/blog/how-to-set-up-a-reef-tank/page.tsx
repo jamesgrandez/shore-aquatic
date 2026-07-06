@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import RelatedGuides from "@/components/RelatedGuides";
 
 export const metadata: Metadata = {
-  title: "How to Set Up Your First Reef Tank: Complete Beginner Guide | Shore Aquatic",
+  title: "How to Set Up Your First Reef Tank: Complete Beginner Guide",
   description:
     "Complete reef tank setup guide for beginners. Equipment tiers ($300-$1,500+), cycling protocol, water parameters, livestock order, refugium setup, and a realistic first-year budget. From a Florida saltwater specialist.",
   alternates: { canonical: "https://shoreaquatic.com/blog/how-to-set-up-a-reef-tank" },

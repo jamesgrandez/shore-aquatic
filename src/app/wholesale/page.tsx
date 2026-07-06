@@ -5,7 +5,7 @@ import { getCurrentSession } from "@/lib/wholesale-session";
 import WholesaleLoginForm from "./WholesaleLoginForm";
 
 export const metadata: Metadata = {
-  title: "Wholesale Portal Login | Shore Aquatic",
+  title: "Wholesale Portal Login",
   description:
     "Sign in to the Shore Aquatic wholesale portal to access our B2B price list, catalog, and account tools.",
   robots: { index: false, follow: false },  // don't index the login page

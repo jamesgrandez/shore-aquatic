@@ -4,7 +4,7 @@ import { getCurrentSession } from "@/lib/wholesale-session";
 import { products } from "@/lib/mockData";
 
 export const metadata: Metadata = {
-  title: "Wholesale Portal | Shore Aquatic",
+  title: "Wholesale Portal",
   description: "Shore Aquatic wholesale catalog, price list, and download center for licensed retailers.",
   robots: { index: false, follow: false },
 };

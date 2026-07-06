@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import RelatedGuides from "@/components/RelatedGuides";
 
 export const metadata: Metadata = {
-  title: "Best Plants for Shrimp Tanks: 10 Species Ranked + Safety Protocol | Shore Aquatic",
+  title: "Best Plants for Shrimp Tanks: 10 Species Ranked + Safety Protocol",
   description:
     "10 ranked shrimp-safe plants scored on biofilm production, shelter, light, and difficulty. Plant safety protocol (pesticide, copper, glutaraldehyde risks), quarantine steps, low-tech carpet picks, and Caridina vs Neocaridina specifics.",
   alternates: { canonical: "https://shoreaquatic.com/blog/best-plants-for-shrimp-tanks" },

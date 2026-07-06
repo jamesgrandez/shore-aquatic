@@ -21,13 +21,16 @@ export async function generateMetadata(
   }
 
   const imageUrl = getProductImage(product.id);
-  const title = product.scientificName
-    ? `${product.name} (${product.scientificName})`
-    : product.name;
+  // "for sale" is a proven high-CTR commercial modifier for our live-goods
+  // queries (GSC shows "{species} for sale" converting far better than the
+  // bare name). Dry goods keep the plain product name.
+  const forSale = product.category === "Dry Goods" ? "" : " for Sale";
+  const sci = product.scientificName ? ` (${product.scientificName})` : "";
+  const title = `${product.name}${forSale}`;
 
   return {
     title,
-    description: `Buy ${product.name}${product.scientificName ? ` (${product.scientificName})` : ""} online. ${product.description.slice(0, 140)}. $${product.price.toFixed(2)} – Free 2-day shipping on orders over $100.`,
+    description: `Buy ${product.name}${sci} online — $${product.price.toFixed(2)}. ${product.description.slice(0, 65).trim()}… Free 2-day shipping over $100.`,
     openGraph: {
       title: `${product.name} – Shore Aquatic`,
       description: product.description.slice(0, 200),

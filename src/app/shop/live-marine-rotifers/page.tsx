@@ -5,12 +5,12 @@ import Footer from "@/components/Footer";
 import VariantSelector from "./VariantSelector";
 
 export const metadata: Metadata = {
-  title: "Live Marine Rotifers (L-Type Brachionus) — Built for Breeders | Shore Aquatic",
+  title: "Live Marine Rotifers (L-Type Brachionus) — Built for Breeders",
   description:
     "L-type marine rotifer culture sized for first-feed marine larvae (150–360 microns). Day-0 productive density — feed today, not in 3 weeks. Signed Quality Report with every shipment. 4 oz, 16 oz, 32 oz, and 1 Gallon sizes.",
   alternates: { canonical: "https://shoreaquatic.com/shop/live-marine-rotifers" },
   openGraph: {
-    title: "Live Marine Rotifers — Built for Breeders | Shore Aquatic",
+    title: "Live Marine Rotifers — Built for Breeders",
     description:
       "L-type Brachionus rotifer culture at 500–1,000 per mL. Sized for clownfish, seahorse, mandarin, and dottyback fry. Signed Quality Report with every shipment.",
     type: "website",

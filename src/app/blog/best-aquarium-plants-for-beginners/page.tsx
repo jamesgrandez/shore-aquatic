@@ -3,9 +3,9 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "15 Best Aquarium Plants for Beginners (No CO₂ Required) | Shore Aquatic",
+  title: "15 Best Aquarium Plants for Beginners (No CO₂ Required)",
   description:
-    "Ranked by a 5-dimension beginner score — with failure modes, pro tips, and scenario picks for nano tanks, shrimp tanks, and algae-plagued setups. All 15 plants grow without CO₂.",
+    "15 easy aquarium plants ranked by a 5-dimension score — with each plant's #1 failure mode, a pro tip, and picks for nano, shrimp, and algae-prone tanks. No CO₂ needed.",
   alternates: {
     canonical: "https://shoreaquatic.com/blog/best-aquarium-plants-for-beginners",
   },

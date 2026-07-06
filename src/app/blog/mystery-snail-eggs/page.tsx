@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import RelatedGuides from "@/components/RelatedGuides";
 
 export const metadata: Metadata = {
-  title: "Mystery Snail Eggs: Identify, Hatch, or Remove (Complete Guide) | Shore Aquatic",
+  title: "Mystery Snail Eggs: Identify, Hatch, or Remove (Complete Guide)",
   description:
     "Found pink eggs above your tank waterline? Complete guide to mystery snail eggs — identification, hatching timeline, decision matrix, removal protocol, color genetics, and 10-question FAQ.",
   alternates: { canonical: "https://shoreaquatic.com/blog/mystery-snail-eggs" },

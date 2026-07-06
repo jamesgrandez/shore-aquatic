@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import NewsletterPopup from "@/components/NewsletterPopup";
 import "./globals.css";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
@@ -102,6 +103,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         <Navbar />
         {children}
+        <NewsletterPopup />
       </body>
     </html>
   );

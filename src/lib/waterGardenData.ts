@@ -5782,7 +5782,7 @@ export const waterGardenProducts: Product[] = [
     category: "Water Garden",
     subCategory: "Marginal Tropical - 2\" Pot",
     waterType: "Both",
-    availability: "BACKORDER",
+    availability: "AVAILABLE",
     price: 20.99,
     size: "2\" Pot",
     wholesalePrice: 1.38,

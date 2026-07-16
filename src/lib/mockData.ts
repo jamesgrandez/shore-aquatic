@@ -263,7 +263,7 @@ export const products: Product[] = [
     category: "Plants",
     subCategory: "Bunch Plants",
     waterType: "Freshwater",
-    availability: "BACKORDER",
+    availability: "AVAILABLE",
     price: 20.99,
     wholesalePrice: 1.35,
     imageGradient: "from-teal-900 to-emerald-900",

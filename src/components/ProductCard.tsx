@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Product } from "@/lib/mockData";
 import { CartUtils } from "@/lib/cart";
 import { getProductImage } from "@/lib/imageMap";
+import { isBogo, isBogoLimited } from "@/lib/promotions";
 import AvailabilityBadge from "./AvailabilityBadge";
 
 function CategoryIcon({ category }: { category: string }) {
@@ -39,6 +40,8 @@ export default function ProductCard({ product }: { product: Product }) {
   const isOutOfSeason = product.availability === "OUT OF SEASON";
   const isBackorder = product.availability === "BACKORDER";
   const requiresConfig = product.id === "live-marine-rotifers";
+  const bogo = isBogo(product.id);
+  const bogoLimited = isBogoLimited(product.id);
   const imageUrl = getProductImage(product.id);
 
   const handleAdd = () => {
@@ -67,6 +70,16 @@ export default function ProductCard({ product }: { product: Product }) {
             />
           ) : (
             <CategoryIcon category={product.category} />
+          )}
+          {bogo && (
+            <span className="absolute top-2.5 left-2.5 rounded-full bg-emerald-500 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-lg">
+              Buy 1 Get 1 Free
+            </span>
+          )}
+          {bogoLimited && (
+            <span className="absolute top-2.5 right-2.5 rounded-full bg-coral px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-lg">
+              Limited
+            </span>
           )}
         </div>
       </Link>

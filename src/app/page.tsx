@@ -7,11 +7,13 @@ import PlantMarquee from "@/components/PlantMarquee";
 import FeaturedPlants from "@/components/FeaturedPlants";
 import SaltwaterShowcase from "@/components/SaltwaterShowcase";
 import RotiferHero from "@/components/RotiferHero";
+import AnnouncementBar from "@/components/AnnouncementBar";
 
 export default function Home() {
   return (
     <main>
       <Hero />
+      <AnnouncementBar />
       <SaltwaterShowcase />
       <PlantMarquee />
       <ShippingBanner />

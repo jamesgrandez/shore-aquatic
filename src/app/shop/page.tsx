@@ -33,6 +33,7 @@ const SW_SUBCATEGORIES = ["Macroalgae", "Live Food"] as const;
 // Livestock sub-category chips — extensible as we add Shrimp, Fish, etc.
 const LS_SUBCATEGORIES = ["Snails", "Saltwater Invertebrates"] as const;
 import ProductCard from "@/components/ProductCard";
+import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
 
 const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts, ...dryGoodsProducts, ...marineLivestockProducts];
@@ -163,6 +164,8 @@ export default function ShopPage() {
           </motion.p>
         </div>
       </section>
+
+      <AnnouncementBar />
 
       {/* Sticky filter bar */}
       <div className="sticky top-16 z-40 bg-ocean-950/95 backdrop-blur-xl border-b border-white/5">

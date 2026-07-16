@@ -9,6 +9,8 @@
  *      create a Shopify cart, and redirect to cart.checkoutUrl
  */
 
+import { SHOPIFY_HANDLE_OVERRIDES } from "./shopifyHandleOverrides";
+
 const DOMAIN = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN!;
 const TOKEN  = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_TOKEN!;
 const API    = `https://${DOMAIN}/api/2025-01/graphql.json`;
@@ -33,11 +35,14 @@ async function storefrontFetch(query: string, variables: Record<string, unknown>
 
 /**
  * Returns the Shopify GID for the first variant of a product.
- * Our product IDs map directly to Shopify handles (underscores → hyphens, lowercase).
- * e.g. "wg-hccom" → handle "wg-hccom", "plant-bamb" → handle "plant-bamb"
+ * Our product IDs map directly to Shopify handles (underscores → hyphens, lowercase),
+ * e.g. "wg-hccom" → handle "wg-hccom", "plant-bamb" → handle "plant-bamb".
+ * Some Shopify products use a different handle than the default rule produces —
+ * those are corrected via SHOPIFY_HANDLE_OVERRIDES (see that file).
  */
 async function getVariantIdByHandle(productId: string): Promise<string | null> {
-  const handle = productId.replace(/_/g, "-").toLowerCase();
+  const handle =
+    SHOPIFY_HANDLE_OVERRIDES[productId] ?? productId.replace(/_/g, "-").toLowerCase();
   const data = await storefrontFetch(`
     query GetVariantByHandle($handle: String!) {
       productByHandle(handle: $handle) {

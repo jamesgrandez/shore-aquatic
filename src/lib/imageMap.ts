@@ -1237,6 +1237,8 @@ const marineImageMap: Record<string, string> = {
 
 const localImageMap: Record<string, string> = {
   "live-marine-rotifers": "/images/rotifers/hero-packshot.jpg",
+  // Floating Plant Bundle — composite of Red Root Floater, Salvinia & Duckweed
+  "floater-bundle": "/images/plants/floater-bundle.jpg",
   // Mystery snails — purple variants use specific photos; others use the assortment shot
   "ls-snail-assorted-3":  "/images/snails/assorted-rainbow.jpg",
   "ls-snail-assorted-10": "/images/snails/assorted-rainbow.jpg",

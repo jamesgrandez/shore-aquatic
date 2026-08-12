@@ -7233,7 +7233,7 @@ export const marineLivestockProducts: Product[] = [
     category: "Livestock",
     subCategory: "Saltwater Invertebrates",
     waterType: "Saltwater",
-    availability: "BACKORDER",
+    availability: "AVAILABLE",
     price: 145.99,
     size: "5 nudibranchs, ~1/4–1/2 inch each",
     wholesalePrice: 95.99,

@@ -8,7 +8,7 @@ export default async function WholesalePortalLayout({ children }: { children: Re
   // Server-side auth check — redirects to login if no valid session.
   const session = await getCurrentSession();
   if (!session) {
-    redirect("/wholesale");
+    redirect("/wholesale/login");
   }
 
   return (

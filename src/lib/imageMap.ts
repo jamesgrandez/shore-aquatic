@@ -1239,6 +1239,18 @@ const localImageMap: Record<string, string> = {
   "live-marine-rotifers": "/images/rotifers/hero-packshot.jpg",
   // Floating Plant Bundle — composite of Red Root Floater, Salvinia & Duckweed
   "floater-bundle": "/images/plants/floater-bundle.jpg",
+  // Corrections: the FAN catalog mapped these to a betta / Riccia photo
+  "plant-mrerop":  "/images/plants/red-root-floater.jpg",
+  "plant-mmimom":  "/images/plants/monte-carlo.jpg",
+  "plant-mmimoml": "/images/plants/monte-carlo.jpg",
+  "plant-pmimo":   "/images/plants/monte-carlo.jpg",
+  "plant-pbated":  "/images/plants/dwarf-baby-tears-cup.jpg",
+  "plant-tchecac": "/images/plants/dwarf-baby-tears-cup.jpg",
+  "plant-mdwbam":  "/images/plants/dwarf-baby-tears-mat.jpg",
+  "plant-mdwbamx": "/images/plants/dwarf-baby-tears-mat.jpg",
+  "plant-mdwbar":  "/images/plants/dwarf-baby-tears-rock.jpg",
+  "plant-mdwbarl": "/images/plants/dwarf-baby-tears-rock.jpg",
+  "plant-mdwbadr": "/images/plants/dwarf-baby-tears-rock.jpg",
   // Mystery snails — purple variants use specific photos; others use the assortment shot
   "ls-snail-assorted-3":  "/images/snails/assorted-rainbow.jpg",
   "ls-snail-assorted-10": "/images/snails/assorted-rainbow.jpg",

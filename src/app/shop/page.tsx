@@ -27,16 +27,36 @@ const WG_VARIANTS: Record<string, string[]> = {
   "Marginal":      ["Hardy", "Tropical"],
 };
 
-// Saltwater sub-category chips — extensible as we add Corals, Invertebrates, Marine Plants
-const SW_SUBCATEGORIES = ["Macroalgae", "Live Food"] as const;
-
-// Livestock sub-category chips — extensible as we add Shrimp, Fish, etc.
-const LS_SUBCATEGORIES = ["Snails", "Saltwater Invertebrates"] as const;
 import ProductCard from "@/components/ProductCard";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
 
-const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts, ...dryGoodsProducts, ...marineLivestockProducts];
+// One card per product id. Supplier quantity tiers (e.g. "Amazon 6-24 / 25-49 / 50+")
+// were imported as separate rows sharing an id; they already share one product page
+// and one cart line, and duplicate React keys made the grid render erratically.
+const allProducts = (() => {
+  const seen = new Set<string>();
+  return [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts, ...dryGoodsProducts, ...marineLivestockProducts]
+    .filter((p) => (seen.has(p.id) ? false : (seen.add(p.id), true)));
+})();
+
+// Sub-category chips are derived from the catalog, so every type that exists is
+// filterable and no chip ever leads to an empty result.
+function countSubcats(category: string): Map<string, number> {
+  const m = new Map<string, number>();
+  for (const p of allProducts) {
+    if (p.category === category && p.subCategory) m.set(p.subCategory, (m.get(p.subCategory) ?? 0) + 1);
+  }
+  return m;
+}
+const byCount = (m: Map<string, number>) => [...m.keys()].sort((a, b) => m.get(b)! - m.get(a)!);
+
+const PLANT_COUNTS = countSubcats("Plants");
+const PLANT_TYPES = subCategories.filter((s) => PLANT_COUNTS.has(s));
+const SW_COUNTS = countSubcats("Saltwater");
+const SW_SUBCATEGORIES = byCount(SW_COUNTS);
+const LS_COUNTS = countSubcats("Livestock");
+const LS_SUBCATEGORIES = byCount(LS_COUNTS);
 
 const CATEGORIES = ["All", "Plants", "Water Garden", "Saltwater", "Livestock", "Dry Goods"] as const;
 const WATER_TYPES = ["All", "Freshwater", "Saltwater"] as const;
@@ -177,7 +197,7 @@ export default function ShopPage() {
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat}
-                  onClick={() => { setCategory(cat); setSubCategory("All"); }}
+                  onClick={() => { setCategory(cat); setSubCategory("All"); setWgGroup("All"); setWgVariant("All"); }}
                   className={`rounded-full px-3 py-1 text-xs font-medium transition-all cursor-pointer ${
                     category === cat
                       ? "bg-aqua-400/20 text-aqua-300 border border-aqua-400/40"
@@ -312,7 +332,7 @@ export default function ShopPage() {
                       : "bg-white/5 text-slate-500 border border-white/10 hover:text-white"
                   }`}
                 >
-                  {sub}
+                  {sub} <span className="opacity-50">{SW_COUNTS.get(sub)}</span>
                 </button>
               ))}
             </div>
@@ -342,16 +362,16 @@ export default function ShopPage() {
                       : "bg-white/5 text-slate-500 border border-white/10 hover:text-white"
                   }`}
                 >
-                  {sub}
+                  {sub} <span className="opacity-50">{LS_COUNTS.get(sub)}</span>
                 </button>
               ))}
             </div>
           )}
 
-          {/* Aquarium plants: genus sub-category row */}
+          {/* Aquarium plants: plant-type row */}
           {(category === "All" || category === "Plants") && (
             <div className="mt-2 flex items-center gap-1.5 flex-wrap">
-              <span className="text-xs text-slate-600 mr-1">Genus:</span>
+              <span className="text-xs text-slate-600 mr-1">Plant type:</span>
               <button
                 onClick={() => setSubCategory("All")}
                 className={`rounded-full px-2.5 py-0.5 text-xs transition-all cursor-pointer ${
@@ -360,19 +380,19 @@ export default function ShopPage() {
                     : "bg-white/5 text-slate-500 border border-white/10 hover:text-white"
                 }`}
               >
-                All Genera
+                All Plants
               </button>
-              {subCategories.map((sub) => (
+              {PLANT_TYPES.map((sub) => (
                 <button
                   key={sub}
-                  onClick={() => setSubCategory(sub)}
+                  onClick={() => { setCategory("Plants"); setSubCategory(sub); }}
                   className={`rounded-full px-2.5 py-0.5 text-xs transition-all cursor-pointer ${
                     subCategory === sub
                       ? "bg-teal-400/20 text-teal-300 border border-teal-400/40"
                       : "bg-white/5 text-slate-500 border border-white/10 hover:text-white"
                   }`}
                 >
-                  {sub}
+                  {sub} <span className="opacity-50">{PLANT_COUNTS.get(sub)}</span>
                 </button>
               ))}
             </div>
@@ -405,7 +425,7 @@ export default function ShopPage() {
         <AnimatePresence mode="wait">
           {paginated.length > 0 ? (
             <motion.div
-              key={`${category}-${subCategory}-${availability}-${search}-${page}`}
+              key={`${category}-${subCategory}-${wgGroup}-${wgVariant}-${waterType}-${availability}-${search}-${page}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}

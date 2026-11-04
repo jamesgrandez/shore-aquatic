@@ -29,7 +29,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-bambnl",
@@ -43,7 +43,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bammnl",
@@ -57,7 +57,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-banimnl",
@@ -71,7 +71,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.3,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bannanl",
@@ -85,7 +85,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.3,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bbatenl",
@@ -99,7 +99,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bbacnl",
@@ -113,7 +113,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bbaaunl",
@@ -127,7 +127,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bbapunl",
@@ -141,7 +141,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bcagrnl",
@@ -155,7 +155,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.15,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bcapunl",
@@ -169,7 +169,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bcarnl",
@@ -183,7 +183,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bcrchnl",
@@ -197,7 +197,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bdianl",
@@ -211,7 +211,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bdrflnl",
@@ -225,7 +225,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bhechnl",
@@ -239,7 +239,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bhegrnl",
@@ -253,7 +253,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bhornl",
@@ -267,7 +267,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.35,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bhyannl",
@@ -281,7 +281,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bhyarnl",
@@ -295,7 +295,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bhypinl",
@@ -309,7 +309,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-blihinl",
@@ -323,7 +323,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bllonl",
@@ -337,7 +337,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bllgonl",
@@ -351,7 +351,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bluatnl",
@@ -365,7 +365,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-blubrnl",
@@ -379,7 +379,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-blucunl",
@@ -393,7 +393,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-blunanl",
@@ -407,7 +407,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-blunenl",
@@ -421,7 +421,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bluovnl",
@@ -435,7 +435,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-blupenl",
@@ -449,7 +449,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bluresknl",
@@ -463,7 +463,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-blusurenl",
@@ -477,7 +477,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bluwhnl",
@@ -491,7 +491,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bmaynl",
@@ -505,7 +505,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bmeoanl",
@@ -519,7 +519,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bmonnl",
@@ -533,7 +533,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bmyfinl",
@@ -547,7 +547,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bmygrnl",
@@ -561,7 +561,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bmyrenl",
@@ -575,7 +575,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bpafenl",
@@ -589,7 +589,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bpennl",
@@ -603,7 +603,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bpodanl",
@@ -617,7 +617,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bpoernl",
@@ -631,7 +631,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bprpanl",
@@ -645,7 +645,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bpuwanl",
@@ -659,7 +659,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-brohrnl",
@@ -673,7 +673,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-broinnl",
@@ -687,7 +687,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bromacnl",
@@ -701,7 +701,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bromagnl",
@@ -715,7 +715,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bronanl",
@@ -729,7 +729,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-broorjunl",
@@ -743,7 +743,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-broflnl",
@@ -757,7 +757,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-browanl",
@@ -771,7 +771,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-btelnl",
@@ -785,7 +785,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.7,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bteronl",
@@ -799,7 +799,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-btemnl",
@@ -813,7 +813,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-btenanl",
@@ -827,7 +827,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-btevanl",
@@ -841,7 +841,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-bwisnl",
@@ -855,7 +855,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.78,
     imageGradient: "from-teal-900 to-emerald-900",
-    tags: ["freshwater", "stem plant", "beginner"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-ealts",
@@ -870,7 +870,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-ealtm",
@@ -885,7 +885,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-ealtl",
@@ -900,7 +900,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-ealtx",
@@ -915,7 +915,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eamas",
@@ -930,7 +930,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.7,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eamam",
@@ -945,7 +945,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.15,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eamal",
@@ -960,7 +960,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 1.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eamax",
@@ -975,7 +975,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eamcos",
@@ -990,7 +990,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eamcom",
@@ -1005,7 +1005,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eamcol",
@@ -1020,7 +1020,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-ebras",
@@ -1035,7 +1035,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-ebram",
@@ -1050,7 +1050,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-ebral",
@@ -1065,7 +1065,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-ebrax",
@@ -1080,7 +1080,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-echbr",
@@ -1094,7 +1094,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.42,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-echna",
@@ -1108,7 +1108,7 @@ export const products: Product[] = [
     price: 18.99,
     wholesalePrice: 0.3,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-echmas",
@@ -1123,7 +1123,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-echmam",
@@ -1138,7 +1138,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-echmal",
@@ -1153,7 +1153,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-efrsts",
@@ -1168,7 +1168,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-efrstm",
@@ -1183,7 +1183,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-efrstl",
@@ -1198,7 +1198,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-einrem",
@@ -1213,7 +1213,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-einrel",
@@ -1228,7 +1228,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eklbas",
@@ -1243,7 +1243,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eklbam",
@@ -1258,7 +1258,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eklbal",
@@ -1273,7 +1273,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eklbax",
@@ -1288,7 +1288,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eklprs",
@@ -1303,7 +1303,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eklprm",
@@ -1318,7 +1318,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eklprl",
@@ -1333,7 +1333,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-emels",
@@ -1348,7 +1348,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.93,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-emelm",
@@ -1363,7 +1363,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-emell",
@@ -1378,7 +1378,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-emelx",
@@ -1393,7 +1393,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-emegos",
@@ -1408,7 +1408,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.93,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-emegom",
@@ -1423,7 +1423,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-emegol",
@@ -1438,7 +1438,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-emegox",
@@ -1453,7 +1453,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-emepis",
@@ -1468,7 +1468,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-emepim",
@@ -1483,7 +1483,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-emepil",
@@ -1498,7 +1498,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eoris",
@@ -1513,7 +1513,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eorim",
@@ -1528,7 +1528,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eoril",
@@ -1543,7 +1543,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eorix",
@@ -1558,7 +1558,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eozes",
@@ -1573,7 +1573,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eozem",
@@ -1588,7 +1588,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eozel",
@@ -1603,7 +1603,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eozex",
@@ -1618,7 +1618,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eozgrs",
@@ -1633,7 +1633,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eozgrm",
@@ -1648,7 +1648,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eozgrl",
@@ -1663,7 +1663,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eozgrx",
@@ -1678,7 +1678,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-emirs",
@@ -1693,7 +1693,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-emirm",
@@ -1708,7 +1708,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-emirl",
@@ -1723,7 +1723,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-emirx",
@@ -1738,7 +1738,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-erads",
@@ -1753,7 +1753,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.7,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eradm",
@@ -1768,7 +1768,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.15,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eradl",
@@ -1783,7 +1783,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 1.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eradx",
@@ -1798,7 +1798,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eramas",
@@ -1813,7 +1813,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eramam",
@@ -1828,7 +1828,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eramal",
@@ -1843,7 +1843,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eramax",
@@ -1858,7 +1858,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-erans",
@@ -1873,7 +1873,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eranm",
@@ -1888,7 +1888,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eranl",
@@ -1903,7 +1903,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eranx",
@@ -1918,7 +1918,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-erefls",
@@ -1933,7 +1933,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-ereflm",
@@ -1948,7 +1948,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-erefll",
@@ -1963,7 +1963,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-ereflx",
@@ -1978,7 +1978,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eremes",
@@ -1993,7 +1993,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.93,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eremem",
@@ -2008,7 +2008,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eremel",
@@ -2023,7 +2023,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-eremex",
@@ -2038,7 +2038,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-erepem",
@@ -2053,7 +2053,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-erepel",
@@ -2068,7 +2068,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-ererum",
@@ -2083,7 +2083,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-ererul",
@@ -2098,7 +2098,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-ererux",
@@ -2113,7 +2113,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-erosts",
@@ -2128,7 +2128,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-erostm",
@@ -2143,7 +2143,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-erostl",
@@ -2158,7 +2158,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-erostx",
@@ -2173,7 +2173,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-erufs",
@@ -2188,7 +2188,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 0.85,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-erufm",
@@ -2203,7 +2203,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-erufl",
@@ -2218,7 +2218,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.1,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-erufx",
@@ -2233,7 +2233,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-estelm",
@@ -2248,7 +2248,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.4,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-estell",
@@ -2263,7 +2263,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 3.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-evesm",
@@ -2277,7 +2277,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.88,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-anbarom",
@@ -2292,7 +2292,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 2.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-anbarol",
@@ -2307,7 +2307,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 3.5,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-ancofm",
@@ -2322,7 +2322,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 2.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-ancofl",
@@ -2337,7 +2337,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 3.5,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-anconm",
@@ -2352,7 +2352,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 2.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-anconl",
@@ -2367,7 +2367,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 3.5,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-anfram",
@@ -2382,7 +2382,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 2.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-anfral",
@@ -2397,7 +2397,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 3.5,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-anhasm",
@@ -2412,7 +2412,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 2.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-anhasl",
@@ -2427,7 +2427,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 3.5,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-anlanm",
@@ -2442,7 +2442,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 2.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-anlanl",
@@ -2457,7 +2457,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 3.5,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-annanm",
@@ -2472,7 +2472,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 2.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-annanl",
@@ -2487,7 +2487,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 3.5,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-annagom",
@@ -2502,7 +2502,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 2.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-annannl",
@@ -2516,7 +2516,7 @@ export const products: Product[] = [
     price: 21.99,
     wholesalePrice: 2.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-annapel",
@@ -2531,7 +2531,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 2.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-annancm",
@@ -2546,7 +2546,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 2.0,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-annancl",
@@ -2561,7 +2561,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 3.5,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-annangm",
@@ -2576,7 +2576,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 2.0,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-annangl",
@@ -2591,7 +2591,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 3.5,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-capo",
@@ -2605,7 +2605,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 2.7,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cbalm",
@@ -2620,7 +2620,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.87,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cball",
@@ -2635,7 +2635,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 1.25,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cbalx",
@@ -2650,7 +2650,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 1.81,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cblam",
@@ -2665,7 +2665,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.68,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cblal",
@@ -2680,7 +2680,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 1.0,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cblax",
@@ -2695,7 +2695,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 1.86,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cparm",
@@ -2710,7 +2710,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.68,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cparx",
@@ -2725,7 +2725,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 1.86,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cpetm",
@@ -2740,7 +2740,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.68,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cpetx",
@@ -2755,7 +2755,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 1.86,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cponm",
@@ -2770,7 +2770,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.68,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cretm",
@@ -2785,7 +2785,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.04,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cretl",
@@ -2800,7 +2800,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.08,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cspim",
@@ -2815,7 +2815,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.68,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cspix",
@@ -2830,7 +2830,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 1.86,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cundm",
@@ -2845,7 +2845,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.58,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cundms",
@@ -2860,7 +2860,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.7,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cundx",
@@ -2875,7 +2875,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 1.86,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-custm",
@@ -2890,7 +2890,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 1.75,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-custl",
@@ -2905,7 +2905,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.7,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-custx",
@@ -2920,7 +2920,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.75,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cwebrm",
@@ -2935,7 +2935,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.58,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cwebrms",
@@ -2950,7 +2950,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.7,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cwebrx",
@@ -2965,7 +2965,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 1.86,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cwebrxs",
@@ -2980,7 +2980,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 2.04,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cwegrm",
@@ -2995,7 +2995,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.58,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cwegrms",
@@ -3010,7 +3010,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.7,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cwegrx",
@@ -3025,7 +3025,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 1.86,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cwegrxs",
@@ -3040,7 +3040,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 2.1,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cwerem",
@@ -3055,7 +3055,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.58,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-cwerex",
@@ -3070,7 +3070,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 1.86,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-vcon",
@@ -3084,7 +3084,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.43,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-vconb",
@@ -3098,7 +3098,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.8,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-vcor",
@@ -3112,7 +3112,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.36,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-vcorb",
@@ -3126,7 +3126,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.8,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-vita",
@@ -3140,7 +3140,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.35,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-vitab",
@@ -3154,7 +3154,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.8,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-vjun",
@@ -3168,7 +3168,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.58,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-vnan",
@@ -3182,7 +3182,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.35,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-vnanb",
@@ -3196,7 +3196,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.8,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-schi",
@@ -3210,7 +3210,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-ssub",
@@ -3224,7 +3224,7 @@ export const products: Product[] = [
     price: 18.99,
     wholesalePrice: 0.32,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-ssubb",
@@ -3238,7 +3238,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.8,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-ssudw",
@@ -3252,7 +3252,7 @@ export const products: Product[] = [
     price: 18.99,
     wholesalePrice: 0.32,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-ssudwb",
@@ -3266,7 +3266,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.8,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-aboib",
@@ -3280,7 +3280,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.6,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-aboim",
@@ -3295,7 +3295,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 2.75,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-aboil",
@@ -3310,7 +3310,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 3.8,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-aboix",
@@ -3325,7 +3325,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 4.7,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-acapb",
@@ -3339,7 +3339,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.6,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-acapm",
@@ -3354,7 +3354,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 2.75,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-acapl",
@@ -3369,7 +3369,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 3.8,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-acapx",
@@ -3384,7 +3384,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 4.7,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-acrim",
@@ -3399,7 +3399,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.85,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-acril",
@@ -3414,7 +3414,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 1.6,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-acrix",
@@ -3429,7 +3429,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 2.75,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-alonb",
@@ -3443,7 +3443,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.6,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-alonm",
@@ -3458,7 +3458,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 2.75,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-alonl",
@@ -3473,7 +3473,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 3.8,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-alonx",
@@ -3488,7 +3488,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 4.7,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-amalab",
@@ -3502,7 +3502,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.6,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-aulvb",
@@ -3516,7 +3516,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.6,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-aulvm",
@@ -3531,7 +3531,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 2.75,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-aulvl",
@@ -3546,7 +3546,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 3.8,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-aulvx",
@@ -3561,7 +3561,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 4.7,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-macva",
@@ -3575,7 +3575,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.64,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-mbapl",
@@ -3589,7 +3589,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.1,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-mbapll",
@@ -3604,7 +3604,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 1.75,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-mbasp",
@@ -3618,7 +3618,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.64,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-mbast",
@@ -3632,7 +3632,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.88,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-mblau",
@@ -3646,7 +3646,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.64,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-mblja",
@@ -3660,7 +3660,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.64,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-mblre",
@@ -3674,7 +3674,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 1.0,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-mbuar",
@@ -3688,7 +3688,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbubib",
@@ -3702,7 +3702,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbubrad",
@@ -3716,7 +3716,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbubrph",
@@ -3730,7 +3730,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbucat",
@@ -3744,7 +3744,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbucadac",
@@ -3758,7 +3758,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbugod",
@@ -3772,7 +3772,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbugobe",
@@ -3786,7 +3786,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbugrbr",
@@ -3800,7 +3800,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbugrja",
@@ -3814,7 +3814,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbugrewa",
@@ -3828,7 +3828,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbukegl",
@@ -3842,7 +3842,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbukemr",
@@ -3856,7 +3856,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbumeco",
@@ -3870,7 +3870,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbumive",
@@ -3884,7 +3884,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mburama",
@@ -3898,7 +3898,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbureda",
@@ -3912,7 +3912,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mburemi",
@@ -3926,7 +3926,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbutita",
@@ -3940,7 +3940,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbuthre",
@@ -3954,7 +3954,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mbuwdg",
@@ -3968,7 +3968,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.4,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-mcapl",
@@ -3982,7 +3982,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.58,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-mcrcal",
@@ -3996,7 +3996,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 2.98,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-mcyhe",
@@ -4011,7 +4011,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.88,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-mducxl",
@@ -4026,7 +4026,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.3,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "floating", "floater", "surface"],
   },
   {
     id: "plant-mdwli",
@@ -4040,7 +4040,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.25,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-mervi",
@@ -4054,7 +4054,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.75,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mjafe",
@@ -4068,7 +4068,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 1.05,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-mjafelg",
@@ -4083,7 +4083,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 1.81,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-mjafela",
@@ -4097,7 +4097,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.51,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-mjafetr",
@@ -4111,7 +4111,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.51,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-mliun",
@@ -4125,7 +4125,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.65,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mmisw",
@@ -4139,7 +4139,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.67,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mmiswsf",
@@ -4153,7 +4153,7 @@ export const products: Product[] = [
     price: 38.99,
     wholesalePrice: 15.0,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mmiswsfh",
@@ -4167,7 +4167,7 @@ export const products: Product[] = [
     price: 29.99,
     wholesalePrice: 8.17,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mmogr",
@@ -4181,7 +4181,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.58,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-mmobas",
@@ -4256,7 +4256,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 0.72,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mocpll",
@@ -4271,7 +4271,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 0.93,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-monpld",
@@ -4285,7 +4285,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.43,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-mtilog",
@@ -4299,7 +4299,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.6,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-mtilogl",
@@ -4314,7 +4314,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.75,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-mtilor",
@@ -4328,7 +4328,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.6,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-mtilorl",
@@ -4343,7 +4343,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.75,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "bulb", "lily", "centerpiece"],
   },
   {
     id: "plant-mwasp",
@@ -4357,7 +4357,7 @@ export const products: Product[] = [
     price: 19.99,
     wholesalePrice: 0.63,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-mwaspl",
@@ -4372,7 +4372,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 1.0,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-mdwbadr",
@@ -4386,7 +4386,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.62,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mcapldr",
@@ -4400,7 +4400,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 4.0,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-mjamodr",
@@ -4428,7 +4428,7 @@ export const products: Product[] = [
     price: 26.99,
     wholesalePrice: 6.1,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pancofdr",
@@ -4442,7 +4442,7 @@ export const products: Product[] = [
     price: 26.99,
     wholesalePrice: 6.1,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-panhadr",
@@ -4456,7 +4456,7 @@ export const products: Product[] = [
     price: 26.99,
     wholesalePrice: 6.1,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pannanldr",
@@ -4470,7 +4470,7 @@ export const products: Product[] = [
     price: 26.99,
     wholesalePrice: 6.1,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pannapedr",
@@ -4484,7 +4484,7 @@ export const products: Product[] = [
     price: 26.99,
     wholesalePrice: 6.1,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pannadr",
@@ -4498,7 +4498,7 @@ export const products: Product[] = [
     price: 26.99,
     wholesalePrice: 6.1,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pannancdr",
@@ -4512,7 +4512,7 @@ export const products: Product[] = [
     price: 26.99,
     wholesalePrice: 6.1,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pannangdr",
@@ -4526,7 +4526,7 @@ export const products: Product[] = [
     price: 26.99,
     wholesalePrice: 6.1,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-mdwbar",
@@ -4540,7 +4540,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.2,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mdwbarl",
@@ -4555,7 +4555,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.41,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mjafer",
@@ -4569,7 +4569,7 @@ export const products: Product[] = [
     price: 29.99,
     wholesalePrice: 8.17,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-mdwbam",
@@ -4583,7 +4583,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 3.25,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mdwbamx",
@@ -4598,7 +4598,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 14.42,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mchmom",
@@ -4654,7 +4654,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 3.25,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mgloml",
@@ -4669,7 +4669,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 14.42,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mdwham",
@@ -4683,7 +4683,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 3.25,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mdwhaml",
@@ -4698,7 +4698,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 14.42,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mhyjam",
@@ -4712,7 +4712,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 3.25,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-mhyjaml",
@@ -4727,7 +4727,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 14.42,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-mjafemh",
@@ -4741,7 +4741,7 @@ export const products: Product[] = [
     price: 25.99,
     wholesalePrice: 4.79,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-mjafemat",
@@ -4755,7 +4755,7 @@ export const products: Product[] = [
     price: 28.99,
     wholesalePrice: 7.5,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-mjafeml",
@@ -4770,7 +4770,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 10.22,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-mjafenlmat",
@@ -4784,7 +4784,7 @@ export const products: Product[] = [
     price: 26.99,
     wholesalePrice: 6.01,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-mjamom",
@@ -4827,7 +4827,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 3.25,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mmimoml",
@@ -4842,7 +4842,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 14.42,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mmiswm",
@@ -4856,7 +4856,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 3.25,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mmiswml",
@@ -4871,7 +4871,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 14.42,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-mricchm",
@@ -4927,7 +4927,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.6,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "floating", "floater", "surface"],
   },
   {
     id: "plant-mchmop",
@@ -5027,7 +5027,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.6,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-mrerop",
@@ -5041,7 +5041,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.6,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "floating", "floater", "surface"],
   },
   {
     id: "floater-bundle",
@@ -5083,7 +5083,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.6,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "floating", "floater", "surface"],
   },
   {
     id: "plant-mtamop",
@@ -5125,7 +5125,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "assorted", "bundle", "variety pack"],
   },
   {
     id: "plant-tcalmic",
@@ -5139,7 +5139,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tcalros",
@@ -5153,7 +5153,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tcanhac",
@@ -5167,7 +5167,7 @@ export const products: Product[] = [
     price: 24.99,
     wholesalePrice: 4.53,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-tcanbagoc",
@@ -5181,7 +5181,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-tcannaicc",
@@ -5195,7 +5195,7 @@ export const products: Product[] = [
     price: 34.99,
     wholesalePrice: 12.0,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-tcannapec",
@@ -5209,7 +5209,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-tcannapic",
@@ -5223,7 +5223,7 @@ export const products: Product[] = [
     price: 27.99,
     wholesalePrice: 7.0,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-tcbacwhc",
@@ -5237,7 +5237,7 @@ export const products: Product[] = [
     price: 24.99,
     wholesalePrice: 4.53,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tcbohe",
@@ -5251,7 +5251,7 @@ export const products: Product[] = [
     price: 24.99,
     wholesalePrice: 4.53,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-tcbubrgc",
@@ -5265,7 +5265,7 @@ export const products: Product[] = [
     price: 24.99,
     wholesalePrice: 4.53,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-tcbubrpc",
@@ -5279,7 +5279,7 @@ export const products: Product[] = [
     price: 24.99,
     wholesalePrice: 4.53,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-tcbukec",
@@ -5293,7 +5293,7 @@ export const products: Product[] = [
     price: 24.99,
     wholesalePrice: 4.53,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-tcbubaka",
@@ -5307,7 +5307,7 @@ export const products: Product[] = [
     price: 24.99,
     wholesalePrice: 4.53,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-tcbusp",
@@ -5321,7 +5321,7 @@ export const products: Product[] = [
     price: 24.99,
     wholesalePrice: 4.53,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-tccrbalc",
@@ -5335,7 +5335,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-tccrfl",
@@ -5349,7 +5349,7 @@ export const products: Product[] = [
     price: 27.99,
     wholesalePrice: 7.0,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-tccrtonc",
@@ -5363,7 +5363,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-tccrunrc",
@@ -5377,7 +5377,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-tcchmoc",
@@ -5405,7 +5405,7 @@ export const products: Product[] = [
     price: 24.99,
     wholesalePrice: 4.53,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-tcecma",
@@ -5419,7 +5419,7 @@ export const products: Product[] = [
     price: 24.99,
     wholesalePrice: 4.53,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-tcelec",
@@ -5433,7 +5433,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-tcelemc",
@@ -5447,7 +5447,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-tcelpac",
@@ -5461,7 +5461,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-tcercic",
@@ -5475,7 +5475,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-tcgloc",
@@ -5489,7 +5489,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-tcheblc",
@@ -5503,7 +5503,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-tchecac",
@@ -5517,7 +5517,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-tchemic",
@@ -5531,7 +5531,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tchychc",
@@ -5545,7 +5545,7 @@ export const products: Product[] = [
     price: 27.99,
     wholesalePrice: 7.0,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tchypic",
@@ -5559,7 +5559,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tchyarc",
@@ -5573,7 +5573,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tchysic",
@@ -5587,7 +5587,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tchytrc",
@@ -5601,7 +5601,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tclablc",
@@ -5615,7 +5615,7 @@ export const products: Product[] = [
     price: 25.99,
     wholesalePrice: 5.2,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-tclibrc",
@@ -5629,7 +5629,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-tclocac",
@@ -5643,7 +5643,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tcluindo",
@@ -5657,7 +5657,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tcmahic",
@@ -5671,7 +5671,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-tcmiptwic",
@@ -5685,7 +5685,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-tcmiptnalc",
@@ -5699,7 +5699,7 @@ export const products: Product[] = [
     price: 25.99,
     wholesalePrice: 5.2,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-tcmimoc",
@@ -5713,7 +5713,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-tcmyguc",
@@ -5727,7 +5727,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tcplafc",
@@ -5755,7 +5755,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tcpoerc",
@@ -5769,7 +5769,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tcriflc",
@@ -5783,7 +5783,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.48,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "floating", "floater", "surface"],
   },
   {
     id: "plant-tcroboc",
@@ -5797,7 +5797,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tcrogrc",
@@ -5811,7 +5811,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tcromac",
@@ -5825,7 +5825,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tcrovic",
@@ -5839,7 +5839,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-tcsasuc",
@@ -5853,7 +5853,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-tcschpric",
@@ -5867,7 +5867,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-tcstrec",
@@ -5881,7 +5881,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-tctaxc",
@@ -5965,7 +5965,7 @@ export const products: Product[] = [
     price: 23.99,
     wholesalePrice: 3.91,
     imageGradient: "from-green-900 to-lime-900",
-    tags: ["freshwater", "moss", "shrimp", "low light"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-tcwemoc",
@@ -5992,7 +5992,7 @@ export const products: Product[] = [
     price: 59.99,
     wholesalePrice: 29.99,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["aquascaping", "tools", "book"],
   },
   {
     id: "plant-mposa",
@@ -6005,7 +6005,7 @@ export const products: Product[] = [
     price: 26.99,
     wholesalePrice: 6.01,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["aquascaping", "tools", "book"],
   },
   {
     id: "plant-mkaaqbo",
@@ -6018,7 +6018,7 @@ export const products: Product[] = [
     price: 126.99,
     wholesalePrice: 79.99,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["aquascaping", "tools", "book"],
   },
   {
     id: "plant-mdrim",
@@ -6033,7 +6033,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 35.03,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-mdrsps",
@@ -6048,7 +6048,7 @@ export const products: Product[] = [
     size: "Small",
     wholesalePrice: 46.7,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-mdrspm",
@@ -6063,7 +6063,7 @@ export const products: Product[] = [
     size: "Medium",
     wholesalePrice: 67.14,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-mdrspl",
@@ -6078,7 +6078,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 43.2,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-mdrspx",
@@ -6093,7 +6093,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 16.93,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-maquset",
@@ -6107,7 +6107,7 @@ export const products: Product[] = [
     price: 37.99,
     wholesalePrice: 14.36,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["aquascaping", "tools", "book"],
   },
   {
     id: "plant-msci",
@@ -6121,7 +6121,7 @@ export const products: Product[] = [
     price: 26.99,
     wholesalePrice: 6.01,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["aquascaping", "tools", "book"],
   },
   {
     id: "plant-mspa",
@@ -6135,7 +6135,7 @@ export const products: Product[] = [
     price: 25.99,
     wholesalePrice: 4.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["aquascaping", "tools", "book"],
   },
   {
     id: "plant-mtwe",
@@ -6149,7 +6149,7 @@ export const products: Product[] = [
     price: 25.99,
     wholesalePrice: 4.85,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["aquascaping", "tools", "book"],
   },
   {
     id: "plant-pass",
@@ -6162,7 +6162,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "assorted", "bundle", "variety pack"],
   },
   {
     id: "plant-palt",
@@ -6176,7 +6176,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.38,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pama",
@@ -6190,7 +6190,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pama",
@@ -6204,7 +6204,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pama",
@@ -6218,7 +6218,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pamal",
@@ -6233,7 +6233,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.68,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pamax",
@@ -6248,7 +6248,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 3.75,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pbra",
@@ -6262,7 +6262,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-pbra",
@@ -6276,7 +6276,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-pbra",
@@ -6290,7 +6290,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-pbral",
@@ -6305,7 +6305,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-pfrstl",
@@ -6320,7 +6320,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pklba",
@@ -6334,7 +6334,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pklba",
@@ -6348,7 +6348,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pklba",
@@ -6362,7 +6362,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pklbal",
@@ -6377,7 +6377,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pklpr",
@@ -6391,7 +6391,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.57,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pklprl",
@@ -6406,7 +6406,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pmel",
@@ -6420,7 +6420,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.57,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pmell",
@@ -6435,7 +6435,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pori",
@@ -6449,7 +6449,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pori",
@@ -6463,7 +6463,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pori",
@@ -6477,7 +6477,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-emerald-900 to-green-900",
-    tags: ["freshwater", "rosette", "centerpiece", "sword"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-poril",
@@ -6492,7 +6492,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-poze",
@@ -6506,7 +6506,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-poze",
@@ -6520,7 +6520,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-poze",
@@ -6534,7 +6534,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pozel",
@@ -6549,7 +6549,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pozgr",
@@ -6563,7 +6563,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pozgr",
@@ -6577,7 +6577,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pozgr",
@@ -6591,7 +6591,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pozgrl",
@@ -6606,7 +6606,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-prad",
@@ -6620,7 +6620,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-prad",
@@ -6634,7 +6634,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-prad",
@@ -6648,7 +6648,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pradl",
@@ -6663,7 +6663,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-prama",
@@ -6677,7 +6677,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-prama",
@@ -6691,7 +6691,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-prama",
@@ -6705,7 +6705,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pramal",
@@ -6720,7 +6720,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-prefl",
@@ -6734,7 +6734,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-prefl",
@@ -6748,7 +6748,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-prefl",
@@ -6762,7 +6762,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-prefll",
@@ -6777,7 +6777,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-preme",
@@ -6791,7 +6791,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.57,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-premel",
@@ -6806,7 +6806,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-prepel",
@@ -6821,7 +6821,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-preru",
@@ -6835,7 +6835,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.57,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-prerul",
@@ -6850,7 +6850,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pren",
@@ -6864,7 +6864,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pren",
@@ -6878,7 +6878,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pren",
@@ -6892,7 +6892,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-prosel",
@@ -6907,7 +6907,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pstell",
@@ -6922,7 +6922,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-puru",
@@ -6936,7 +6936,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.57,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-purul",
@@ -6951,7 +6951,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.95,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pves",
@@ -6965,7 +6965,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pves",
@@ -6979,7 +6979,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pves",
@@ -6993,7 +6993,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-panbaro",
@@ -7007,7 +7007,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 2.75,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-panbarol",
@@ -7022,7 +7022,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 4.0,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pancof",
@@ -7036,7 +7036,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 2.75,
     imageGradient: "from-green-900 to-teal-900",
-    tags: ["freshwater", "low light", "hardy", "rhizome"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pancofl",
@@ -7051,7 +7051,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 4.0,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pancon",
@@ -7065,7 +7065,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 2.75,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-panconl",
@@ -7080,7 +7080,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 4.0,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-panfr",
@@ -7094,7 +7094,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 2.75,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-panfrl",
@@ -7109,7 +7109,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 4.0,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-panha",
@@ -7123,7 +7123,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 2.75,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-panhal",
@@ -7138,7 +7138,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 4.0,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-panla",
@@ -7152,7 +7152,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 2.75,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-panna",
@@ -7166,7 +7166,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 2.75,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pannal",
@@ -7181,7 +7181,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 4.0,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pannanl",
@@ -7195,7 +7195,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 2.75,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pannape",
@@ -7209,7 +7209,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 2.75,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pannanc",
@@ -7223,7 +7223,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 2.75,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pannancl",
@@ -7238,7 +7238,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 4.0,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pannang",
@@ -7252,7 +7252,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 2.75,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pbate",
@@ -7266,7 +7266,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-pbate",
@@ -7280,7 +7280,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-pbate",
@@ -7294,7 +7294,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-pbated",
@@ -7308,7 +7308,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pbated",
@@ -7322,7 +7322,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pbated",
@@ -7336,7 +7336,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pbugrw",
@@ -7350,7 +7350,7 @@ export const products: Product[] = [
     price: 24.99,
     wholesalePrice: 4.09,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-pbugod",
@@ -7364,7 +7364,7 @@ export const products: Product[] = [
     price: 24.99,
     wholesalePrice: 4.09,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-pburemi",
@@ -7378,7 +7378,7 @@ export const products: Product[] = [
     price: 24.99,
     wholesalePrice: 4.09,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "bucephalandra", "buce", "rhizome", "epiphyte", "low light"],
   },
   {
     id: "plant-pcapl",
@@ -7392,7 +7392,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-pcapl",
@@ -7406,7 +7406,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-pcapl",
@@ -7420,7 +7420,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-pchsw",
@@ -7434,7 +7434,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pchsw",
@@ -7448,7 +7448,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pchsw",
@@ -7462,7 +7462,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pcrba",
@@ -7476,7 +7476,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrba",
@@ -7490,7 +7490,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrba",
@@ -7504,7 +7504,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrlu",
@@ -7518,7 +7518,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrlu",
@@ -7532,7 +7532,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrlu",
@@ -7546,7 +7546,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrlux",
@@ -7561,7 +7561,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 2.1,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrpa",
@@ -7575,7 +7575,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrpa",
@@ -7589,7 +7589,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrpa",
@@ -7603,7 +7603,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrsp",
@@ -7617,7 +7617,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrsp",
@@ -7631,7 +7631,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrsp",
@@ -7645,7 +7645,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrun",
@@ -7659,7 +7659,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrun",
@@ -7673,7 +7673,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrun",
@@ -7687,7 +7687,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrunx",
@@ -7702,7 +7702,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 2.1,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrweb",
@@ -7716,7 +7716,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrweb",
@@ -7730,7 +7730,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrweb",
@@ -7744,7 +7744,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrwebx",
@@ -7759,7 +7759,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 2.1,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrwefla",
@@ -7773,7 +7773,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 2.92,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrwefl",
@@ -7787,7 +7787,7 @@ export const products: Product[] = [
     price: 22.99,
     wholesalePrice: 2.92,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrweg",
@@ -7801,7 +7801,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrweg",
@@ -7815,7 +7815,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrweg",
@@ -7829,7 +7829,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrwer",
@@ -7843,7 +7843,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrwer",
@@ -7857,7 +7857,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrwer",
@@ -7871,7 +7871,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pcrwerx",
@@ -7886,7 +7886,7 @@ export const products: Product[] = [
     size: "X-Large",
     wholesalePrice: 2.1,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "cryptocoryne", "crypt", "low light", "root feeder"],
   },
   {
     id: "plant-pervi",
@@ -7900,7 +7900,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pervi",
@@ -7914,7 +7914,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pervi",
@@ -7928,7 +7928,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pfole",
@@ -7942,7 +7942,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pfole",
@@ -7956,7 +7956,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pfole",
@@ -7970,7 +7970,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pfoled",
@@ -7984,7 +7984,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pfoled",
@@ -7998,7 +7998,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pfoled",
@@ -8012,7 +8012,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pglo",
@@ -8026,7 +8026,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pglo",
@@ -8040,7 +8040,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pglo",
@@ -8054,7 +8054,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-phadw",
@@ -8068,7 +8068,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-phadw",
@@ -8082,7 +8082,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-phadw",
@@ -8096,7 +8096,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-phagi",
@@ -8110,7 +8110,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-phagi",
@@ -8124,7 +8124,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-phagi",
@@ -8138,7 +8138,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-cyan-900 to-teal-900",
-    tags: ["freshwater", "low light", "foreground", "crypt"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-phamdw",
@@ -8152,7 +8152,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-phamdw",
@@ -8166,7 +8166,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-phamdw",
@@ -8180,7 +8180,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-phegr",
@@ -8194,7 +8194,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-phegr",
@@ -8208,7 +8208,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-phegr",
@@ -8222,7 +8222,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-phyja",
@@ -8236,7 +8236,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-phyja",
@@ -8250,7 +8250,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-phyja",
@@ -8264,7 +8264,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-phyar",
@@ -8278,7 +8278,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-phyar",
@@ -8292,7 +8292,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-phyar",
@@ -8306,7 +8306,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-phyco",
@@ -8320,7 +8320,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-phyco",
@@ -8334,7 +8334,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-phyco",
@@ -8348,7 +8348,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-phypi",
@@ -8362,7 +8362,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-phypi",
@@ -8376,7 +8376,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-phypi",
@@ -8390,7 +8390,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-pmimo",
@@ -8404,7 +8404,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pmimo",
@@ -8418,7 +8418,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pmimo",
@@ -8432,7 +8432,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pmisw",
@@ -8446,7 +8446,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pmisw",
@@ -8460,7 +8460,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pmisw",
@@ -8474,7 +8474,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pmiswn",
@@ -8488,7 +8488,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pmiswn",
@@ -8502,7 +8502,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pmiswn",
@@ -8516,7 +8516,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-pmon",
@@ -8530,7 +8530,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-pmon",
@@ -8544,7 +8544,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-pmon",
@@ -8558,7 +8558,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-ppen",
@@ -8572,7 +8572,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-ppen",
@@ -8586,7 +8586,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-ppen",
@@ -8600,7 +8600,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-ppohe",
@@ -8614,7 +8614,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.77,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-psadw",
@@ -8628,7 +8628,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-psadw",
@@ -8642,7 +8642,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-psadw",
@@ -8656,7 +8656,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "grass", "vallisneria", "background", "runners"],
   },
   {
     id: "plant-pscpr",
@@ -8670,7 +8670,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.77,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["terrarium", "emersed", "paludarium"],
   },
   {
     id: "plant-psta",
@@ -8684,7 +8684,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.77,
     imageGradient: "from-teal-800 to-emerald-900",
-    tags: ["freshwater", "foreground", "carpet", "grass"],
+    tags: ["freshwater", "carpet", "foreground", "carpeting"],
   },
   {
     id: "plant-ptel",
@@ -8698,7 +8698,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-ptel",
@@ -8712,7 +8712,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-ptel",
@@ -8726,7 +8726,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-pwasp",
@@ -8740,7 +8740,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-pwasp",
@@ -8754,7 +8754,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-pwasp",
@@ -8768,7 +8768,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-pwaspl",
@@ -8783,7 +8783,7 @@ export const products: Product[] = [
     size: "Large",
     wholesalePrice: 2.04,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "fern", "rhizome", "low light", "epiphyte"],
   },
   {
     id: "plant-pwis",
@@ -8797,7 +8797,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.44,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-pwis",
@@ -8811,7 +8811,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.34,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-pwis",
@@ -8825,7 +8825,7 @@ export const products: Product[] = [
     price: 20.99,
     wholesalePrice: 1.32,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "stem plant", "background", "fast growing"],
   },
   {
     id: "plant-pamamo",
@@ -8839,7 +8839,7 @@ export const products: Product[] = [
     price: 27.99,
     wholesalePrice: 6.4,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-porimo",
@@ -8853,7 +8853,7 @@ export const products: Product[] = [
     price: 27.99,
     wholesalePrice: 6.4,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pozemo",
@@ -8867,7 +8867,7 @@ export const products: Product[] = [
     price: 27.99,
     wholesalePrice: 6.4,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-pozgrmo",
@@ -8881,7 +8881,7 @@ export const products: Product[] = [
     price: 27.99,
     wholesalePrice: 6.4,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-preflmo",
@@ -8895,7 +8895,7 @@ export const products: Product[] = [
     price: 27.99,
     wholesalePrice: 6.4,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "sword", "amazon sword", "rosette", "centerpiece", "root feeder"],
   },
   {
     id: "plant-panbaromo",
@@ -8909,7 +8909,7 @@ export const products: Product[] = [
     price: 31.99,
     wholesalePrice: 9.36,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-panconmo",
@@ -8923,7 +8923,7 @@ export const products: Product[] = [
     price: 31.99,
     wholesalePrice: 9.36,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-panfrmo",
@@ -8937,7 +8937,7 @@ export const products: Product[] = [
     price: 31.99,
     wholesalePrice: 9.36,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-panhamo",
@@ -8951,7 +8951,7 @@ export const products: Product[] = [
     price: 31.99,
     wholesalePrice: 9.36,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pannamo",
@@ -8965,7 +8965,7 @@ export const products: Product[] = [
     price: 31.99,
     wholesalePrice: 9.36,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pannancmo",
@@ -8979,7 +8979,7 @@ export const products: Product[] = [
     price: 31.99,
     wholesalePrice: 9.36,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
   {
     id: "plant-pannangmo",
@@ -8993,7 +8993,7 @@ export const products: Product[] = [
     price: 31.99,
     wholesalePrice: 9.36,
     imageGradient: "from-teal-900 to-cyan-900",
-    tags: ["freshwater", "large", "centerpiece", "mature"],
+    tags: ["freshwater", "anubias", "low light", "hardy", "rhizome", "epiphyte"],
   },
 ];
 

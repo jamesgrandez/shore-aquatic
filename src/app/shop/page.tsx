@@ -89,6 +89,8 @@ export default function ShopPage() {
     }
     const sub = params.get("sub");
     if (sub) setSubCategory(sub);
+    const q = params.get("search") ?? params.get("q");
+    if (q) setSearch(q);
   }, []);
 
   // Reset page on filter change
@@ -111,7 +113,14 @@ export default function ShopPage() {
   }, [wgGroup, wgVariant]);
 
   const filtered = useMemo(() => {
-    return allProducts.filter((p) => {
+    // Every search word must appear somewhere (order-free, e.g. "red floater");
+    // results whose name / scientific name match rank first.
+    const terms = search.toLowerCase().split(/\s+/).filter(Boolean);
+    const nameScore = (p: (typeof allProducts)[number]) => {
+      const n = `${p.name} ${p.scientificName || ""}`.toLowerCase();
+      return terms.filter((t) => n.includes(t)).length;
+    };
+    const matches = allProducts.filter((p) => {
       if (category !== "All" && p.category !== category) return false;
 
       // WG-specific group filter (replaces subCategory for Water Garden)
@@ -136,13 +145,17 @@ export default function ShopPage() {
 
       if (waterType !== "All" && p.waterType !== waterType && p.waterType !== "Both") return false;
       if (availability !== "All" && p.availability !== availabilityMap[availability]) return false;
-      if (search) {
-        const q = search.toLowerCase();
-        const haystack = `${p.name} ${p.scientificName || ""} ${p.description} ${p.tags.join(" ")} ${p.subCategory}`.toLowerCase();
-        if (!haystack.includes(q)) return false;
+      if (terms.length) {
+        const haystack = `${p.name} ${p.scientificName || ""} ${p.description} ${p.tags.join(" ")} ${p.subCategory} ${p.category}`.toLowerCase();
+        if (!terms.every((t) => haystack.includes(t))) return false;
       }
       return true;
     });
+    if (!terms.length) return matches;
+    return matches
+      .map((p, i) => ({ p, i, s: nameScore(p) }))
+      .sort((a, b) => b.s - a.s || a.i - b.i)
+      .map((x) => x.p);
   }, [category, subCategory, wgGroup, wgVariant, wgSubCatFilter, waterType, availability, search]);
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE);

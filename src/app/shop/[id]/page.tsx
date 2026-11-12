@@ -118,6 +118,8 @@ export async function generateMetadata(
   };
 }
 
+const SHIPS_FREE_CATEGORIES = new Set(["Plants", "Water Garden", "Dry Goods"]);
+
 // One year from today for priceValidUntil
 function priceValidUntil() {
   const d = new Date();
@@ -168,17 +170,20 @@ function buildProductJsonLd(product: Product, imageUrl: string | null) {
         "name": "Shore Aquatic",
         "url": "https://shoreaquatic.com"
       },
-      // Merchant listing: return policy (live plants — 3-day DOA/damage window)
+      // Merchant listing: return policy. Live goods: no returns. Damage on
+      // arrival is handled by the Live Arrival Guarantee (report within 24 h
+      // with a photo → replacement or store credit), see /shipping-returns.
       "hasMerchantReturnPolicy": {
         "@type": "MerchantReturnPolicy",
         "applicableCountry": "US",
-        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-        "merchantReturnDays": 3,
-        "returnMethod": "https://schema.org/ReturnByMail",
-        "returnFees": "https://schema.org/FreeReturn"
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
       },
-      // Merchant listing: shipping details
-      "shippingDetails": {
+      // Merchant listing: shipping details. Only for products in Shopify's
+      // General profile (plants, pond plants, dry goods), which offers a $0
+      // "Free Shipping" rate on every order. Live animals and macroalgae ship
+      // on paid express profiles (e.g. $45.99), so no rate is claimed for them.
+      ...(SHIPS_FREE_CATEGORIES.has(product.category) && !(product.waterType === "Saltwater")
+        ? { "shippingDetails": {
         "@type": "OfferShippingDetails",
         "shippingRate": {
           "@type": "MonetaryAmount",
@@ -204,7 +209,8 @@ function buildProductJsonLd(product: Product, imageUrl: string | null) {
             "unitCode": "DAY"
           }
         }
-      }
+      } }
+        : {}),
     },
     "category": product.category,
   };

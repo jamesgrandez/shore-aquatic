@@ -19,8 +19,8 @@ const infoLinks = [
 ];
 
 const legalLinks = [
-  { href: "#", label: "Privacy Policy" },
-  { href: "#", label: "Terms of Service" },
+  { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/terms-of-service", label: "Terms of Service" },
   { href: "/image-credits", label: "Photo Credits" },
 ];
 

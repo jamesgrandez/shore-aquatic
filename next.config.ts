@@ -117,6 +117,16 @@ const nextConfig: NextConfig = {
         destination: "https://shoreaquatic.com/shipping-returns",
         permanent: true,
       },
+      {
+        source: "/policies/privacy-policy",
+        destination: "https://shoreaquatic.com/privacy-policy",
+        permanent: true,
+      },
+      {
+        source: "/policies/terms-of-service",
+        destination: "https://shoreaquatic.com/terms-of-service",
+        permanent: true,
+      },
       // ─── Shopify /search → shop search (query string is passed through: ?q=) ──
       {
         source: "/search",

@@ -116,3 +116,15 @@ body {
 .product-copy ul { list-style: disc; }
 .product-copy ol { list-style: decimal; }
 .product-copy li { margin-bottom: 0.35rem; }
+
+/* Legal pages (privacy policy, terms) rendered from src/content/legal/*.md */
+.legal-copy { color: #cbd5e1; font-size: 0.95rem; line-height: 1.75; }
+.legal-copy h2 { margin: 2.25rem 0 0.75rem; font-size: 1.25rem; font-weight: 700; color: #fff; }
+.legal-copy h3 { margin: 1.5rem 0 0.5rem; font-size: 1.05rem; font-weight: 700; color: #fff; }
+.legal-copy p { margin: 0 0 1rem; }
+.legal-copy strong { color: #fff; }
+.legal-copy ul, .legal-copy ol { margin: 0 0 1rem; padding-left: 1.4rem; }
+.legal-copy ul { list-style: disc; }
+.legal-copy ol { list-style: decimal; }
+.legal-copy li { margin-bottom: 0.4rem; }
+.legal-copy a { color: #22d3ee; text-decoration: underline; }

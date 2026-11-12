@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Product } from "@/lib/mockData";
 import { CartUtils } from "@/lib/cart";
-import { getProductImage } from "@/lib/imageMap";
+import { getProductImage, sizedImage } from "@/lib/imageMap";
 import { isBogo, isBogoLimited } from "@/lib/promotions";
 import AvailabilityBadge from "./AvailabilityBadge";
 
@@ -61,10 +61,12 @@ export default function ProductCard({ product }: { product: Product }) {
         <div className={`relative h-44 bg-gradient-to-br ${product.imageGradient} flex items-center justify-center overflow-hidden`}>
           {imageUrl ? (
             <Image
-              src={imageUrl.includes("squarespace") ? `${imageUrl}?format=500w` : imageUrl}
+              src={sizedImage(imageUrl, 500)}
               alt={product.name}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className={`transition-transform duration-500 group-hover:scale-105 ${
+                product.images?.length ? "object-contain bg-white" : "object-cover"
+              }`}
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               loading="lazy"
             />
@@ -74,6 +76,11 @@ export default function ProductCard({ product }: { product: Product }) {
           {bogo && (
             <span className="absolute top-2.5 left-2.5 rounded-full bg-emerald-500 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-lg">
               Buy 1 Get 1 Free
+            </span>
+          )}
+          {product.badge && !bogo && (
+            <span className="absolute top-2.5 left-2.5 rounded-full bg-coral px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-lg">
+              {product.badge}
             </span>
           )}
           {bogoLimited && (

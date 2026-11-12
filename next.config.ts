@@ -18,6 +18,10 @@ const nextConfig: NextConfig = {
       // ═════════════════════════════════════════════════════════════════
       // SHOPIFY → NEXT.JS MIGRATION REDIRECTS
       // ═════════════════════════════════════════════════════════════════
+      // Old /products/<handle> URLs are handled per product in proxy.ts
+      // (exact product redirect, or 410 Gone) — no catch-all here, because a
+      // mass redirect to /shop is treated by Google as a soft 404.
+      //
       // These rules recover ~270 old Shopify URLs that GSC reported as
       // 404 (sourced from Coverage report 2026-06-08). Order matters —
       // specific rules first, then catch-all wildcards.
@@ -70,61 +74,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
-      // ─── Specific high-impression product redirects (clear matches) ───
-      // (101 impressions) Gracilaria hayi → Pom Pom Gracilaria listing
-      {
-        source: "/products/gracilaria-hayi-algae-red-bush-algae-for-reef-saltwater-refugium-tank",
-        destination: "https://shoreaquatic.com/shop/sw-pompom",
-        permanent: true,
-      },
-      // (79 impressions) Chaeto → Chaeto listing
-      {
-        source: "/products/chaeto-chaetomorpha-sp-macro-algae",
-        destination: "https://shoreaquatic.com/shop/sw-chaeto",
-        permanent: true,
-      },
-      // (77 impressions) Red grape caulerpa → all saltwater
-      {
-        source: "/products/red-grape-caulerpa-or-kelp-botryocladia-sp-macro-algae-refugium",
-        destination: "https://shoreaquatic.com/shop?category=Saltwater",
-        permanent: true,
-      },
-      // (81 impressions) Hornwort → Hornwort bunch listing
-      {
-        source: "/products/hornwort-coontail-or-ceratophyllum-demersum-aquarium-plant",
-        destination: "https://shoreaquatic.com/shop/plant-bhornl",
-        permanent: true,
-      },
 
-      // ─── Category-aware product fallbacks ─────────────────────────────
-      // Cherry / Neocaridina shrimp → Livestock category
-      {
-        source: "/products/red-cherry-shrimp-live-shrimp-for-freshwater-aquariums-or-shrimp-tank",
-        destination: "https://shoreaquatic.com/shop?category=Livestock",
-        permanent: true,
-      },
-      {
-        source: "/products/10-pack-neocaridina-freshwater-skittle-shrimp-by-shore-aquatic",
-        destination: "https://shoreaquatic.com/shop?category=Livestock",
-        permanent: true,
-      },
-      // Berghia / saltwater inverts → Saltwater (Livestock subcategory)
-      {
-        source: "/products/3-pack-berghia-nudibranch-for-saltwater-reef-fish-tank-aquarium",
-        destination: "https://shoreaquatic.com/shop?category=Livestock",
-        permanent: true,
-      },
-      // Water garden plants
-      {
-        source: "/products/blue-pickerel-pontederia-spp-live-pond-plant",
-        destination: "https://shoreaquatic.com/shop?category=Water Garden",
-        permanent: true,
-      },
-      {
-        source: "/products/extra-large-portion-of-duckweed",
-        destination: "https://shoreaquatic.com/shop?category=Water Garden",
-        permanent: true,
-      },
 
       // ─── Bulk catch-all redirects (in priority order) ────────────────
       // /blogs/news/* → blog index (catch-all for ~6 lower-impression blog URLs)
@@ -150,16 +100,33 @@ const nextConfig: NextConfig = {
         destination: "https://shoreaquatic.com/shop?category=Plants",
         permanent: true,
       },
+      {
+        source: "/collections/bundle-packs-combo-deals",
+        destination: "https://shoreaquatic.com/shop/bundles",
+        permanent: true,
+      },
       // /collections/* (all other Shopify category pages) → shop
       {
         source: "/collections/:slug*",
         destination: "https://shoreaquatic.com/shop",
         permanent: true,
       },
-      // /products/* (all unmapped Shopify product URLs) → shop
+      // ─── Shopify policy pages → our policy page ──────────────────────
       {
-        source: "/products/:slug*",
+        source: "/policies/:policy(shipping-policy|refund-policy)",
+        destination: "https://shoreaquatic.com/shipping-returns",
+        permanent: true,
+      },
+      // ─── Shopify /search → shop search (query string is passed through: ?q=) ──
+      {
+        source: "/search",
         destination: "https://shoreaquatic.com/shop",
+        permanent: true,
+      },
+      // ─── Care guides that were removed (no matching product) ──────────
+      {
+        source: "/care-guides/:slug(pistia-stratiotes|aeschynomene-fluitans|neptunia-aquatica)",
+        destination: "https://shoreaquatic.com/care-guides",
         permanent: true,
       },
       // /pages/* (all unmapped Shopify static pages) → homepage

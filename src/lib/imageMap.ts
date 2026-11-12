@@ -1,3 +1,5 @@
+import { bundleProducts } from "./bundleData";
+
 // Auto-generated from Florida Aquatic Nurseries image catalog
 // Maps product id -> image URL (601 plants matched)
 export const fanImageMap: Record<string, string> = {
@@ -1267,6 +1269,20 @@ const localImageMap: Record<string, string> = {
   "sw-hermit-scarlet-20": "/images/hermits/scarlet-white-bg.jpg",
 };
 
+// Products that carry their own gallery (bundles) — first image is the main one.
+const galleryImageMap: Record<string, string> = Object.fromEntries(
+  bundleProducts.filter((p) => p.images?.length).map((p) => [p.id, p.images![0]])
+);
+
 export function getProductImage(productId: string): string | null {
-  return localImageMap[productId] ?? marineImageMap[productId] ?? dryGoodsImageMap[productId] ?? fanImageMap[productId] ?? null;
+  return galleryImageMap[productId] ?? localImageMap[productId] ?? marineImageMap[productId] ?? dryGoodsImageMap[productId] ?? fanImageMap[productId] ?? null;
+}
+
+/** Append a width hint the image host understands (Squarespace / Shopify). */
+export function sizedImage(url: string, width: number): string {
+  if (url.startsWith("/")) return url;
+  const sep = url.includes("?") ? "&" : "?";
+  if (url.includes("cdn.shopify.com")) return `${url}${sep}width=${width}`;
+  if (url.includes("squarespace-cdn.com")) return `${url}${sep}format=${width}w`;
+  return url;
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 const shopLinks = [
+  { href: "/shop/bundles", label: "Bundles & Variety Packs" },
   { href: "/shop?category=Plants", label: "Plants" },
   { href: "/shop?category=Water Garden", label: "Water Garden" },
   { href: "/shop?category=Saltwater", label: "Saltwater" },
@@ -12,6 +13,7 @@ const infoLinks = [
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
+  { href: "/shipping-returns", label: "Shipping & Returns" },
   { href: "/care-guides", label: "Care Guides" },
   { href: "/contact", label: "Contact" },
 ];

@@ -8,11 +8,17 @@ import FeaturedPlants from "@/components/FeaturedPlants";
 import SaltwaterShowcase from "@/components/SaltwaterShowcase";
 import RotiferHero from "@/components/RotiferHero";
 import AnnouncementBar from "@/components/AnnouncementBar";
+import BundleCarousel from "@/components/BundleCarousel";
+import { getBundles } from "@/lib/catalog";
+import { getProductImage } from "@/lib/imageMap";
 
 export default function Home() {
   return (
     <main>
       <Hero />
+      <BundleCarousel
+        bundles={getBundles().map((p) => ({ ...p, descriptionHtml: undefined, cardImage: getProductImage(p.id) }))}
+      />
       <AnnouncementBar />
       <SaltwaterShowcase />
       <PlantMarquee />

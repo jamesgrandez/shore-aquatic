@@ -1,16 +1,11 @@
 import { MetadataRoute } from "next";
-import { products } from "@/lib/mockData";
-import { waterGardenProducts } from "@/lib/waterGardenData";
-import { saltwaterProducts } from "@/lib/saltwaterData";
-import { livestockProducts } from "@/lib/livestockData";
-import { dryGoodsProducts } from "@/lib/dryGoodsData";
-import { marineLivestockProducts } from "@/lib/marineLivestockData";
+import { catalogProducts } from "@/lib/catalog";
 import { plantDetails } from "@/lib/plantDetails";
 
 const BASE = "https://shoreaquatic.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts, ...dryGoodsProducts, ...marineLivestockProducts];
+  const allProducts = catalogProducts; // de-duplicated, hidden products excluded
 
   const productUrls = allProducts
     .filter((p) => p.availability !== "OUT OF SEASON")
@@ -36,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/shop`,            lastModified: new Date(), changeFrequency: "daily",   priority: 0.9 },
     { url: `${BASE}/shop/live-marine-rotifers`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/shop/bogo-sale`,            lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE}/shop/bundles`,              lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/care-guides`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/faq`,             lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/blog`,            lastModified: new Date(), changeFrequency: "weekly",  priority: 0.8 },

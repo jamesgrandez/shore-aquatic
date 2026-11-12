@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import BundlesCta from "@/components/BundlesCta";
 import RelatedGuides from "@/components/RelatedGuides";
 
 export const metadata: Metadata = {
@@ -874,6 +875,7 @@ export default function ReefTankSetupGuidePage() {
       </section>
 
       <RelatedGuides current="how-to-set-up-a-reef-tank" />
+      <BundlesCta />
       <Footer />
     </main>
   );

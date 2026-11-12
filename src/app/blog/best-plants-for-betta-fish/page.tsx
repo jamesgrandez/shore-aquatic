@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
+import BundlesCta from "@/components/BundlesCta";
 export const metadata: Metadata = {
   title: "15 Best Plants for Betta Fish — Fin-Safe Ranked Guide",
   description:
@@ -776,6 +777,7 @@ export default function BestPlantsForBettaPage() {
         </section>
       </div>
 
+      <BundlesCta />
       <Footer />
     </main>
   );

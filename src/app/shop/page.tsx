@@ -3,12 +3,8 @@
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, ChevronLeft, ChevronRight, SlidersHorizontal } from "lucide-react";
-import { products, subCategories } from "@/lib/mockData";
-import { waterGardenProducts } from "@/lib/waterGardenData";
-import { saltwaterProducts } from "@/lib/saltwaterData";
-import { livestockProducts } from "@/lib/livestockData";
-import { dryGoodsProducts } from "@/lib/dryGoodsData";
-import { marineLivestockProducts } from "@/lib/marineLivestockData";
+import { subCategories } from "@/lib/mockData";
+import { catalogProducts } from "@/lib/catalog";
 
 // Grouped Water Garden filters — group label maps to the subCategory prefix it matches
 const WG_GROUPS = [
@@ -31,14 +27,8 @@ import ProductCard from "@/components/ProductCard";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
 
-// One card per product id. Supplier quantity tiers (e.g. "Amazon 6-24 / 25-49 / 50+")
-// were imported as separate rows sharing an id; they already share one product page
-// and one cart line, and duplicate React keys made the grid render erratically.
-const allProducts = (() => {
-  const seen = new Set<string>();
-  return [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts, ...dryGoodsProducts, ...marineLivestockProducts]
-    .filter((p) => (seen.has(p.id) ? false : (seen.add(p.id), true)));
-})();
+// One card per product id (catalog is de-duplicated and excludes hidden items).
+const allProducts = catalogProducts;
 
 // Sub-category chips are derived from the catalog, so every type that exists is
 // filterable and no chip ever leads to an empty result.

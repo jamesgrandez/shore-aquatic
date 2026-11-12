@@ -107,3 +107,12 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #0A2540 #010A14;
 }
+
+/* Rich product copy (bundle descriptions authored as HTML) */
+.product-copy p { margin: 0 0 0.85rem; }
+.product-copy strong { color: #fff; }
+.product-copy h3 { margin: 1.25rem 0 0.5rem; font-size: 0.95rem; font-weight: 700; color: #fff; }
+.product-copy ul, .product-copy ol { margin: 0 0 0.85rem; padding-left: 1.25rem; }
+.product-copy ul { list-style: disc; }
+.product-copy ol { list-style: decimal; }
+.product-copy li { margin-bottom: 0.35rem; }

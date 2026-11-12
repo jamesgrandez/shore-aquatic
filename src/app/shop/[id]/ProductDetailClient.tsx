@@ -1,21 +1,15 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
+import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ShoppingCart, ArrowLeft, Leaf, Sun, Droplets, MapPin, FlaskConical, Move, Zap, CheckCircle2 } from "lucide-react";
-import { products } from "@/lib/mockData";
-import { waterGardenProducts } from "@/lib/waterGardenData";
-import { saltwaterProducts } from "@/lib/saltwaterData";
-import { livestockProducts } from "@/lib/livestockData";
-import { dryGoodsProducts } from "@/lib/dryGoodsData";
-import { marineLivestockProducts } from "@/lib/marineLivestockData";
-import { getProductImage } from "@/lib/imageMap";
+import { getProductImage, sizedImage } from "@/lib/imageMap";
+import { findProduct, getVariantSiblings } from "@/lib/catalog";
 import { findPlantDetail } from "@/lib/plantDetails";
 import { CartUtils } from "@/lib/cart";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
-
-const allProducts = [...products, ...waterGardenProducts, ...saltwaterProducts, ...livestockProducts, ...dryGoodsProducts, ...marineLivestockProducts];
 
 const CARE_ROWS = [
   { key: "commonName",   label: "Common Name",        icon: Leaf },
@@ -35,8 +29,15 @@ export default function ProductDetailClient() {
   const router = useRouter();
   const id = Array.isArray(params.id) ? params.id[0] : params.id;
 
-  const product = useMemo(() => allProducts.find((p) => p.id === id), [id]);
-  const imageUrl = product ? getProductImage(product.id) : null;
+  const product = useMemo(() => (id ? findProduct(id) : undefined), [id]);
+  const gallery = product?.images?.length
+    ? product.images
+    : product && getProductImage(product.id)
+    ? [getProductImage(product.id)!]
+    : [];
+  const [activeImage, setActiveImage] = useState(0);
+  const imageUrl = gallery[Math.min(activeImage, gallery.length - 1)] ?? null;
+  const siblings = product ? getVariantSiblings(product) : [];
   const detail = product?.scientificName ? findPlantDetail(product.scientificName) : null;
 
   if (!product) {
@@ -71,9 +72,9 @@ export default function ProductDetailClient() {
           <div className={`relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br ${product.imageGradient} aspect-square`}>
             {imageUrl ? (
               <img
-                src={`${imageUrl}?format=800w`}
+                src={sizedImage(imageUrl, 800)}
                 alt={product.name}
-                className="w-full h-full object-cover"
+                className={`w-full h-full ${product.images?.length ? "object-contain bg-white" : "object-cover"}`}
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center opacity-20">
@@ -81,6 +82,24 @@ export default function ProductDetailClient() {
               </div>
             )}
           </div>
+          {gallery.length > 1 && (
+            <div className="mt-3 grid grid-cols-6 gap-2">
+              {gallery.map((src, i) => (
+                <button
+                  key={src}
+                  type="button"
+                  onClick={() => setActiveImage(i)}
+                  aria-label={`Show image ${i + 1} of ${gallery.length}`}
+                  aria-current={i === activeImage}
+                  className={`aspect-square overflow-hidden rounded-lg border bg-white cursor-pointer ${
+                    i === activeImage ? "border-aqua-400" : "border-white/10 opacity-70 hover:opacity-100"
+                  }`}
+                >
+                  <img src={sizedImage(src, 160)} alt="" className="h-full w-full object-contain" loading="lazy" />
+                </button>
+              ))}
+            </div>
+          )}
         </motion.div>
 
         {/* RIGHT: Info */}
@@ -125,6 +144,33 @@ export default function ProductDetailClient() {
             <AvailabilityBadge status={product.availability} />
           </div>
 
+          {/* Variant options (e.g. tank size) */}
+          {siblings.length > 1 && product.variantGroup && (
+            <div>
+              <p className="mb-2 text-xs font-medium uppercase tracking-wider text-slate-500">
+                {product.variantGroup.label}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {siblings.map((s) => (
+                  <Link
+                    key={s.id}
+                    href={`/shop/${s.id}`}
+                    replace
+                    scroll={false}
+                    aria-current={s.id === product.id ? "page" : undefined}
+                    className={`rounded-full border px-4 py-2 text-sm transition-colors ${
+                      s.id === product.id
+                        ? "border-aqua-400 bg-aqua-400/10 text-white"
+                        : "border-white/15 text-slate-300 hover:bg-white/5"
+                    }`}
+                  >
+                    {s.variantGroup!.option} · ${s.price.toFixed(2)}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Size */}
           {product.size && (
             <p className="text-sm text-slate-400">
@@ -148,11 +194,30 @@ export default function ProductDetailClient() {
             {isOutOfSeason ? "Out of Season" : isBackorder ? "Add to Cart (Backorder)" : "Add to Cart"}
           </button>
 
-          {/* Short description (from product data) */}
-          {product.description && (
-            <p className="text-sm text-slate-400 leading-relaxed">
-              {product.description}
-            </p>
+          {/* Quick care facts */}
+          {product.care && (
+            <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {product.care.map((c) => (
+                <div key={c.label} className="rounded-xl border border-white/10 bg-white/5 px-3 py-2">
+                  <dt className="text-[11px] uppercase tracking-wider text-slate-500">{c.label}</dt>
+                  <dd className="text-sm text-white">{c.value}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
+
+          {/* Description: rich copy when authored, else the short description */}
+          {product.descriptionHtml ? (
+            <div
+              className="product-copy text-sm text-slate-300 leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
+            />
+          ) : (
+            product.description && (
+              <p className="text-sm text-slate-400 leading-relaxed">
+                {product.description}
+              </p>
+            )
           )}
         </motion.div>
       </div>

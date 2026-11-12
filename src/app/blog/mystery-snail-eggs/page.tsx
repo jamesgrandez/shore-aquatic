@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import BundlesCta from "@/components/BundlesCta";
 import RelatedGuides from "@/components/RelatedGuides";
 
 export const metadata: Metadata = {
@@ -861,6 +862,7 @@ export default function MysterySnailEggsPage() {
       </section>
 
       <RelatedGuides current="mystery-snail-eggs" />
+      <BundlesCta />
       <Footer />
     </main>
   );

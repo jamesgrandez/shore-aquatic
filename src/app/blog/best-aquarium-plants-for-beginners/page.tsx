@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
+import BundlesCta from "@/components/BundlesCta";
 export const metadata: Metadata = {
   title: "15 Best Aquarium Plants for Beginners (No CO₂ Required)",
   description:
@@ -1093,6 +1094,7 @@ export default function BestBeginnnerPlantsPage() {
         </section>
       </div>
 
+      <BundlesCta />
       <Footer />
     </main>
   );

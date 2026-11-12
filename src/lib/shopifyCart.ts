@@ -10,6 +10,12 @@
  */
 
 import { SHOPIFY_HANDLE_OVERRIDES } from "./shopifyHandleOverrides";
+import { bundleProducts } from "./bundleData";
+
+// Bundles carry their own Shopify handle (+ SKU to pick the right variant).
+const PRODUCT_SHOPIFY: Record<string, { handle: string; sku?: string }> = Object.fromEntries(
+  bundleProducts.filter((p) => p.shopify).map((p) => [p.id, p.shopify!])
+);
 
 const DOMAIN = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN!;
 const TOKEN  = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_TOKEN!;
@@ -41,12 +47,13 @@ async function storefrontFetch(query: string, variables: Record<string, unknown>
  * those are corrected via SHOPIFY_HANDLE_OVERRIDES (see that file).
  */
 async function getVariantIdByHandle(productId: string): Promise<string | null> {
+  const mapped = PRODUCT_SHOPIFY[productId];
   const handle =
-    SHOPIFY_HANDLE_OVERRIDES[productId] ?? productId.replace(/_/g, "-").toLowerCase();
+    mapped?.handle ?? SHOPIFY_HANDLE_OVERRIDES[productId] ?? productId.replace(/_/g, "-").toLowerCase();
   const data = await storefrontFetch(`
     query GetVariantByHandle($handle: String!) {
       productByHandle(handle: $handle) {
-        variants(first: 1) {
+        variants(first: 25) {
           edges {
             node { id sku availableForSale }
           }
@@ -55,7 +62,10 @@ async function getVariantIdByHandle(productId: string): Promise<string | null> {
     }
   `, { handle });
 
-  const variant = data?.productByHandle?.variants?.edges?.[0]?.node;
+  const variants: { id: string; sku: string | null }[] =
+    data?.productByHandle?.variants?.edges?.map((e: { node: { id: string; sku: string | null } }) => e.node) ?? [];
+  // Multi-variant products (e.g. tank sizes): pick the variant by SKU.
+  const variant = (mapped?.sku && variants.find((v) => v.sku === mapped.sku)) || variants[0];
   return variant?.id ?? null;
 }
 

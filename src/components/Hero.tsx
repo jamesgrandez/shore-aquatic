@@ -113,7 +113,7 @@ const plantCards: PlantCard[] = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[56vh] pt-28 pb-16 sm:pb-20 flex items-center justify-center overflow-hidden">
       {/* Background gradient orbs — toned down since photos provide visual interest */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-cyan-900/20 blur-[120px] animate-float" />
@@ -175,7 +175,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="mb-8"
+          className="mb-5"
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-aqua-400/30 bg-aqua-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-aqua-300 shadow-lg shadow-aqua-400/5">
             <span className="h-1.5 w-1.5 rounded-full bg-aqua-400 animate-pulse" />
@@ -188,7 +188,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="text-4xl sm:text-5xl md:text-7xl font-light leading-tight tracking-tight text-white"
+          className="text-4xl sm:text-5xl md:text-6xl font-light leading-tight tracking-tight text-white"
         >
           Where Every Tank
           <br />
@@ -202,7 +202,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="mx-auto mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-slate-400"
+          className="mx-auto mt-4 max-w-2xl text-base sm:text-lg leading-relaxed text-slate-400"
         >
           Hand-curated freshwater and saltwater plants, livestock, and dry
           goods — available by weekly order. We grow it. We source it. You
@@ -214,7 +214,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="mt-7 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Link
             href="/shop"
@@ -237,7 +237,7 @@ export default function Hero() {
           viewBox="0 0 1440 120"
           fill="none"
           preserveAspectRatio="none"
-          className="w-full h-[80px] sm:h-[120px]"
+          className="w-full h-[48px] sm:h-[72px]"
         >
           <path
             d="M0 80 C360 20, 720 100, 1080 40 C1260 10, 1380 50, 1440 30 L1440 120 L0 120 Z"

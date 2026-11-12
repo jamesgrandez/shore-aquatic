@@ -2394,7 +2394,8 @@ function editDistance(a: string, b: string): number {
   return dp[m][n];
 }
 
-export function findPlantDetail(scientificName: string): PlantDetail | null {
+/** Care-guide entry (slug + detail) for a scientific name, or null. */
+export function findPlantDetailEntry(scientificName: string): [string, PlantDetail] | null {
   if (!scientificName) return null;
   const norm = scientificName.toLowerCase().replace(/[‘’']/g, "").trim();
   const words = norm.split(/\s+/);
@@ -2406,7 +2407,7 @@ export function findPlantDetail(scientificName: string): PlantDetail | null {
     const slugNorm = slug.replace(/-/g, " ").replace(/var /g, "").trim();
     const slugWords = slugNorm.split(" ").slice(0, 2).join(" ");
     if (slugNorm === norm || slugNorm.startsWith(genusSpecies) || genusSpecies.startsWith(slugWords)) {
-      return detail;
+      return [slug, detail];
     }
   }
 
@@ -2418,9 +2419,13 @@ export function findPlantDetail(scientificName: string): PlantDetail | null {
     const slugSpecies = slugParts[1] ?? "";
     if (editDistance(genus, slugGenus) <= 1 && species && slugSpecies &&
         (species.startsWith(slugSpecies) || slugSpecies.startsWith(species))) {
-      return detail;
+      return [slug, detail];
     }
   }
 
   return null;
+}
+
+export function findPlantDetail(scientificName: string): PlantDetail | null {
+  return findPlantDetailEntry(scientificName)?.[1] ?? null;
 }

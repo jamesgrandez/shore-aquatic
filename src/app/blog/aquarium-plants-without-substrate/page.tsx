@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
+import BundlesCta from "@/components/BundlesCta";
 export const metadata: Metadata = {
   title: "Aquarium Plants Without Substrate: 29 Species Ranked",
   description:
@@ -1600,6 +1601,7 @@ export default function AquariumPlantsSubstratePage() {
         </section>
       </div>
 
+      <BundlesCta />
       <Footer />
     </main>
   );

@@ -12,7 +12,27 @@ export interface Product {
   size?: string;
   imageGradient: string;
   tags: string[];
+  // ── Optional fields (used by bundles; see bundleData.ts) ──────────────
+  /** Gallery, first = main image. Overrides imageMap when present. */
+  images?: string[];
+  /** Rich detail-page copy authored in this repo (trusted HTML). */
+  descriptionHtml?: string;
+  /** Quick care facts shown on the detail page. */
+  care?: { label: string; value: string }[];
+  /** ISO date the product was added — drives "newest first" ordering. */
+  addedAt?: string;
+  /** Short card badge, e.g. "NEW" or "Buy 2 Get 1". */
+  badge?: string;
+  /** Built but not published: excluded from listings, sitemap and its URL 404s. */
+  hidden?: boolean;
+  /** Shopify checkout mapping when the handle/variant differs from the id. */
+  shopify?: { handle: string; sku?: string };
+  /** Sibling products sold as options of one item (e.g. tank sizes). */
+  variantGroup?: { key: string; label: string; option: string };
 }
+
+/** Tag that puts a product in the Bundles category (same tag as Shopify). */
+export const BUNDLE_TAG = "bundle-pack";
 
 // 625 real products from Florida Aquatic Nurseries 2026 Price List
 // Pricing: (wholesale + $3 pkg + $10 ship) x 1.35, charm priced
@@ -845,7 +865,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-bwisnl",
-    name: "Wisteria",
+    name: "Water Wisteria",
     scientificName: "Hygrophila difformis",
     description: "Hardy stem plant suitable for background or midground placement. Fast-growing under most conditions. Forgiving of beginner mistakes — tolerates a wide range of light, pH, and temperature.",
     category: "Plants",
@@ -859,7 +879,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-ealts",
-    name: "Altlandsberg",
+    name: "Altlandsberg Sword",
     scientificName: "Echinodorus 'Altlandsberg'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Altlandsberg cultivar with attractive olive-green leaves.",
     category: "Plants",
@@ -874,7 +894,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-ealtm",
-    name: "Altlandsberg",
+    name: "Altlandsberg Sword",
     scientificName: "Echinodorus 'Altlandsberg'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Altlandsberg cultivar with attractive olive-green leaves.",
     category: "Plants",
@@ -889,7 +909,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-ealtl",
-    name: "Altlandsberg",
+    name: "Altlandsberg Sword",
     scientificName: "Echinodorus 'Altlandsberg'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Altlandsberg cultivar with attractive olive-green leaves.",
     category: "Plants",
@@ -904,7 +924,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-ealtx",
-    name: "Altlandsberg",
+    name: "Altlandsberg Sword",
     scientificName: "Echinodorus 'Altlandsberg'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Altlandsberg cultivar with attractive olive-green leaves.",
     category: "Plants",
@@ -919,7 +939,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eamas",
-    name: "Amazon",
+    name: "Amazon Sword",
     scientificName: "E. grisebachii 'Bleherae'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -934,7 +954,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eamam",
-    name: "Amazon",
+    name: "Amazon Sword",
     scientificName: "E. grisebachii 'Bleherae'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -949,7 +969,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eamal",
-    name: "Amazon",
+    name: "Amazon Sword",
     scientificName: "E. grisebachii 'Bleherae'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -964,7 +984,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eamax",
-    name: "Amazon",
+    name: "Amazon Sword",
     scientificName: "E. grisebachii 'Bleherae'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -979,7 +999,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eamcos",
-    name: "Amazon 'Compacta'",
+    name: "Amazon 'Compacta' Sword",
     scientificName: "E. grisebachii 'Bleherae' Compacta",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact form — stays smaller than standard species.",
     category: "Plants",
@@ -994,7 +1014,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eamcom",
-    name: "Amazon 'Compacta'",
+    name: "Amazon 'Compacta' Sword",
     scientificName: "E. grisebachii 'Bleherae' Compacta",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact form — stays smaller than standard species.",
     category: "Plants",
@@ -1009,7 +1029,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eamcol",
-    name: "Amazon 'Compacta'",
+    name: "Amazon 'Compacta' Sword",
     scientificName: "E. grisebachii 'Bleherae' Compacta",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact form — stays smaller than standard species.",
     category: "Plants",
@@ -1084,7 +1104,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-echbr",
-    name: "Chain, Broad Leaf",
+    name: "Chain Sword, Broad Leaf",
     scientificName: "Helanthium bolivianum 'Quadricostatus'",
     description: "Compact rosette plant for foreground or midground placement. Spreads via runners to form a dense carpet over time. More forgiving than larger sword plants — thrives in low-tech setups with moderate light and any substrate. The broad-leaf form has wider foliage with more visual impact.",
     category: "Plants",
@@ -1098,7 +1118,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-echna",
-    name: "Chain, Narrow Leaf",
+    name: "Chain Sword, Narrow Leaf",
     scientificName: "Helanthium tenellum",
     description: "Compact rosette plant for foreground or midground placement. Spreads via runners to form a dense carpet over time. More forgiving than larger sword plants — thrives in low-tech setups with moderate light and any substrate. The narrow-leaf form has slimmer foliage — useful for tighter spaces or detail aquascaping.",
     category: "Plants",
@@ -1112,7 +1132,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-echmas",
-    name: "Chocolate Marble",
+    name: "Chocolate Marble Sword",
     scientificName: "Echinodorus 'Chocolate Marble'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Chocolate-marble variegation pattern — striking centerpiece.",
     category: "Plants",
@@ -1127,7 +1147,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-echmam",
-    name: "Chocolate Marble",
+    name: "Chocolate Marble Sword",
     scientificName: "Echinodorus 'Chocolate Marble'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Chocolate-marble variegation pattern — striking centerpiece.",
     category: "Plants",
@@ -1142,7 +1162,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-echmal",
-    name: "Chocolate Marble",
+    name: "Chocolate Marble Sword",
     scientificName: "Echinodorus 'Chocolate Marble'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Chocolate-marble variegation pattern — striking centerpiece.",
     category: "Plants",
@@ -1157,7 +1177,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-efrsts",
-    name: "Frans Stoffels",
+    name: "Frans Stoffels Sword",
     scientificName: "Echinodorus 'Frans Stoffels'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Frans Stoffels hybrid — bushier than standard sword shape.",
     category: "Plants",
@@ -1172,7 +1192,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-efrstm",
-    name: "Frans Stoffels",
+    name: "Frans Stoffels Sword",
     scientificName: "Echinodorus 'Frans Stoffels'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Frans Stoffels hybrid — bushier than standard sword shape.",
     category: "Plants",
@@ -1187,7 +1207,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-efrstl",
-    name: "Frans Stoffels",
+    name: "Frans Stoffels Sword",
     scientificName: "Echinodorus 'Frans Stoffels'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Frans Stoffels hybrid — bushier than standard sword shape.",
     category: "Plants",
@@ -1202,7 +1222,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-einrem",
-    name: "Indian Red",
+    name: "Indian Red Sword",
     scientificName: "Echinodorus 'Indian Red'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -1217,7 +1237,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-einrel",
-    name: "Indian Red",
+    name: "Indian Red Sword",
     scientificName: "Echinodorus 'Indian Red'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -1232,7 +1252,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eklbas",
-    name: "Kleiner Bar",
+    name: "Kleiner Bar Sword",
     scientificName: "Echinodorus 'Kleiner Bar'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Kleiner Bar cultivar — narrower leaves than standard Amazon.",
     category: "Plants",
@@ -1247,7 +1267,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eklbam",
-    name: "Kleiner Bar",
+    name: "Kleiner Bar Sword",
     scientificName: "Echinodorus 'Kleiner Bar'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Kleiner Bar cultivar — narrower leaves than standard Amazon.",
     category: "Plants",
@@ -1262,7 +1282,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eklbal",
-    name: "Kleiner Bar",
+    name: "Kleiner Bar Sword",
     scientificName: "Echinodorus 'Kleiner Bar'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Kleiner Bar cultivar — narrower leaves than standard Amazon.",
     category: "Plants",
@@ -1277,7 +1297,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eklbax",
-    name: "Kleiner Bar",
+    name: "Kleiner Bar Sword",
     scientificName: "Echinodorus 'Kleiner Bar'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Kleiner Bar cultivar — narrower leaves than standard Amazon.",
     category: "Plants",
@@ -1292,7 +1312,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eklprs",
-    name: "Kleiner Prinz",
+    name: "Kleiner Prinz Sword",
     scientificName: "Echinodorus 'Kleiner Prinz'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Kleiner Prinz cultivar — broader, deeper-red foliage.",
     category: "Plants",
@@ -1307,7 +1327,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eklprm",
-    name: "Kleiner Prinz",
+    name: "Kleiner Prinz Sword",
     scientificName: "Echinodorus 'Kleiner Prinz'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Kleiner Prinz cultivar — broader, deeper-red foliage.",
     category: "Plants",
@@ -1322,7 +1342,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eklprl",
-    name: "Kleiner Prinz",
+    name: "Kleiner Prinz Sword",
     scientificName: "Echinodorus 'Kleiner Prinz'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Kleiner Prinz cultivar — broader, deeper-red foliage.",
     category: "Plants",
@@ -1337,7 +1357,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-emels",
-    name: "Melon",
+    name: "Melon Sword",
     scientificName: "Echinodorus osiris",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -1352,7 +1372,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-emelm",
-    name: "Melon",
+    name: "Melon Sword",
     scientificName: "Echinodorus osiris",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -1367,7 +1387,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-emell",
-    name: "Melon",
+    name: "Melon Sword",
     scientificName: "Echinodorus osiris",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -1382,7 +1402,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-emelx",
-    name: "Melon",
+    name: "Melon Sword",
     scientificName: "Echinodorus osiris",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -1397,7 +1417,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-emegos",
-    name: "Melon, Golden",
+    name: "Melon Sword, Golden",
     scientificName: "Echinodorus osiris 'Golden'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The gold variety shows yellow-tinged leaves and a brighter overall appearance.",
     category: "Plants",
@@ -1412,7 +1432,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-emegom",
-    name: "Melon, Golden",
+    name: "Melon Sword, Golden",
     scientificName: "Echinodorus osiris 'Golden'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The gold variety shows yellow-tinged leaves and a brighter overall appearance.",
     category: "Plants",
@@ -1427,7 +1447,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-emegol",
-    name: "Melon, Golden",
+    name: "Melon Sword, Golden",
     scientificName: "Echinodorus osiris 'Golden'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The gold variety shows yellow-tinged leaves and a brighter overall appearance.",
     category: "Plants",
@@ -1442,7 +1462,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-emegox",
-    name: "Melon, Golden",
+    name: "Melon Sword, Golden",
     scientificName: "Echinodorus osiris 'Golden'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The gold variety shows yellow-tinged leaves and a brighter overall appearance.",
     category: "Plants",
@@ -1457,7 +1477,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-emepis",
-    name: "Melon, Pinwheel",
+    name: "Melon Sword, Pinwheel",
     scientificName: "Echinodorus osiris 'Pinwheel'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Distinctive Pinwheel pattern variegation.",
     category: "Plants",
@@ -1472,7 +1492,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-emepim",
-    name: "Melon, Pinwheel",
+    name: "Melon Sword, Pinwheel",
     scientificName: "Echinodorus osiris 'Pinwheel'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Distinctive Pinwheel pattern variegation.",
     category: "Plants",
@@ -1487,7 +1507,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-emepil",
-    name: "Melon, Pinwheel",
+    name: "Melon Sword, Pinwheel",
     scientificName: "Echinodorus osiris 'Pinwheel'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Distinctive Pinwheel pattern variegation.",
     category: "Plants",
@@ -1502,7 +1522,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eoris",
-    name: "Oriental",
+    name: "Oriental Sword",
     scientificName: "Echinodorus 'Oriental'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Oriental Sword — pink-flushed new growth.",
     category: "Plants",
@@ -1517,7 +1537,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eorim",
-    name: "Oriental",
+    name: "Oriental Sword",
     scientificName: "Echinodorus 'Oriental'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Oriental Sword — pink-flushed new growth.",
     category: "Plants",
@@ -1532,7 +1552,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eoril",
-    name: "Oriental",
+    name: "Oriental Sword",
     scientificName: "Echinodorus 'Oriental'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Oriental Sword — pink-flushed new growth.",
     category: "Plants",
@@ -1547,7 +1567,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eorix",
-    name: "Oriental",
+    name: "Oriental Sword",
     scientificName: "Echinodorus 'Oriental'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Oriental Sword — pink-flushed new growth.",
     category: "Plants",
@@ -1562,7 +1582,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eozes",
-    name: "Ozelot",
+    name: "Ozelot Sword",
     scientificName: "Echinodorus 'Ozelot'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -1577,7 +1597,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eozem",
-    name: "Ozelot",
+    name: "Ozelot Sword",
     scientificName: "Echinodorus 'Ozelot'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -1592,7 +1612,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eozel",
-    name: "Ozelot",
+    name: "Ozelot Sword",
     scientificName: "Echinodorus 'Ozelot'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -1607,7 +1627,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eozex",
-    name: "Ozelot",
+    name: "Ozelot Sword",
     scientificName: "Echinodorus 'Ozelot'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -1622,7 +1642,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eozgrs",
-    name: "Ozelot, Green",
+    name: "Ozelot Sword, Green",
     scientificName: "Echinodorus 'Ozelot green'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -1637,7 +1657,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eozgrm",
-    name: "Ozelot, Green",
+    name: "Ozelot Sword, Green",
     scientificName: "Echinodorus 'Ozelot green'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -1652,7 +1672,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eozgrl",
-    name: "Ozelot, Green",
+    name: "Ozelot Sword, Green",
     scientificName: "Echinodorus 'Ozelot green'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -1667,7 +1687,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eozgrx",
-    name: "Ozelot Green",
+    name: "Ozelot Green Sword",
     scientificName: "Echinodorus 'Ozelot green'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -1682,7 +1702,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-emirs",
-    name: "Pink Miracle",
+    name: "Pink Miracle Sword",
     scientificName: "Echinodorus 'Pink Miracle'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -1697,7 +1717,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-emirm",
-    name: "Pink Miracle",
+    name: "Pink Miracle Sword",
     scientificName: "Echinodorus 'Pink Miracle'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -1712,7 +1732,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-emirl",
-    name: "Pink Miracle",
+    name: "Pink Miracle Sword",
     scientificName: "Echinodorus 'Pink Miracle'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -1727,7 +1747,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-emirx",
-    name: "Pink Miracle",
+    name: "Pink Miracle Sword",
     scientificName: "Echinodorus 'Pink Miracle'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -1742,7 +1762,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-erads",
-    name: "Radican",
+    name: "Radican Sword",
     scientificName: "Echinodorus cordifolius",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -1757,7 +1777,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eradm",
-    name: "Radican",
+    name: "Radican Sword",
     scientificName: "Echinodorus cordifolius",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -1772,7 +1792,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eradl",
-    name: "Radican",
+    name: "Radican Sword",
     scientificName: "Echinodorus cordifolius",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -1787,7 +1807,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eradx",
-    name: "Radican",
+    name: "Radican Sword",
     scientificName: "Echinodorus cordifolius",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -1802,7 +1822,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eramas",
-    name: "Radican, Marble Q",
+    name: "Radican Sword, Marble Q",
     scientificName: "Echinodorus cordifolius 'Tropica Marble Queen'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -1817,7 +1837,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eramam",
-    name: "Radican, Marble Q",
+    name: "Radican Sword, Marble Q",
     scientificName: "Echinodorus cordifolius 'Tropica Marble Queen'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -1832,7 +1852,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eramal",
-    name: "Radican, Marble Q",
+    name: "Radican Sword, Marble Q",
     scientificName: "Echinodorus cordifolius 'Tropica Marble Queen'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -1847,7 +1867,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eramax",
-    name: "Radican, Marble Q",
+    name: "Radican Sword, Marble Q",
     scientificName: "Echinodorus cordifolius 'Tropica Marble Queen'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -1862,7 +1882,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-erans",
-    name: "Rangeri",
+    name: "Rangeri Sword",
     scientificName: "Echinodorus grandiflorus",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Larger Rangeri variety — ideal for tall tanks.",
     category: "Plants",
@@ -1877,7 +1897,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eranm",
-    name: "Rangeri",
+    name: "Rangeri Sword",
     scientificName: "Echinodorus grandiflorus",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Larger Rangeri variety — ideal for tall tanks.",
     category: "Plants",
@@ -1892,7 +1912,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eranl",
-    name: "Rangeri",
+    name: "Rangeri Sword",
     scientificName: "Echinodorus grandiflorus",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Larger Rangeri variety — ideal for tall tanks.",
     category: "Plants",
@@ -1907,7 +1927,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eranx",
-    name: "Rangeri",
+    name: "Rangeri Sword",
     scientificName: "Echinodorus grandiflorus",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Larger Rangeri variety — ideal for tall tanks.",
     category: "Plants",
@@ -1922,7 +1942,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-erefls",
-    name: "Red Flame",
+    name: "Red Flame Sword",
     scientificName: "Echinodorus 'Red Flame'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -1937,7 +1957,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-ereflm",
-    name: "Red Flame",
+    name: "Red Flame Sword",
     scientificName: "Echinodorus 'Red Flame'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -1952,7 +1972,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-erefll",
-    name: "Red Flame",
+    name: "Red Flame Sword",
     scientificName: "Echinodorus 'Red Flame'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -1967,7 +1987,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-ereflx",
-    name: "Red Flame",
+    name: "Red Flame Sword",
     scientificName: "Echinodorus 'Red Flame'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -1982,7 +2002,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eremes",
-    name: "Red Melon",
+    name: "Red Melon Sword",
     scientificName: "Echinodorus barthii",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -1997,7 +2017,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eremem",
-    name: "Red Melon",
+    name: "Red Melon Sword",
     scientificName: "Echinodorus barthii",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -2012,7 +2032,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eremel",
-    name: "Red Melon",
+    name: "Red Melon Sword",
     scientificName: "Echinodorus barthii",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -2027,7 +2047,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-eremex",
-    name: "Red Melon",
+    name: "Red Melon Sword",
     scientificName: "Echinodorus barthii",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -2042,7 +2062,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-erepem",
-    name: "Red Pearl",
+    name: "Red Pearl Sword",
     scientificName: "Echinodorus 'Red Pearl'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -2057,7 +2077,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-erepel",
-    name: "Red Pearl",
+    name: "Red Pearl Sword",
     scientificName: "Echinodorus 'Red Pearl'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -2072,7 +2092,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-ererum",
-    name: "Red Rubin",
+    name: "Red Rubin Sword",
     scientificName: "Echinodorus 'Rubin'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -2087,7 +2107,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-ererul",
-    name: "Red Rubin",
+    name: "Red Rubin Sword",
     scientificName: "Echinodorus 'Rubin'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -2102,7 +2122,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-ererux",
-    name: "Red Rubin",
+    name: "Red Rubin Sword",
     scientificName: "Echinodorus 'Rubin'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -2117,7 +2137,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-erosts",
-    name: "Rosette",
+    name: "Rosette Sword",
     scientificName: "Echinodorus parviflorus 'Tropica'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -2132,7 +2152,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-erostm",
-    name: "Rosette",
+    name: "Rosette Sword",
     scientificName: "Echinodorus parviflorus 'Tropica'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -2147,7 +2167,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-erostl",
-    name: "Rosette",
+    name: "Rosette Sword",
     scientificName: "Echinodorus parviflorus 'Tropica'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -2162,7 +2182,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-erostx",
-    name: "Rosette",
+    name: "Rosette Sword",
     scientificName: "Echinodorus parviflorus 'Tropica'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -2177,7 +2197,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-erufs",
-    name: "Ruffle",
+    name: "Ruffle Sword",
     scientificName: "Echinodorus martii",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -2192,7 +2212,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-erufm",
-    name: "Ruffle",
+    name: "Ruffle Sword",
     scientificName: "Echinodorus martii",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -2207,7 +2227,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-erufl",
-    name: "Ruffle",
+    name: "Ruffle Sword",
     scientificName: "Echinodorus martii",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -2222,7 +2242,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-erufx",
-    name: "Ruffle",
+    name: "Ruffle Sword",
     scientificName: "Echinodorus martii",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -2237,7 +2257,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-estelm",
-    name: "St. Elmo'S Fire",
+    name: "St. Elmo'S Fire Sword",
     scientificName: "Echinodorus 'St. Elmo's Fire'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Striking pink-and-cream variegated St. Elmo's Fire variant.",
     category: "Plants",
@@ -2252,7 +2272,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-estell",
-    name: "St. Elmo'S Fire",
+    name: "St. Elmo'S Fire Sword",
     scientificName: "Echinodorus 'St. Elmo's Fire'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Striking pink-and-cream variegated St. Elmo's Fire variant.",
     category: "Plants",
@@ -2267,7 +2287,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-evesm",
-    name: "Vesuvius",
+    name: "Vesuvius Sword",
     scientificName: "Helanthium bolivianum 'Vesuvius'",
     description: "Compact rosette plant for foreground or midground placement. Spreads via runners to form a dense carpet over time. More forgiving than larger sword plants — thrives in low-tech setups with moderate light and any substrate. Distinctive corkscrew curly leaves.",
     category: "Plants",
@@ -2281,7 +2301,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-anbarom",
-    name: "Barteri 'Round Leaf'",
+    name: "Anubias Barteri 'Round Leaf'",
     scientificName: "Anubias barteri 'Broad Leaf'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. The broad-leaf form has wider foliage with more visual impact.",
     category: "Plants",
@@ -2296,7 +2316,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-anbarol",
-    name: "Barteri 'Round Leaf'",
+    name: "Anubias Barteri 'Round Leaf'",
     scientificName: "Anubias barteri 'Broad Leaf'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. The broad-leaf form has wider foliage with more visual impact.",
     category: "Plants",
@@ -2311,7 +2331,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-ancofm",
-    name: "Coffeefolia",
+    name: "Anubias Coffeefolia",
     scientificName: "Anubias barteri 'Coffeefolia'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Distinctive corrugated bronze-tinted leaves.",
     category: "Plants",
@@ -2326,7 +2346,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-ancofl",
-    name: "Coffeefolia",
+    name: "Anubias Coffeefolia",
     scientificName: "Anubias barteri 'Coffeefolia'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Distinctive corrugated bronze-tinted leaves.",
     category: "Plants",
@@ -2341,7 +2361,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-anconm",
-    name: "Congensis",
+    name: "Anubias Congensis",
     scientificName: "Anubias 'afzelii'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants.",
     category: "Plants",
@@ -2356,7 +2376,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-anconl",
-    name: "Congensis",
+    name: "Anubias Congensis",
     scientificName: "Anubias 'afzelii'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants.",
     category: "Plants",
@@ -2371,7 +2391,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-anfram",
-    name: "Frazeri",
+    name: "Anubias Frazeri",
     scientificName: "Anubias 'frazeri'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. The Frazeri hybrid has distinctive elongated foliage.",
     category: "Plants",
@@ -2386,7 +2406,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-anfral",
-    name: "Frazeri",
+    name: "Anubias Frazeri",
     scientificName: "Anubias 'frazeri'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. The Frazeri hybrid has distinctive elongated foliage.",
     category: "Plants",
@@ -2401,7 +2421,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-anhasm",
-    name: "Hastifolia",
+    name: "Anubias Hastifolia",
     scientificName: "Anubias 'hastifolia'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants.",
     category: "Plants",
@@ -2416,7 +2436,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-anhasl",
-    name: "Hastifolia",
+    name: "Anubias Hastifolia",
     scientificName: "Anubias 'hastifolia'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants.",
     category: "Plants",
@@ -2431,7 +2451,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-anlanm",
-    name: "Lanceolata",
+    name: "Anubias Lanceolata",
     scientificName: "Anubias barteri var. 'Angustifolia'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Angustifolia — narrow elongated leaves.",
     category: "Plants",
@@ -2446,7 +2466,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-anlanl",
-    name: "Lanceolata",
+    name: "Anubias Lanceolata",
     scientificName: "Anubias barteri var. 'Angustifolia'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Angustifolia — narrow elongated leaves.",
     category: "Plants",
@@ -2461,7 +2481,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-annanm",
-    name: "Nana",
+    name: "Anubias Nana",
     scientificName: "Anubias barteri var.' nana'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Compact variety ideal for nano and small tanks.",
     category: "Plants",
@@ -2476,7 +2496,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-annanl",
-    name: "Nana",
+    name: "Anubias Nana",
     scientificName: "Anubias barteri var. 'nana'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Compact variety ideal for nano and small tanks.",
     category: "Plants",
@@ -2491,7 +2511,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-annagom",
-    name: "Nana Golden",
+    name: "Anubias Nana Golden",
     scientificName: "Anubia Nana var. 'Golden'",
     description: "Live aquatic plant for freshwater aquariums. Hardy and adaptable to a range of conditions. Nana Golden.",
     category: "Plants",
@@ -2506,7 +2526,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-annannl",
-    name: "Nana Narrow Leaf",
+    name: "Anubias Nana Narrow Leaf",
     scientificName: "Anubias barteri var. nana 'Narrow Leaf'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. The narrow-leaf form has slimmer foliage — useful for tighter spaces or detail aquascaping.",
     category: "Plants",
@@ -2520,7 +2540,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-annapel",
-    name: "Nana 'Petite'",
+    name: "Anubias Nana 'Petite'",
     scientificName: "Anubias barteri var. nana 'Petite'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. This is the smallest form — perfect for nano tanks and foreground placement.",
     category: "Plants",
@@ -2535,7 +2555,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-annancm",
-    name: "Nancon",
+    name: "Anubias Nancon",
     scientificName: "Anubias 'Nancon'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants.",
     category: "Plants",
@@ -2550,7 +2570,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-annancl",
-    name: "Nancon",
+    name: "Anubias Nancon",
     scientificName: "Anubias 'Nancon'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants.",
     category: "Plants",
@@ -2565,7 +2585,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-annangm",
-    name: "Nangi",
+    name: "Anubias Nangi",
     scientificName: "Anubias 'Nangi'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Compact Nangi hybrid with intermediate leaf shape.",
     category: "Plants",
@@ -2580,7 +2600,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-annangl",
-    name: "Nangi",
+    name: "Anubias Nangi",
     scientificName: "Anubias 'Nangi'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Compact Nangi hybrid with intermediate leaf shape.",
     category: "Plants",
@@ -2595,7 +2615,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-capo",
-    name: "Aponogetifolia",
+    name: "Cryptocoryne Aponogetifolia",
     scientificName: "Cryptocoryne aponogetifolia",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners.",
     category: "Plants",
@@ -2609,7 +2629,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cbalm",
-    name: "Balansae",
+    name: "Cryptocoryne Balansae",
     scientificName: "Cryptocoryne crispatula var. balansae",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Balansae — long narrow ribbon leaves up to 24 inches.",
     category: "Plants",
@@ -2624,7 +2644,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cball",
-    name: "Balansae",
+    name: "Cryptocoryne Balansae",
     scientificName: "Cryptocoryne crispatula var. balansae",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Balansae — long narrow ribbon leaves up to 24 inches.",
     category: "Plants",
@@ -2639,7 +2659,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cbalx",
-    name: "Balansae",
+    name: "Cryptocoryne Balansae",
     scientificName: "Cryptocoryne crispatula var. balansae",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Balansae — long narrow ribbon leaves up to 24 inches.",
     category: "Plants",
@@ -2654,7 +2674,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cblam",
-    name: "Blassii",
+    name: "Cryptocoryne Blassii",
     scientificName: "Cryptocoryne blassii",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners.",
     category: "Plants",
@@ -2669,7 +2689,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cblal",
-    name: "Blassii",
+    name: "Cryptocoryne Blassii",
     scientificName: "Cryptocoryne blassii",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners.",
     category: "Plants",
@@ -2684,7 +2704,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cblax",
-    name: "Blassii",
+    name: "Cryptocoryne Blassii",
     scientificName: "Cryptocoryne blassii",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners.",
     category: "Plants",
@@ -2699,7 +2719,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cparm",
-    name: "Parva",
+    name: "Cryptocoryne Parva",
     scientificName: "Cryptocoryne parva",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Parva — the smallest crypt species.",
     category: "Plants",
@@ -2714,7 +2734,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cparx",
-    name: "Parva",
+    name: "Cryptocoryne Parva",
     scientificName: "Cryptocoryne parva",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Parva — the smallest crypt species.",
     category: "Plants",
@@ -2729,7 +2749,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cpetm",
-    name: "Petchii",
+    name: "Cryptocoryne Petchii",
     scientificName: "Cryptocoryne beckettii 'Petchii'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Beckettii — bronze-tinted leaves.",
     category: "Plants",
@@ -2744,7 +2764,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cpetx",
-    name: "Petchii",
+    name: "Cryptocoryne Petchii",
     scientificName: "Cryptocoryne beckettii 'Petchii'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Beckettii — bronze-tinted leaves.",
     category: "Plants",
@@ -2759,7 +2779,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cponm",
-    name: "Pontederiifolia",
+    name: "Cryptocoryne Pontederiifolia",
     scientificName: "Cryptocoryne pontederiifolia",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Distinctive heart-shaped Pontederiifolia leaves.",
     category: "Plants",
@@ -2774,7 +2794,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cretm",
-    name: "Retrospiralis",
+    name: "Cryptocoryne Retrospiralis",
     scientificName: "Cryptocoryne retrospiralis",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Spiralis — twisted ribbon-shaped leaves.",
     category: "Plants",
@@ -2789,7 +2809,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cretl",
-    name: "Retrospiralis",
+    name: "Cryptocoryne Retrospiralis",
     scientificName: "Cryptocoryne retrospiralis",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Spiralis — twisted ribbon-shaped leaves.",
     category: "Plants",
@@ -2804,7 +2824,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cspim",
-    name: "Spiralis",
+    name: "Cryptocoryne Spiralis",
     scientificName: "Cryptocoryne spiralis",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Spiralis — twisted ribbon-shaped leaves.",
     category: "Plants",
@@ -2819,7 +2839,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cspix",
-    name: "Spiralis",
+    name: "Cryptocoryne Spiralis",
     scientificName: "Cryptocoryne spiralis",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Spiralis — twisted ribbon-shaped leaves.",
     category: "Plants",
@@ -2834,7 +2854,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cundm",
-    name: "Undulata",
+    name: "Cryptocoryne Undulata",
     scientificName: "Cryptocoryne undulata",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Undulata — wavy frilly leaves.",
     category: "Plants",
@@ -2849,7 +2869,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cundms",
-    name: "Undulata Subm",
+    name: "Cryptocoryne Undulata Subm",
     scientificName: "Cryptocoryne undulata",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Undulata — wavy frilly leaves.",
     category: "Plants",
@@ -2864,7 +2884,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cundx",
-    name: "Undulata",
+    name: "Cryptocoryne Undulata",
     scientificName: "Cryptocoryne undulata",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Undulata — wavy frilly leaves.",
     category: "Plants",
@@ -2879,7 +2899,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-custm",
-    name: "Usteriana",
+    name: "Cryptocoryne Usteriana",
     scientificName: "Cryptocoryne usteriana",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Usteriana — large dramatic leaves with rippled edges.",
     category: "Plants",
@@ -2894,7 +2914,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-custl",
-    name: "Usteriana",
+    name: "Cryptocoryne Usteriana",
     scientificName: "Cryptocoryne usteriana",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Usteriana — large dramatic leaves with rippled edges.",
     category: "Plants",
@@ -2909,7 +2929,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-custx",
-    name: "Usteriana",
+    name: "Cryptocoryne Usteriana",
     scientificName: "Cryptocoryne usteriana",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Usteriana — large dramatic leaves with rippled edges.",
     category: "Plants",
@@ -2924,7 +2944,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cwebrm",
-    name: "Wendtii, Bronze",
+    name: "Cryptocoryne Wendtii, Bronze",
     scientificName: "Cryptocoryne wendtii 'Tropica'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -2939,7 +2959,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cwebrms",
-    name: "Wendtii, Bronze Subm",
+    name: "Cryptocoryne Wendtii, Bronze Subm",
     scientificName: "Cryptocoryne wendtii 'Tropica'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -2954,7 +2974,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cwebrx",
-    name: "Wendtii, Bronze",
+    name: "Cryptocoryne Wendtii, Bronze",
     scientificName: "Cryptocoryne wendtii 'Tropica'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -2969,7 +2989,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cwebrxs",
-    name: "Wendii, Bronze Subm",
+    name: "Cryptocoryne Wendtii, Bronze Subm",
     scientificName: "Cryptocoryne wendtii 'Tropica'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -2984,7 +3004,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cwegrm",
-    name: "Wendtii, Green",
+    name: "Cryptocoryne Wendtii, Green",
     scientificName: "Cryptocoryne wendtii 'Green'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners.",
     category: "Plants",
@@ -2999,7 +3019,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cwegrms",
-    name: "Wendtii, Green Subm",
+    name: "Cryptocoryne Wendtii, Green Subm",
     scientificName: "Cryptocoryne wendtii 'Green'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners.",
     category: "Plants",
@@ -3014,7 +3034,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cwegrx",
-    name: "Wendtii, Green",
+    name: "Cryptocoryne Wendtii, Green",
     scientificName: "Cryptocoryne wendtii 'Green'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners.",
     category: "Plants",
@@ -3029,7 +3049,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cwegrxs",
-    name: "Wendtii, Green Subm",
+    name: "Cryptocoryne Wendtii, Green Subm",
     scientificName: "Cryptocoryne wendtii 'Green'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners.",
     category: "Plants",
@@ -3044,7 +3064,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cwerem",
-    name: "Wendtii, Red",
+    name: "Cryptocoryne Wendtii, Red",
     scientificName: "Cryptocoryne wendtii 'Mi Oya'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -3059,7 +3079,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-cwerex",
-    name: "Wendtii, Red",
+    name: "Cryptocoryne Wendtii, Red",
     scientificName: "Cryptocoryne wendtii 'Mi Oya'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -4418,7 +4438,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-panbadr",
-    name: "An. Barteri On Wood",
+    name: "Anubias Barteri On Wood",
     scientificName: "Anubias barteri 'Broad Leaf'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. The broad-leaf form has wider foliage with more visual impact.",
     category: "Plants",
@@ -4432,7 +4452,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pancofdr",
-    name: "An. Coffeefolia On Wood",
+    name: "Anubias Coffeefolia On Wood",
     scientificName: "Anubias barteri 'Coffeefolia'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Distinctive corrugated bronze-tinted leaves.",
     category: "Plants",
@@ -4446,7 +4466,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-panhadr",
-    name: "A. Hastifolia On Wood",
+    name: "Anubias Hastifolia On Wood",
     scientificName: "Anubias hastifolia",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Pre-attached to natural driftwood — ready to drop into your tank.",
     category: "Plants",
@@ -4460,7 +4480,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pannanldr",
-    name: "A. Nana Narrow Leaf On Wood",
+    name: "Anubias Nana Narrow Leaf On Wood",
     scientificName: "Anubias barteri var. nana 'Narrow Leaf'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. The narrow-leaf form has slimmer foliage — useful for tighter spaces or detail aquascaping.",
     category: "Plants",
@@ -4474,7 +4494,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pannapedr",
-    name: "A. Nana Petite On Wood",
+    name: "Anubias Nana Petite On Wood",
     scientificName: "Anubias barteri var. nana",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. This is the smallest form — perfect for nano tanks and foreground placement.",
     category: "Plants",
@@ -4488,7 +4508,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pannadr",
-    name: "A. Nana On Wood",
+    name: "Anubias Nana On Wood",
     scientificName: "Anubias barteri var. nana",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Compact variety ideal for nano and small tanks.",
     category: "Plants",
@@ -4502,7 +4522,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pannancdr",
-    name: "A. Nancon On Wood",
+    name: "Anubias Nancon On Wood",
     scientificName: "Anubias 'Nancon'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Pre-attached to natural driftwood — ready to drop into your tank.",
     category: "Plants",
@@ -4516,7 +4536,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pannangdr",
-    name: "A. Nangi On Wood",
+    name: "Anubias Nangi On Wood",
     scientificName: "Anubias 'Nangi'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Compact Nangi hybrid with intermediate leaf shape.",
     category: "Plants",
@@ -5055,7 +5075,9 @@ export const products: Product[] = [
     price: 21.99,
     wholesalePrice: 3.85,
     imageGradient: "from-green-900 to-emerald-900",
-    tags: ["freshwater", "floating", "bundle", "red root floater", "salvinia", "duckweed", "free shipping"],
+    tags: ["freshwater", "floating", "bundle", "bundle-pack", "red root floater", "salvinia", "duckweed", "free shipping"],
+    badge: "3-Plant Bundle",
+    addedAt: "2026-08-12",
   },
   {
     id: "plant-mrimop",
@@ -5157,7 +5179,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-tcanhac",
-    name: "A. Hastifolia T/C Cup",
+    name: "Anubias Hastifolia T/C Cup",
     scientificName: "Anubias hastifolia",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants.",
     category: "Plants",
@@ -5171,7 +5193,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-tcanbagoc",
-    name: "A. Nana 'Golden' T/C Cup",
+    name: "Anubias Nana 'Golden' T/C Cup",
     scientificName: "Anubias barteri var. nana 'Golden'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. The gold variety shows yellow-tinged leaves and a brighter overall appearance.",
     category: "Plants",
@@ -5185,7 +5207,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-tcannaicc",
-    name: "A. Nana 'Ice' T/C Cup",
+    name: "Anubias Nana 'Ice' T/C Cup",
     scientificName: "Anubias barteri var. nana 'Ice'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Compact variety ideal for nano and small tanks.",
     category: "Plants",
@@ -5199,7 +5221,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-tcannapec",
-    name: "A. Nana Petite T/C Cup",
+    name: "Anubias Nana Petite T/C Cup",
     scientificName: "Anubias barteri var. nana 'Petite'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. This is the smallest form — perfect for nano tanks and foreground placement.",
     category: "Plants",
@@ -5213,7 +5235,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-tcannapic",
-    name: "A. Nana Pinto T/C Cup",
+    name: "Anubias Nana Pinto T/C Cup",
     scientificName: "Anubias barteri var. nana 'Pinto'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Compact variety ideal for nano and small tanks.",
     category: "Plants",
@@ -5325,7 +5347,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-tccrbalc",
-    name: "C. Crispatula 'Balansae' T/C Cup",
+    name: "Cryptocoryne Crispatula 'Balansae' T/C Cup",
     scientificName: "Cryptocoryne crispatula",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Balansae — long narrow ribbon leaves up to 24 inches.",
     category: "Plants",
@@ -5339,7 +5361,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-tccrfl",
-    name: "C. Flamingo T/C Cup",
+    name: "Cryptocoryne Flamingo T/C Cup",
     scientificName: "Cryptocoryne 'Flamingo'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Pink-flushed Flamingo cultivar — one of the rarest and most striking crypts.",
     category: "Plants",
@@ -5353,7 +5375,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-tccrtonc",
-    name: "C. Crispatula 'Tonkinensis' T/C Cup",
+    name: "Cryptocoryne Crispatula 'Tonkinensis' T/C Cup",
     scientificName: "Cryptocoryne crispatula 'Tonkinensis'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners.",
     category: "Plants",
@@ -5367,7 +5389,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-tccrunrc",
-    name: "C. Undulatus Red T/C Cup",
+    name: "Cryptocoryne Undulatus Red T/C Cup",
     scientificName: "Cryptocoryne undulatus",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -6166,7 +6188,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-palt",
-    name: "Altlandsberg",
+    name: "Altlandsberg Sword",
     scientificName: "Echinodorus 'Altlandsberg'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Altlandsberg cultivar with attractive olive-green leaves.",
     category: "Plants",
@@ -6180,7 +6202,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pama",
-    name: "Amazon 6-24",
+    name: "Amazon Sword 6-24",
     scientificName: "E. grisebachii 'Bleherae'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -6194,7 +6216,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pama",
-    name: "Amazon 25-49",
+    name: "Amazon Sword 25-49",
     scientificName: "E. grisebachii 'Bleherae'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -6208,7 +6230,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pama",
-    name: "Amazon 50+",
+    name: "Amazon Sword 50+",
     scientificName: "E. grisebachii 'Bleherae'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -6222,7 +6244,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pamal",
-    name: "Amazon",
+    name: "Amazon Sword",
     scientificName: "E. grisebachii 'Bleherae'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -6237,7 +6259,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pamax",
-    name: "Amazon",
+    name: "Amazon Sword",
     scientificName: "E. grisebachii 'Bleherae'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -6309,7 +6331,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pfrstl",
-    name: "Frans Stoffels",
+    name: "Frans Stoffels Sword",
     scientificName: "Echinodorus 'Frans Stoffels'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Frans Stoffels hybrid — bushier than standard sword shape.",
     category: "Plants",
@@ -6324,7 +6346,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pklba",
-    name: "Kleiner Bar 6-24",
+    name: "Kleiner Bar Sword 6-24",
     scientificName: "Echinodorus 'Kleiner Bar'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Kleiner Bar cultivar — narrower leaves than standard Amazon.",
     category: "Plants",
@@ -6338,7 +6360,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pklba",
-    name: "Kleiner Bar 25-49",
+    name: "Kleiner Bar Sword 25-49",
     scientificName: "Echinodorus 'Kleiner Bar'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Kleiner Bar cultivar — narrower leaves than standard Amazon.",
     category: "Plants",
@@ -6352,7 +6374,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pklba",
-    name: "Kleiner Bar 50+",
+    name: "Kleiner Bar Sword 50+",
     scientificName: "Echinodorus 'Kleiner Bar'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Kleiner Bar cultivar — narrower leaves than standard Amazon.",
     category: "Plants",
@@ -6366,7 +6388,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pklbal",
-    name: "Kleiner Bar",
+    name: "Kleiner Bar Sword",
     scientificName: "Echinodorus 'Kleiner Bar'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Kleiner Bar cultivar — narrower leaves than standard Amazon.",
     category: "Plants",
@@ -6381,7 +6403,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pklpr",
-    name: "Kleiner Prinz",
+    name: "Kleiner Prinz Sword",
     scientificName: "Echinodorus 'Kleiner Prinz'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Kleiner Prinz cultivar — broader, deeper-red foliage.",
     category: "Plants",
@@ -6395,7 +6417,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pklprl",
-    name: "Kleiner Prinz",
+    name: "Kleiner Prinz Sword",
     scientificName: "Echinodorus 'Kleiner Prinz'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Compact Kleiner Prinz cultivar — broader, deeper-red foliage.",
     category: "Plants",
@@ -6410,7 +6432,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pmel",
-    name: "Melon",
+    name: "Melon Sword",
     scientificName: "Echinodorus osiris",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -6424,7 +6446,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pmell",
-    name: "Melon",
+    name: "Melon Sword",
     scientificName: "Echinodorus osiris",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -6439,7 +6461,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pori",
-    name: "Oriental 6-24",
+    name: "Oriental Sword 6-24",
     scientificName: "Echinodorus 'Oriental'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Oriental Sword — pink-flushed new growth.",
     category: "Plants",
@@ -6453,7 +6475,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pori",
-    name: "Oriental 25-49",
+    name: "Oriental Sword 25-49",
     scientificName: "Echinodorus 'Oriental'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Oriental Sword — pink-flushed new growth.",
     category: "Plants",
@@ -6467,7 +6489,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pori",
-    name: "Oriental 50+",
+    name: "Oriental Sword 50+",
     scientificName: "Echinodorus 'Oriental'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Oriental Sword — pink-flushed new growth.",
     category: "Plants",
@@ -6481,7 +6503,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-poril",
-    name: "Oriental",
+    name: "Oriental Sword",
     scientificName: "Echinodorus 'Oriental'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Oriental Sword — pink-flushed new growth.",
     category: "Plants",
@@ -6496,7 +6518,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-poze",
-    name: "Ozelot 6-24",
+    name: "Ozelot Sword 6-24",
     scientificName: "Echinodorus 'Ozelot'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -6510,7 +6532,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-poze",
-    name: "Ozelot 25-49",
+    name: "Ozelot Sword 25-49",
     scientificName: "Echinodorus 'Ozelot'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -6524,7 +6546,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-poze",
-    name: "Ozelot 50+",
+    name: "Ozelot Sword 50+",
     scientificName: "Echinodorus 'Ozelot'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -6538,7 +6560,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pozel",
-    name: "Ozelot",
+    name: "Ozelot Sword",
     scientificName: "Echinodorus 'Ozelot'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -6553,7 +6575,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pozgr",
-    name: "Ozelot, Green 6-24",
+    name: "Ozelot Sword, Green 6-24",
     scientificName: "Echinodorus 'Ozelot green'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -6567,7 +6589,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pozgr",
-    name: "Ozelot, Green 25-49",
+    name: "Ozelot Sword, Green 25-49",
     scientificName: "Echinodorus 'Ozelot green'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -6581,7 +6603,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pozgr",
-    name: "Ozelot, Green 50+",
+    name: "Ozelot Sword, Green 50+",
     scientificName: "Echinodorus 'Ozelot green'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -6595,7 +6617,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pozgrl",
-    name: "Ozelot, Green",
+    name: "Ozelot Sword, Green",
     scientificName: "Echinodorus 'Ozelot green'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -6610,7 +6632,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-prad",
-    name: "Radican 6-24",
+    name: "Radican Sword 6-24",
     scientificName: "Echinodorus cordifolius",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -6624,7 +6646,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-prad",
-    name: "Radican 25-49",
+    name: "Radican Sword 25-49",
     scientificName: "Echinodorus cordifolius",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -6638,7 +6660,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-prad",
-    name: "Radican 50+",
+    name: "Radican Sword 50+",
     scientificName: "Echinodorus cordifolius",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -6652,7 +6674,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pradl",
-    name: "Radican",
+    name: "Radican Sword",
     scientificName: "Echinodorus cordifolius",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -6667,7 +6689,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-prama",
-    name: "Radican, Marble Q. 6-24",
+    name: "Radican Sword, Marble Q. 6-24",
     scientificName: "Echinodorus cordifolius 'Tropica Marble Queen'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -6681,7 +6703,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-prama",
-    name: "Radican, Marble Q. 25-49",
+    name: "Radican Sword, Marble Q. 25-49",
     scientificName: "Echinodorus cordifolius 'Tropica Marble Queen'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -6695,7 +6717,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-prama",
-    name: "Radican, Marble Q. 50+",
+    name: "Radican Sword, Marble Q. 50+",
     scientificName: "Echinodorus cordifolius 'Tropica Marble Queen'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -6709,7 +6731,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pramal",
-    name: "Radican, Marble Q",
+    name: "Radican Sword, Marble Q",
     scientificName: "Echinodorus cordifolius 'Tropica Marble Queen'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -6724,7 +6746,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-prefl",
-    name: "Red Flame 6-24",
+    name: "Red Flame Sword 6-24",
     scientificName: "Echinodorus 'Red Flame'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -6738,7 +6760,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-prefl",
-    name: "Red Flame 25-49",
+    name: "Red Flame Sword 25-49",
     scientificName: "Echinodorus 'Red Flame'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -6752,7 +6774,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-prefl",
-    name: "Red Flame 50+",
+    name: "Red Flame Sword 50+",
     scientificName: "Echinodorus 'Red Flame'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -6766,7 +6788,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-prefll",
-    name: "Red Flame",
+    name: "Red Flame Sword",
     scientificName: "Echinodorus 'Red Flame'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -6781,7 +6803,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-preme",
-    name: "Red Melon",
+    name: "Red Melon Sword",
     scientificName: "Echinodorus barthii",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -6795,7 +6817,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-premel",
-    name: "Red Melon",
+    name: "Red Melon Sword",
     scientificName: "Echinodorus barthii",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -6810,7 +6832,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-prepel",
-    name: "Red Pearl",
+    name: "Red Pearl Sword",
     scientificName: "Echinodorus 'Red Pearl'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -6825,7 +6847,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-preru",
-    name: "Red Rubin",
+    name: "Red Rubin Sword",
     scientificName: "Echinodorus 'Rubin'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -6839,7 +6861,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-prerul",
-    name: "Red Rubin",
+    name: "Red Rubin Sword",
     scientificName: "Echinodorus 'Rubin'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -6854,7 +6876,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pren",
-    name: "Reni 6-24",
+    name: "Reni Sword 6-24",
     scientificName: "Echinodorus 'Reni'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Reni cultivar — green leaves with pink new growth.",
     category: "Plants",
@@ -6868,7 +6890,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pren",
-    name: "Reni 25-49",
+    name: "Reni Sword 25-49",
     scientificName: "Echinodorus 'Reni'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Reni cultivar — green leaves with pink new growth.",
     category: "Plants",
@@ -6882,7 +6904,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pren",
-    name: "Reni 50+",
+    name: "Reni Sword 50+",
     scientificName: "Echinodorus 'Reni'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Reni cultivar — green leaves with pink new growth.",
     category: "Plants",
@@ -6896,7 +6918,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-prosel",
-    name: "Rose",
+    name: "Rose Sword",
     scientificName: "Echinodorus 'Rose'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -6911,7 +6933,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pstell",
-    name: "St. Elmo'S Fire",
+    name: "St. Elmo'S Fire Sword",
     scientificName: "Echinodorus 'St. Elmo's Fire'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Striking pink-and-cream variegated St. Elmo's Fire variant.",
     category: "Plants",
@@ -6926,7 +6948,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-puru",
-    name: "Uruguayensis",
+    name: "Uruguayensis Sword",
     scientificName: "Echinodorus uruguayensis",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -6940,7 +6962,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-purul",
-    name: "Uruguayensis",
+    name: "Uruguayensis Sword",
     scientificName: "Echinodorus uruguayensis",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light.",
     category: "Plants",
@@ -6955,7 +6977,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pves",
-    name: "Vesuvius 6-24",
+    name: "Vesuvius Sword 6-24",
     scientificName: "Helanthium bolivianum 'Vesuvius'",
     description: "Compact rosette plant for foreground or midground placement. Spreads via runners to form a dense carpet over time. More forgiving than larger sword plants — thrives in low-tech setups with moderate light and any substrate. Distinctive corkscrew curly leaves.",
     category: "Plants",
@@ -6969,7 +6991,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pves",
-    name: "Vesuvius 25-49",
+    name: "Vesuvius Sword 25-49",
     scientificName: "Helanthium bolivianum 'Vesuvius'",
     description: "Compact rosette plant for foreground or midground placement. Spreads via runners to form a dense carpet over time. More forgiving than larger sword plants — thrives in low-tech setups with moderate light and any substrate. Distinctive corkscrew curly leaves.",
     category: "Plants",
@@ -6983,7 +7005,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pves",
-    name: "Vesuvius 50+",
+    name: "Vesuvius Sword 50+",
     scientificName: "Helanthium bolivianum 'Vesuvius'",
     description: "Compact rosette plant for foreground or midground placement. Spreads via runners to form a dense carpet over time. More forgiving than larger sword plants — thrives in low-tech setups with moderate light and any substrate. Distinctive corkscrew curly leaves.",
     category: "Plants",
@@ -7466,7 +7488,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrba",
-    name: "Cr. Balansae 6-24",
+    name: "Cryptocoryne Balansae 6-24",
     scientificName: "Cryptocoryne crispatula var. balansae",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Balansae — long narrow ribbon leaves up to 24 inches.",
     category: "Plants",
@@ -7480,7 +7502,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrba",
-    name: "Cr. Balansae 25-49",
+    name: "Cryptocoryne Balansae 25-49",
     scientificName: "Cryptocoryne crispatula var. balansae",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Balansae — long narrow ribbon leaves up to 24 inches.",
     category: "Plants",
@@ -7494,7 +7516,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrba",
-    name: "Cr. Balansae 50+",
+    name: "Cryptocoryne Balansae 50+",
     scientificName: "Cryptocoryne crispatula var. balansae",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Balansae — long narrow ribbon leaves up to 24 inches.",
     category: "Plants",
@@ -7508,7 +7530,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrlu",
-    name: "C. Lutea 6-24",
+    name: "Cryptocoryne Lutea 6-24",
     scientificName: "Cryptocoryne lutea",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Lutea — bronze-yellow leaves.",
     category: "Plants",
@@ -7522,7 +7544,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrlu",
-    name: "C. Lutea 25-49",
+    name: "Cryptocoryne Lutea 25-49",
     scientificName: "Cryptocoryne lutea",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Lutea — bronze-yellow leaves.",
     category: "Plants",
@@ -7536,7 +7558,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrlu",
-    name: "C. Lutea 50+",
+    name: "Cryptocoryne Lutea 50+",
     scientificName: "Cryptocoryne lutea",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Lutea — bronze-yellow leaves.",
     category: "Plants",
@@ -7550,7 +7572,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrlux",
-    name: "C. Lutea",
+    name: "Cryptocoryne Lutea",
     scientificName: "Cryptocoryne lutea",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Lutea — bronze-yellow leaves.",
     category: "Plants",
@@ -7565,7 +7587,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrpa",
-    name: "C. Parva 6-24",
+    name: "Cryptocoryne Parva 6-24",
     scientificName: "Cryptocoryne parva",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Parva — the smallest crypt species.",
     category: "Plants",
@@ -7579,7 +7601,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrpa",
-    name: "C. Parva 25-49",
+    name: "Cryptocoryne Parva 25-49",
     scientificName: "Cryptocoryne parva",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Parva — the smallest crypt species.",
     category: "Plants",
@@ -7593,7 +7615,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrpa",
-    name: "C. Parva 50+",
+    name: "Cryptocoryne Parva 50+",
     scientificName: "Cryptocoryne parva",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Parva — the smallest crypt species.",
     category: "Plants",
@@ -7607,7 +7629,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrsp",
-    name: "C. Spiralis 6-24",
+    name: "Cryptocoryne Spiralis 6-24",
     scientificName: "Cryptocoryne spiralis",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Spiralis — twisted ribbon-shaped leaves.",
     category: "Plants",
@@ -7621,7 +7643,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrsp",
-    name: "C. Spiralis 25-49",
+    name: "Cryptocoryne Spiralis 25-49",
     scientificName: "Cryptocoryne spiralis",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Spiralis — twisted ribbon-shaped leaves.",
     category: "Plants",
@@ -7635,7 +7657,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrsp",
-    name: "C. Spiralis 50+",
+    name: "Cryptocoryne Spiralis 50+",
     scientificName: "Cryptocoryne spiralis",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Spiralis — twisted ribbon-shaped leaves.",
     category: "Plants",
@@ -7649,7 +7671,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrun",
-    name: "C. Undulata 6-24",
+    name: "Cryptocoryne Undulata 6-24",
     scientificName: "Cryptocoryne undulata",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Undulata — wavy frilly leaves.",
     category: "Plants",
@@ -7663,7 +7685,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrun",
-    name: "C. Undulata 25-49",
+    name: "Cryptocoryne Undulata 25-49",
     scientificName: "Cryptocoryne undulata",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Undulata — wavy frilly leaves.",
     category: "Plants",
@@ -7677,7 +7699,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrun",
-    name: "C. Undulata 50+",
+    name: "Cryptocoryne Undulata 50+",
     scientificName: "Cryptocoryne undulata",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Undulata — wavy frilly leaves.",
     category: "Plants",
@@ -7691,7 +7713,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrunx",
-    name: "C. Undulata",
+    name: "Cryptocoryne Undulata",
     scientificName: "Cryptocoryne undulata",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Undulata — wavy frilly leaves.",
     category: "Plants",
@@ -7706,7 +7728,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrweb",
-    name: "C. Wendtii, Bronze 6-24",
+    name: "Cryptocoryne Wendtii, Bronze 6-24",
     scientificName: "Cryptocoryne wendtii 'Tropica'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -7720,7 +7742,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrweb",
-    name: "C. Wendtii, Bronze 25-49",
+    name: "Cryptocoryne Wendtii, Bronze 25-49",
     scientificName: "Cryptocoryne wendtii 'Tropica'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -7734,7 +7756,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrweb",
-    name: "C. Wendtii, Bronze 50+",
+    name: "Cryptocoryne Wendtii, Bronze 50+",
     scientificName: "Cryptocoryne wendtii 'Tropica'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -7748,7 +7770,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrwebx",
-    name: "C. Wendtii, Bronze",
+    name: "Cryptocoryne Wendtii, Bronze",
     scientificName: "Cryptocoryne wendtii 'Tropica'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. The Tropica cultivar — bronze-leaf form widely distributed by Tropica Aquarium Plants.",
     category: "Plants",
@@ -7763,7 +7785,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrwefla",
-    name: "C. Wendtii, Flamingo 6-24",
+    name: "Cryptocoryne Wendtii, Flamingo 6-24",
     scientificName: "Cryptocoryne wendtii 'Flamingo'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Pink-flushed Flamingo cultivar — one of the rarest and most striking crypts.",
     category: "Plants",
@@ -7777,7 +7799,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrwefl",
-    name: "C. Wendtii 'Fl. Sunset'",
+    name: "Cryptocoryne Wendtii 'Fl. Sunset'",
     scientificName: "Cryptocoryne wendtii 'Florida Sunset'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. Florida Sunset — variegated yellow/cream leaves on a dark base.",
     category: "Plants",
@@ -7791,7 +7813,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrweg",
-    name: "C. Wendti-Green 6-24",
+    name: "Cryptocoryne Wendtii, Green 6-24",
     scientificName: "Cryptocoryne wendtii 'Green'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners.",
     category: "Plants",
@@ -7805,7 +7827,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrweg",
-    name: "C. Wendti-Green 25-49",
+    name: "Cryptocoryne Wendtii, Green 25-49",
     scientificName: "Cryptocoryne wendtii 'Green'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners.",
     category: "Plants",
@@ -7819,7 +7841,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrweg",
-    name: "C. Wendti-Green 50+",
+    name: "Cryptocoryne Wendtii, Green 50+",
     scientificName: "Cryptocoryne wendtii 'Green'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners.",
     category: "Plants",
@@ -7833,7 +7855,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrwer",
-    name: "C. Wendtii, Red 6-24",
+    name: "Cryptocoryne Wendtii, Red 6-24",
     scientificName: "Cryptocoryne wendtii 'Mi Oya'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -7847,7 +7869,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrwer",
-    name: "C. Wendtii, Red 25-49",
+    name: "Cryptocoryne Wendtii, Red 25-49",
     scientificName: "Cryptocoryne wendtii 'Mi Oya'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -7861,7 +7883,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrwer",
-    name: "C. Wendtii, Red 50+",
+    name: "Cryptocoryne Wendtii, Red 50+",
     scientificName: "Cryptocoryne wendtii 'Mi Oya'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -7875,7 +7897,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pcrwerx",
-    name: "C. Wendtii, Red",
+    name: "Cryptocoryne Wendtii, Red",
     scientificName: "Cryptocoryne wendtii 'Mi Oya'",
     description: "Adaptable rosette plant for low-tech setups. Heavy root feeder — use root tabs in nutrient-poor substrate. May melt during initial acclimation; new growth follows in 2–3 weeks. Tolerates pH 6.0–8.0 and 68–82°F. Excellent for beginners. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -8829,7 +8851,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pamamo",
-    name: "Amazon Mother",
+    name: "Amazon Sword Mother",
     scientificName: "Echinodorus grisebachii 'Bleherae'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Mature mother plant — large, established, ready for propagation.",
     category: "Plants",
@@ -8843,7 +8865,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-porimo",
-    name: "Oriental Mother",
+    name: "Oriental Sword Mother",
     scientificName: "Echinodorus 'Oriental'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Oriental Sword — pink-flushed new growth.",
     category: "Plants",
@@ -8857,7 +8879,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pozemo",
-    name: "Ozelot Mother",
+    name: "Ozelot Sword Mother",
     scientificName: "Echinodorus 'Ozelot'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -8871,7 +8893,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pozgrmo",
-    name: "Ozelot Green Mother",
+    name: "Ozelot Green Sword Mother",
     scientificName: "Echinodorus 'Ozelot green'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. Ozelot cultivar with bold dark spots on green or red leaves.",
     category: "Plants",
@@ -8885,7 +8907,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-preflmo",
-    name: "Red Flame Mother",
+    name: "Red Flame Sword Mother",
     scientificName: "Echinodorus 'Red Flame'",
     description: "Centerpiece sword plant for medium and large freshwater aquariums. Heavy root feeder — use root tabs in nutrient-poor substrate to fuel growth. Develops impressive broad leaves up to 12 inches tall. Best in pH 6.5–7.5, 72–82°F, with moderate to high light. This variety develops particularly vivid red coloration under good light.",
     category: "Plants",
@@ -8899,7 +8921,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-panbaromo",
-    name: "A. Barteri Rl Mother",
+    name: "Anubias Barteri Rl Mother",
     scientificName: "Anubias barteri 'Broad Leaf'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. The broad-leaf form has wider foliage with more visual impact.",
     category: "Plants",
@@ -8913,7 +8935,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-panconmo",
-    name: "A. Congensis Mother",
+    name: "Anubias Congensis Mother",
     scientificName: "Anubias afzelii",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Mature mother plant — large, established, ready for propagation.",
     category: "Plants",
@@ -8927,7 +8949,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-panfrmo",
-    name: "A. Frazeri Mother",
+    name: "Anubias Frazeri Mother",
     scientificName: "Anubias 'Frazeri'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. The Frazeri hybrid has distinctive elongated foliage.",
     category: "Plants",
@@ -8941,7 +8963,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-panhamo",
-    name: "A. Hastifolia Mother",
+    name: "Anubias Hastifolia Mother",
     scientificName: "Anubias hastifolia",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Mature mother plant — large, established, ready for propagation.",
     category: "Plants",
@@ -8955,7 +8977,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pannamo",
-    name: "A. Nana Mother",
+    name: "Anubias Nana Mother",
     scientificName: "Anubias barteri var. nana",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Compact variety ideal for nano and small tanks.",
     category: "Plants",
@@ -8969,7 +8991,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pannancmo",
-    name: "A. Nancon Mother",
+    name: "Anubias Nancon Mother",
     scientificName: "Anubias 'Nancon'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Mature mother plant — large, established, ready for propagation.",
     category: "Plants",
@@ -8983,7 +9005,7 @@ export const products: Product[] = [
   },
   {
     id: "plant-pannangmo",
-    name: "A. Nangi Mother",
+    name: "Anubias Nangi Mother",
     scientificName: "Anubias 'Nangi'",
     description: "Hardy rhizome plant that thrives in low to medium light. Attach to driftwood, rock, or hardscape — never bury the rhizome, as burying causes rot. Tolerates pH 6.0–8.0 and 68–82°F. Slow growing, virtually indestructible, and one of the most beginner-friendly aquarium plants. Compact Nangi hybrid with intermediate leaf shape.",
     category: "Plants",
@@ -9000,6 +9022,7 @@ export const products: Product[] = [
 // Plant groups, in the order the shop shows them. Each plant's subCategory is
 // assigned by genus (see scientificName) — keep new plants consistent with this list.
 export const subCategories: string[] = [
+  "Bundles & Variety Packs",
   "Anubias",
   "Bucephalandra",
   "Cryptocoryne",

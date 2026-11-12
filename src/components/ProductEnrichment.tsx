@@ -1,35 +1,46 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Product } from "@/lib/mockData";
-import { products } from "@/lib/mockData";
-import { waterGardenProducts } from "@/lib/waterGardenData";
-import { saltwaterProducts } from "@/lib/saltwaterData";
-import { livestockProducts } from "@/lib/livestockData";
-import { dryGoodsProducts } from "@/lib/dryGoodsData";
-import { marineLivestockProducts } from "@/lib/marineLivestockData";
+import { catalogProducts, isBundle } from "@/lib/catalog";
 import { getProductImage } from "@/lib/imageMap";
-import { findPlantDetail } from "@/lib/plantDetails";
+import { findPlantDetail, findPlantDetailEntry } from "@/lib/plantDetails";
 import { getRelatedProducts, getQuickFacts, getAboutContext } from "@/lib/productEnrichment";
 
-const allProducts: Product[] = [
-  ...products,
-  ...waterGardenProducts,
-  ...saltwaterProducts,
-  ...livestockProducts,
-  ...dryGoodsProducts,
-  ...marineLivestockProducts,
-];
+const allProducts: Product[] = catalogProducts;
 
 export default function ProductEnrichment({ product }: { product: Product }) {
   // Skip the About/Quick-Facts block for products that already render a full
   // hand-written care guide (avoids duplication); always show Related Products.
   const hasCareData = !!(product.scientificName && findPlantDetail(product.scientificName));
+  const guideSlug = product.scientificName ? findPlantDetailEntry(product.scientificName)?.[0] ?? null : null;
   const related = getRelatedProducts(product, allProducts, 6);
   const facts = getQuickFacts(product);
   const about = getAboutContext(product);
 
   return (
     <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 space-y-12">
+      {/* Internal links: full care guide, and bundles for plant shoppers */}
+      {(guideSlug || (product.category === "Plants" && !isBundle(product))) && (
+        <div className="flex flex-wrap gap-3">
+          {guideSlug && (
+            <Link
+              href={`/care-guides/${guideSlug}`}
+              className="rounded-full border border-aqua-400/30 bg-aqua-400/10 px-5 py-2.5 text-sm font-semibold text-aqua-300 hover:bg-aqua-400/20"
+            >
+              Read the full {product.scientificName} care guide →
+            </Link>
+          )}
+          {product.category === "Plants" && !isBundle(product) && (
+            <Link
+              href="/shop/bundles"
+              className="rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-slate-200 hover:bg-white/5"
+            >
+              Save with plant bundles &amp; variety packs →
+            </Link>
+          )}
+        </div>
+      )}
+
       {!hasCareData && (
         <div className="grid lg:grid-cols-2 gap-8">
           {/* About */}

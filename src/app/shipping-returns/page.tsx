@@ -44,6 +44,14 @@ export default function ShippingReturnsPage() {
           ))}
 
           <p className="mt-12 text-sm text-slate-400">
+            Ordering in very cold or hot weather? See{" "}
+            <Link href="/guides/shipping-live-plants-winter-summer" className="text-aqua-400 hover:underline">
+              how we ship live plants in winter and summer
+            </Link>
+            .
+          </p>
+
+          <p className="mt-4 text-sm text-slate-400">
             Questions about an order?{" "}
             <Link href="/contact" className="text-aqua-400 hover:underline">
               Contact us

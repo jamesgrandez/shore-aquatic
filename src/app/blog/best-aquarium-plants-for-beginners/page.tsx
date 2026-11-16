@@ -656,6 +656,12 @@ export default function BestBeginnnerPlantsPage() {
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 space-y-16">
 
+        <p className="rounded-xl border border-aqua-400/20 bg-aqua-400/5 px-5 py-3 text-sm text-slate-300">
+          Not sure how many to buy? Our{" "}
+          <Link href="/guides/how-many-plants-for-my-tank" className="text-aqua-400 underline">plant calculator and chart by tank size</Link>{" "}
+          tells you how many plants your tank needs.
+        </p>
+
         {/* ── What is Low-Tech ─────────────────────────────────────────────── */}
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">What Does &ldquo;Low-Tech&rdquo; Actually Mean?</h2>

@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { catalogProducts } from "@/lib/catalog";
+import { getAllGuides } from "@/lib/guides";
 import { plantDetails } from "@/lib/plantDetails";
 
 const BASE = "https://shoreaquatic.com";
@@ -26,6 +27,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const guideUrls = getAllGuides().map((g) => ({
+    url: `${BASE}/guides/${g.slug}`,
+    lastModified: new Date(g.updated),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   return [
     { url: BASE,                      lastModified: new Date(), changeFrequency: "weekly",  priority: 1.0 },
     { url: `${BASE}/shop`,            lastModified: new Date(), changeFrequency: "daily",   priority: 0.9 },
@@ -48,6 +56,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/privacy-policy`,    lastModified: new Date("2026-11-12"), changeFrequency: "yearly", priority: 0.3 },
     { url: `${BASE}/terms-of-service`,  lastModified: new Date("2026-11-12"), changeFrequency: "yearly", priority: 0.3 },
     { url: `${BASE}/contact`,         lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
+    { url: `${BASE}/guides`,          lastModified: new Date(), changeFrequency: "weekly",  priority: 0.8 },
+    ...guideUrls,
     ...productUrls,
     ...careGuideUrls,
   ];

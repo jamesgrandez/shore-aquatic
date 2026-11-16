@@ -19,6 +19,25 @@ export default function ProductEnrichment({ product }: { product: Product }) {
 
   return (
     <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 space-y-12">
+      {/* Plant care guides */}
+      {product.category === "Plants" && (
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-aqua-400">Plant care</h2>
+          <ul className="mt-3 grid gap-2 sm:grid-cols-2 text-sm">
+            <li>
+              <Link href="/guides/how-many-plants-for-my-tank" className="text-slate-200 hover:text-aqua-300">
+                How many plants does my tank need? (calculator) →
+              </Link>
+            </li>
+            <li>
+              <Link href="/guides/aquarium-plants-arrival-guide" className="text-slate-200 hover:text-aqua-300">
+                Your plants arrived: the first 24 hours →
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
+
       {/* Internal links: full care guide, and bundles for plant shoppers */}
       {(guideSlug || (product.category === "Plants" && !isBundle(product))) && (
         <div className="flex flex-wrap gap-3">

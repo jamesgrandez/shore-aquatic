@@ -491,6 +491,11 @@ export default function AquariumPlantColorGuidePage() {
         {/* ── Article body ── */}
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
 
+          <p className="mb-8 rounded-xl border border-aqua-400/20 bg-aqua-400/5 px-5 py-3 text-sm text-slate-300">
+            Just received plants? Start with our{" "}
+            <Link href="/guides/aquarium-plants-arrival-guide" className="text-aqua-400 underline">first 24 hours guide</Link>.
+          </p>
+
           {/* Intro */}
           <div className="prose-section mb-14">
             <p className="text-slate-300 text-base leading-relaxed mb-4">

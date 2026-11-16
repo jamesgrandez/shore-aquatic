@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { imageCredits } from "@/lib/imageCredits";
+import { guideImageCredits } from "@/lib/guideImageCredits";
 
 export default function ImageCreditsPage() {
-  const sorted = [...imageCredits].sort((a, b) => a.species.localeCompare(b.species));
+  const sorted = [...imageCredits, ...guideImageCredits].sort((a, b) => a.species.localeCompare(b.species));
 
   return (
     <main className="pt-16 min-h-screen bg-ocean-950">
@@ -14,7 +15,7 @@ export default function ImageCreditsPage() {
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold text-white">Photo Credits &amp; Licenses</h1>
           <p className="mt-4 text-sm sm:text-base text-slate-400 leading-relaxed max-w-3xl">
-            Many of our marine livestock listings use species reference photographs shared
+            Many of our marine livestock listings and plant guides use photographs shared
             under open licenses by photographers on{" "}
             <a href="https://www.inaturalist.org" className="text-aqua-400 hover:underline" rel="noopener noreferrer" target="_blank">
               iNaturalist
